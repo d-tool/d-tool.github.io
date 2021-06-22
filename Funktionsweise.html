@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de" class=" afnrtd idc0_330" lang="de"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+li {
+}
+.helpdesk {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+
+<title> • Helpdesk</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - " href="https://dtool.mooo.com/app.php/feed">			<link rel="alternate" type="application/atom+xml" title="Feed - Neue Themen" href="https://dtool.mooo.com/app.php/feed?mode=topics">			
+<!--
+	phpBB style name: Lucid Lime
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:	  Eric Seguin
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Gib\u0020die\u0020Nummer\u0020der\u0020Seite\u0020an,\u0020zu\u0020der\u0020du\u0020gehen\u0020m\u00F6chtest.:';
+	var on_page = '';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="Funktionsweise-Dateien/styleswitcher.html"></script>
+<script type="text/javascript" src="Funktionsweise-Dateien/forum_fn.html"></script>
+
+<link href="Funktionsweise-Dateien/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
+<link href="Funktionsweise-Dateien/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection">
+
+<link href="Funktionsweise-Dateien/normal.html" rel="stylesheet" type="text/css" title="A">
+<link href="Funktionsweise-Dateien/medium.html" rel="alternate stylesheet" type="text/css" title="A+">
+<link href="Funktionsweise-Dateien/large.html" rel="alternate stylesheet" type="text/css" title="A++">
+<style type="text/css">
+body,td,th {
+	color: #CCC;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+}
+body {
+	background-color: #262626;
+}
+</style>
+</head>
+
+<body id="phpbb" class="section-allgemeine_funktionsweise ltr">
+
+<div id="wrap">
+  <div id="page-body">
+	  <style type="text/css">
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+
+
+<h2>Helpdesk</h2>
+
+<div class="panel">
+   <div class="inner"><span class="corners-top"><span></span></span>
+
+   <div class="content">
+
+   <table width="1040" height="96" border="0" align="left">
+  <tbody><tr>
+    <td colspan="3" align="left"><a href="http://phunck.untergrund.net/helpdesk/index.html"><img src="Funktionsweise-Dateien/board-banner.png" alt="d-tool-Banner" width="1024" height="96" border="0"></a></td>
+  </tr>
+  <tr>
+    <td width="150" valign="top"><p><a href="http://phunck.untergrund.net/helpdesk/index.html"><img src="Installation-Dateien/button-home.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Installation.html"><img src="Funktionsweise-Dateien/button-installation.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Funktionsweise.html"><img src="Funktionsweise-Dateien/button-funktionsweise-1.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/MainSetup.html"><img src="Installation-Dateien/button_allg_setup.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/SiteSetup.html"><img src="Installation-Dateien/button-site-setup.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Windows.html"><img src="Installation-Dateien/button-windows.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Commands.html"><img src="Installation-Dateien/button-commands.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Remote.html"><img src="Installation-Dateien/button-remote.png" alt="" width="130" height="20" border="0" /></a><a href="http://phunck.untergrund.net/helpdesk/Tips.html"><img src="Installation-Dateien/button-tips.png" alt="" width="130" height="20" border="0" /></a></p></td>
+    <td width="650" valign="top"><p class="normalschrift"><span class="normalschrift"><br>
+    </span></p>
+      <p class="normalschrift"><strong>ALLGEMEINE FUNKTIONSWEISE</strong></p>
+      <p class="normalschrift">Wenn man Sites eingestellt hat tradet 
+d-tool zuerstmal alles. Also man gibt auf der Site an zu welchen anderen
+ Sites gefillt werden soll und dann schiebt er alles was kommt, wenn 
+nichts in den Rules steht.<br>
+        Dann gibt es die Global Skip und die Global Whitelist, welche auf allen Sites zutreffen, womit man Sachen skippen kann.<br>
+        In der GlobalSkip stehen halt Sachen die immer geskippt werden 
+sollen. Die Global Whitelist ist für Majorgroups gedacht, die überall 
+erlaubt sind. <br>
+        Und dann gibt es die Black- und Whitelist der einzelnen Sites 
+bzw. die Affillist. Sie stellen die eigentlichen Rules der Site dar. </p>
+      <p class="normalschrift">Im Grunde läuft es dann bei den meisten 
+Sektionen so, zB wenn es nur bestimmte erlaubte Groups gibt, dass man 
+die Sektion erst einmal verbietet und dann die einzelnen Groups wieder 
+erlaubt.<br>
+        Die Listen haben verschiedene Funktionen und man kann mit 
+Sonderzeichen wie ^ oder + die Einträge in Ihrer Handhabung noch 
+verändern. Das wird beim klick auf "?" in den Rules oder <a href="http://phunck.untergrund.net/helpdesk/_BlackWhitelist.html">hier</a> auf dem Board nochmal erklärt.<br>
+        <br>
+        Handelt es sich um einen Film oder eine TV-Sendung, wird 
+wahlweise noch OMDBApi (für IMDb)  und TVMaze.com abgefragt. Zu guter 
+letzt noch den Jahrescheck (welcher die Jahre kontrolliert die in den 
+Sektionen angegeben sind) und den <a href="http://phunck.untergrund.net/helpdesk/_Wankercheck.html">Wankercheck</a>.<br>
+        <br>
+        Der Wankercheck ist ein System das  falsche Releases in falschen
+ Sektionen und ähnliche crap races heraus zu filtern versucht. Das 
+heisst dass bei Konsolengames zB. gecheckt wird ob auch ein 
+entsprechendes Tag im Release vorkommt etc. <br>
+        Somit können auch keine Filme ins XBOX-Dir getradet werden. 
+Serien in Filmsektionen werden ebenfalls geskippt und ein paar andere 
+Missgeschicke. Ausserdem filtert er Englisch und Deutsch (bzw. alle 
+anderen eingestellten Sprachen) raus wenn es mal in der falschen Sektion
+ ist, falls man GER. oder ENG. in die Sektionsbeschreibungen geschrieben
+ hat. Bei Videosektionen kann man auch immer x264,xvid oder dvdr 
+angeben, dies wird ebenfalls berücksichtigt.<br>
+        Allgemein also immer Sprache und Formate in die 
+Sektionsbeschreibungen schreiben. So kann der Wankercheck gut arbeiten 
+und verhindert, dass falsche Sachen in den Sektionen landen.<br>
+        <br>
+        Neben dem Wankercheck gibt es noch eine andere Möglichkeit, 
+Releases in falschen Sektionen zu verhindern und sogar umzuleiten in die
+ richtige, mit Hilfe von <a href="http://phunck.untergrund.net/helpdesk/_Redirections.html">Redirects</a> in den Sektionseinstellungen.</p>
+      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, <a href="http://phunck.untergrund.net/helpdesk/_Prioritaeten.html">hier</a> mal eine Reihenfolge wie d-tool arbeitet, damit auch alle Klarheiten beseitigt sind.
+      </p>
+      <p class="normalschrift"> mp3/0day: <br>
+        Alles was nicht Deutsch oder Englisch ist wird automatisch 
+geskipped. Die Skipliste liegt im d-tool Ordner und kann bearbeitet 
+werden. Man muss nur den 0day bzw MP3 Ordner angeben, das Datum hängt 
+das Script alleine dran. Oder man gibt den MP3-Today ordner an, dann 
+hängt das Script kein Datum an.<br>
+        Falls das Datum bei 0day/mp3 mitgepostet wird (zb 0528/TEST-MP3), einfach bei der entsprechenden Site "glFTPd" anhaken.<br>
+        <br>
+        cbftp/FTPRush:<br>
+        Man kann 2 verschiedene Clienten für die verschiedenen Aufgaben 
+wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br>
+        Bei Suchen und Raw-Befehlen ist die Suche an sich, technisch 
+gesehen, mit RushFTP viel schneller und zuverlässiger. Doch leider in 
+der Praxis wiederum nicht zuverlässiger, zumindest wenn man cbftp zum 
+racen benutzt, denn es werden meistens alls Logins geblockt und FTPRush 
+guckt in die Röhre...Aber die Suche per dll und FTPRush ist um einges 
+schneller und weniger aufwendig, wenn man mit dem JSON Api Script sucht,
+ dreht mIRC kurz mal durch...also bleibt hängen für ein paar Sekunden.<br>
+        Zudem sind die Suchergebnisse nicht so zuverlässig wie mit 
+FTPRush. Aber was hilft eine gut funktionierende Suche wenn keine Logins
+ frei sind. Und das ist eben bei cbftp immer der Fall, der nimmt sich 
+die Logins einfach, somit wieder ein Vorteil.</p>
+    <p class="normalschrift">&nbsp;</p></td>
+    <td width="228">&nbsp;</td>
+  </tr>
+</tbody></table>
+   </div>
+   </div>
+</div>
+  </div>
+  <div id="page-footer" class="page-footer" role="contentinfo">
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div><img src="Funktionsweise-Dateien/cron.gif" alt="cron" width="1" height="1"></div>
+
+<script src="Funktionsweise-Dateien/jquery.js"></script>
+<script src="Funktionsweise-Dateien/core.js"></script>
+
+
+
+<script src="Funktionsweise-Dateien/forum_fn.js"></script>
+<script src="Funktionsweise-Dateien/ajax.js"></script>
+
+
+
+
+
+</body></html>

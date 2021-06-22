@@ -1,0 +1,251 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="de" xml:lang="de">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="de" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style type="text/css">
+li {
+}
+.helpdesk {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+
+<title> &bull; Information</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - " href="/app.php/feed" />			<link rel="alternate" type="application/atom+xml" title="Feed - Neue Themen" href="/app.php/feed?mode=topics" />			
+<!--
+	phpBB style name: Lucid Lime
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:	  Eric Seguin
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Gib\u0020die\u0020Nummer\u0020der\u0020Seite\u0020an,\u0020zu\u0020der\u0020du\u0020gehen\u0020m\u00F6chtest.:';
+	var on_page = '';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="./../../../styles/lucid_lime/template/styleswitcher.js"></script>
+<script type="text/javascript" src="./../../../styles/lucid_lime/template/forum_fn.js"></script>
+
+<link href="./../../../styles/lucid_lime/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./../../../styles/lucid_lime/theme/stylesheet.css?assets_version=48" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./../../../styles/lucid_lime/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./../../../styles/lucid_lime/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./../../../styles/lucid_lime/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+
+</head>
+
+<body id="phpbb" class="section-app/styles/lucid_lime/theme/large.css ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="./../../../index.php" title="Foren-Übersicht" id="logo"><span class="imageset site_logo"></span></a>
+				<div style="margin-top: 36px; max-height: 65px;"><h1></h1>
+				<p style="font-size: 1.2em;"></p></div>
+				<p class="skiplink"><a href="#start_here">Zum Inhalt</a></p>
+		</div>
+
+					<div id="search-box">
+				<form action="./../../../search.php" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="text" maxlength="128" title="Suche nach Wörtern" class="inputbox search" value="Suche…" onclick="if(this.value=='Suche\u2026')this.value='';" onblur="if(this.value=='')this.value='Suche\u2026';" />
+					<input class="button2" value="Suche" type="submit" /><br />
+					<a href="./../../../search.php" title="Zeigt die erweiterten Suchoptionen an">Erweiterte Suche</a> 
+				</fieldset>
+				</form>
+			</div>
+		
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./../../../index.php" accesskey="h">Foren-Übersicht</a> </li>
+
+				<li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Ändere Schriftgröße">Ändere Schriftgröße</a></li>
+
+																			</ul>
+
+						<ul class="linklist leftside">
+				<li class="icon-ucp">
+					<a href="./../../../ucp.php" title="Persönlicher Bereich" accesskey="e">Persönlicher Bereich</a>
+											 &bull;
+					<a href="./../../../search.php?search_id=egosearch">Eigene Beiträge</a>
+														</li>
+			</ul>
+			
+			<ul class="linklist rightside">
+			    <li class="icon-faq"><a href="/_help/index.php" title="Installationshinweise" class="helpdesk">Helpdesk</a></li>
+			  <li class="icon-faq"><a href="/app.php/help/faq" title="Häufig gestellte Fragen">FAQ</a></li>
+									<li class="icon-members"><a href="./../../../memberlist.php" title="Zeigt eine vollständige Liste aller Mitglieder an">Mitglieder</a></li>					        <li class="icon-logout"><a href="./../../../ucp.php?mode=logout&amp;sid=53073911a922f8cc9b5000f49a2a223c" title="Abmelden" accesskey="x">Abmelden</a></li>
+							</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<div class="panel" id="message">
+	<div class="inner">
+	<h2 class="message-title">Information</h2>
+	<p>Die angeforderte Seite konnte nicht gefunden werden.</p>
+		</div>
+</div>
+
+				</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+							<span class="crumb"><a href="https://d-tool.sytes.net" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Startseite</span></a></span>									<span class="crumb"><a href="./../../../index.php" data-navbar-reference="index"><span>Foren-Übersicht</span></a></span>					</li>
+		
+				<li class="rightside">Alle Zeiten sind <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./../../../ucp.php?mode=delete_cookies" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Alle Cookies löschen</span>
+				</a>
+			</li>
+							<li class="rightside" data-last-responsive="true">
+					<a href="./../../../memberlist.php" title="Zeigt eine vollständige Liste aller Mitglieder an" role="menuitem">
+						<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Mitglieder</span>
+					</a>
+				</li>
+												<li class="rightside" data-last-responsive="true">
+				<a href="./../../../memberlist.php?mode=team" role="menuitem">
+					<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>Das Team</span>
+				</a>
+			</li>
+									<li class="rightside" data-last-responsive="true">
+				<a href="./../../../memberlist.php?mode=contactadmin" role="menuitem">
+					<i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Kontakt</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<br />Lucid Lime style created by <a href="http://www.melvingarcia.com">Melvin García</a>
+		<br>Co-Author: <a href="https://twitter.com/MannixMD">MannixMD</a>		
+		<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+				<p class="footer-row">
+			<span class="footer-copyright">Deutsche Übersetzung durch <a href="https://www.phpbb.de/">phpBB.de</a></span>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link" href="./../../../ucp.php?mode=privacy" title="Datenschutz" role="menuitem">
+				<span class="footer-link-text">Datenschutz</span>
+			</a>
+			|
+			<a class="footer-link" href="./../../../ucp.php?mode=terms" title="Nutzungsbedingungen" role="menuitem">
+				<span class="footer-link-text">Nutzungsbedingungen</span>
+			</a>
+		</p>
+						<p class="footer-row">
+			<a class="footer-link text-strong" href="./../../../adm/index.php?sid=53073911a922f8cc9b5000f49a2a223c">Administrations-Bereich</a>
+		</p>
+			</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX-Fehler" data-ajax-error-text="Bei der Verarbeitung deiner Anfrage ist ein Fehler aufgetreten." data-ajax-error-text-abort="Der Benutzer hat die Anfrage abgebrochen." data-ajax-error-text-timeout="Bei deiner Anfrage ist eine Zeitüberschreitung aufgetreten. Bitte versuche es erneut." data-ajax-error-text-parsererror="Bei deiner Anfrage ist etwas falsch gelaufen und der Server hat eine ungültige Antwort zurückgegeben.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Fehler" data-l-timeout-processing-req="Bei der Anfrage ist eine Zeitüberschreitung aufgetreten.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./../../../cron.php?cron_type=cron.task.core.tidy_search" width="1" height="1" alt="cron" /></div>
+
+<script src="./../../../assets/javascript/jquery.min.js?assets_version=48"></script>
+<script src="./../../../assets/javascript/core.js?assets_version=48"></script>
+
+
+
+<script src="./../../../styles/prosilver/template/forum_fn.js?assets_version=48"></script>
+<script src="./../../../styles/prosilver/template/ajax.js?assets_version=48"></script>
+
+
+
+</body>
+</html>

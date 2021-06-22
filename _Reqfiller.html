@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de" class=" jckdcyqi idc0_330" lang="de"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+li {
+}
+.helpdesk {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+
+<title> • Reqfiller Funktionsweise</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - " href="https://dtool.mooo.com/app.php/feed">			<link rel="alternate" type="application/atom+xml" title="Feed - Neue Themen" href="https://dtool.mooo.com/app.php/feed?mode=topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Fragen und Erklärungen" href="https://dtool.mooo.com/app.php/feed?f=7">	<link rel="alternate" type="application/atom+xml" title="Feed - Thema - Reqfiller Funktionsweise" href="https://dtool.mooo.com/app.php/feed?f=7&amp;t=3">
+<!--
+	phpBB style name: Lucid Lime
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:	  Eric Seguin
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Gib\u0020die\u0020Nummer\u0020der\u0020Seite\u0020an,\u0020zu\u0020der\u0020du\u0020gehen\u0020m\u00F6chtest.:';
+	var on_page = '';
+	var per_page = '10';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="_Reqfiller-Dateien/styleswitcher.html"></script>
+<script type="text/javascript" src="_Reqfiller-Dateien/forum_fn.html"></script>
+
+<link href="_Reqfiller-Dateien/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
+<link href="_Reqfiller-Dateien/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection">
+
+<link href="_Reqfiller-Dateien/normal.html" rel="stylesheet" type="text/css" title="A">
+<link href="_Reqfiller-Dateien/medium.html" rel="alternate stylesheet" type="text/css" title="A+">
+<link href="_Reqfiller-Dateien/large.html" rel="alternate stylesheet" type="text/css" title="A++">
+<style type="text/css">
+body,td,th {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+}
+body {
+	background-color: #262626;
+}
+</style>
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+  <div id="page-body">
+    <div id="p7" class="post has-profile bg2 online">
+      <div class="inner">
+        <dl class="postprofile" id="profile7">
+          <dd class="profile-contact">
+            <div class="dropdown-container dropdown-left">
+              <div class="dropdown">
+                <div class="dropdown-contents contact-icons">
+                  <div align="left"><a href="http://phunck.untergrund.net/helpdesk/index.html"><img src="site_logo.png" alt="" width="1024" height="96" /></a> </div>
+                </div>
+              </div>
+            </div>
+          </dd>
+          
+        </dl>
+        
+        <div class="postbody">
+          <div id="post_content7">
+
+						<h3 class="first">Reqfiller Funktionsweise</h3>
+<div class="content">Der Reqfiller muss im Hauptmenü angeschaltet werden, zudem auf den einzelnen Sites bei den Sektionen:<br>
+<br>
+fill - Ob von dieser site Requests gefillt werden sollen<br>
+get - Ob auf dieser Site Requests gefillt werden sollen<br>
+gl - Anhaken, wenn diese Site mit glFTPd läuft<br>
+!reqfilled - Ob auf dieser Site !reqfilled Commands gegeben werden sollen<br>
+<br>
+Ob es gl ist oder dr sieht man schnell an den Request Ordnern.<br>
+Bei <span style="color:#BF8000">drFTPd</span> steht der nick dabei, in der Regel <strong class="text-strong"><span style="color:#BFFF40">REQUEST-by.nick-</span></strong>Rls.rls.rls-RLS<br>
+bei <span style="color:#BF8000">glFTPd</span> steht <strong class="text-strong"><span style="color:#BFFF40">Req-</span></strong>Rls.rls.rls-RLS<br>
+<br>
+<br>
+- directory:<br>
+Hier den oder die Ordner angeben, in dem die Requests sind, zB. REQUESTS oder incoming/Requests<br>
+- chan:<br>
+Hier den Chan angeben, in dem die Request-Befehle gegeben werden. Wenn es keinen bestimmten gibt, einfach frei lassen<br>
+- gl.prefix:<br>
+Wenn es eine gl-Site ist und die Requestordner standardmässig mit 
+REQ-rls.rls-RLS angelegt werden, frei lassen. Wenn nicht, einfach 
+Eintragen was vor dem Request steht.<br>
+<br>
+Und so sieht das dann aus, kommt im d-tool_req Fenster:<br>
+<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Prison.Break.S04E24.Ein.letzter.Schritt.zur.Freiheit.Teil2.German.Dubbed.WS<br>
+.BDRip.XviD-iNSPiRED<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Prison.Break.S04E24.Ein.letzter.Schritt.zur.Freiheit.Teil2.German.Dubbed.WS<br>
+.BDRip.XviD-iNSPiRED<br>
+<span style="color:#BFFF00">Complete:</span> xx Prison.Break.S04E24.Ein.letzter.Schritt.zur.Freiheit.Teil2.German.Dubbed.WS<br>
+.BDRip.XviD-iNSPiRED<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<span style="color:#FF0000">Reqfill:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<span style="color:#BFFF00">Complete:</span> xx &gt; xx Lena_Meyer_Landrut-Love_Me-WEB-2010-VOiCE<br>
+<br>
+Der Reqfiller checkt alle Sites und tradet volle Kanone von allen auf 
+denen es ist. Bei Complete wird, wenn es aktiviert ist, automatisch der 
+!reqfilled Command ausgegeben<br>
+<br>
+Über das Rechtsklickmenü kann man dann noch bei 
+d-tool&gt;Settings&gt;die Anzahl Angeben, wie oft er das gefundene von 
+einer Site schieben soll und ob beim reqfillen die Länder berücksichtigt
+ werden sollen.<br>
+Wenn man das anschaltet wird nur immerhalb der gleichen Länder getradet.<br>
+Zudem kann man dort noch einstellen ob die Request-Commands der Leute im Request Fenster angezeigt werden sollen.</div>
+
+			
+			
+									
+									<div id="sig7" class="signature"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="_Reqfiller-Dateien/jquery.js"></script>
+<script src="_Reqfiller-Dateien/core.js"></script>
+
+
+
+<script src="_Reqfiller-Dateien/forum_fn.js"></script>
+<script src="_Reqfiller-Dateien/ajax.js"></script>
+
+
+
+
+
+</body></html>

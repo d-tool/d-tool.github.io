@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de" class=" atzdddbv idc0_330" lang="de"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+li {
+}
+.helpdesk {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+</style>
+
+<title> • Redirections</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - " href="https://dtool.mooo.com/app.php/feed">			<link rel="alternate" type="application/atom+xml" title="Feed - Neue Themen" href="https://dtool.mooo.com/app.php/feed?mode=topics">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Fragen und Erklärungen" href="https://dtool.mooo.com/app.php/feed?f=7">	<link rel="alternate" type="application/atom+xml" title="Feed - Thema - Redirections" href="https://dtool.mooo.com/app.php/feed?f=7&amp;t=10">
+<!--
+	phpBB style name: Lucid Lime
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:	  Eric Seguin
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Gib\u0020die\u0020Nummer\u0020der\u0020Seite\u0020an,\u0020zu\u0020der\u0020du\u0020gehen\u0020m\u00F6chtest.:';
+	var on_page = '';
+	var per_page = '10';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="_Redirections-Dateien/styleswitcher.html"></script>
+<script type="text/javascript" src="_Redirections-Dateien/forum_fn.html"></script>
+
+<link href="_Redirections-Dateien/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
+<link href="_Redirections-Dateien/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection">
+
+<link href="_Redirections-Dateien/normal.html" rel="stylesheet" type="text/css" title="A">
+<link href="_Redirections-Dateien/medium.html" rel="alternate stylesheet" type="text/css" title="A+">
+<link href="_Redirections-Dateien/large.html" rel="alternate stylesheet" type="text/css" title="A++">
+<style type="text/css">
+body,td,th {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #CCC;
+}
+body {
+	background-color: #262626;
+}
+</style>
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+  <div id="page-body">
+    <div id="p15" class="post has-profile bg2 online">
+      <div class="inner">
+        <dl class="postprofile" id="profile15">
+          <dd class="profile-contact">
+            <div class="dropdown-container dropdown-left">
+              <div class="dropdown">
+                <div class="dropdown-contents contact-icons">
+                  <div align="left"><a href="http://phunck.untergrund.net/helpdesk/index.html"><img src="site_logo.png" alt="" width="1024" height="96" /></a></div>
+                </div>
+              </div>
+            </div>
+          </dd>
+          
+        </dl>
+        
+        <div class="postbody">
+          <div id="post_content15">
+
+						<h3 class="first">Redirections</h3>
+<div class="content">Bekanntes Problem:<br>
+Auf einer Site gibt es zB für x264 eine Sektion, auf der Zielsite gibt es dafür 2 Sektionen, und zwar 720p und 1080p...<br>
+Bisher wurde dann nicht auf die richtigen Sektionen geleitet. Daher gibt es jetzt Redirections:<br>
+<br>
+Willst du dass ein<br>
+720p-Release von Site 1 aus Sektion x264 zur Site 2 in Sektion x264-720p<br>
+gesendet wird, gleichzeitig aber willst dass<br>
+1080p-Releases von Site 1 aus Sektion x264 zur Site 2 in Sektion x264-1080p<br>
+gesendet wird, gibt es jetzt die möglichkeit es so zu adden:<br>
+<br>
+Gegebenheiten:<br>
+Site 1 ist Sektion x264 - die passende Sektion auf Site 2 ist x264-720p.<br>
+Auf Site 2 gibt es zusätzlich die Sektion x264-1080p, wofür es auf Site 1 keine Sektion gibt.<br>
+<br>
+So muss man dafür sorgen dass in Sektion 720p nicht 1080p gesendet wird und umgekehrt, also in der Blacklist adden.<br>
+Dazu muss man dafür sorgen dass 1080p Releases in die andere Sektion gelenkt werden.<br>
+Dafür geht man im Sektionsmenü der Site 2 auf Redirections und trägt ein:<br>
+<span style="color:#BFFF00">x264-720p</span> + <span style="color:#FFBF00">x264-1080p</span> + <span style="color:#FF8000">1080p</span><br>
+<br>
+Das heisst: Sende Releases von <span style="color:#BFFF40">x264-720p</span> von Site 1 nach <span style="color:#FFBF00">x264-1080p</span> von Site 2, wenn <span style="color:#FF8000">1080p</span> drin vorkommt<br>
+<br>
+Umgekehrt muss man auch dafür sorgen, dass die Sektion 1080p von Site 2,
+ die es auf Site 1 gar nicht gibt, nach x264 auf Site 1 geschoben wird.<br>
+Dazu erstellt man auf der Site 1 eine Dummie-Sektion, Namen kann man 
+vergeben wie man will, ich schreib immer "fake" mit rein, damit ich 
+später noch bescheid weiss. Directory zeigt dann zu der x264 Sektion.<br>
+Und erstellt dann auf der Site eine Redirection von der Dummie 1080p-Sektion nach x264 mit dem Match "1080p".<br>
+Zuletzt msus diese Sektion noch aktivier werden<br>
+<br>
+Fertig<br>
+<br>
+Mögliche Einträge:<br>
+Einfache Einträge, Wildcards (*abc*fgh*), Mehrfacheinträge wie entry|entry und der Eintrag SPORT sind möglich.<br>
+Man kann statt einem Match das im Release vorkommt eben auch SPORT als 
+match eintragen. Dann wird alles umgeleitet, was die matches im Release 
+hat, die bei /dteditsport eingetragen werden.<br>
+<br>
+Und man kann nun, falls sich 2 Redirections zanken würden, eines der 
+beiden forcen mit einem ! vor dem match, zb. TV-EN+TV-x264+!1080p. <br>
+Wenn es nun noch eine Redirection mit TV-EN+TV-HDTV+HDTV gibt, wird immer die mit ! ausgeführt. <br>
+Denn bei einem Release wie Rls.rls.1080p.HDTV.x264-RLS wäre nicht klar 
+was nun vorrangig ist, HDTV oder 1080p. Hier ist es 1080p und das rls 
+wird nicht zu TV-HDTV, sondern zu TV-x264 geschoben.<br>
+Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.<br>
+<br>
+<br>
+<br>
+Hier mal ein Auszug aus meinem at-Fenster, hier hab ich eine Redirection
+ für Sport bei Site BB eingetragen, die wurde richtig geleitet und 
+geschoben, die anderen nicht, weil es eine TV Sektion ist und ich TV  in
+ die Sektionsbeschreibung geschrieben hab, somit greift der Wankercheck 
+und sagt, NEIN. Denn es gibt kein ExxSxx oder ähnliches im 
+Releasenamen..das muss drin vorkommen, wenn man TV bei der Beschreibung 
+einträgt. Was drin steht sieht man hier: (TV X264 GER.)<br>
+<br>
+[06:53:06] TV-X264-DE AA  WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake<br>
+ 62 - [06:53:06] TV-X264-DE  AA &gt; BB  - 
+WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake -
+ w - SPORT-DE*German* - INCOMING/TV-X264-DE &gt; SPORT-DE  (redirect) 
+SPORT<br>
+[06:53:07]  Wankercheck halted  TV-X264-DE &gt; TV-X264-DE (TV X264 
+GER.) 
+WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake 
+ @  AA &gt; CC (no.series)<br>
+[06:53:07]  Wankercheck halted  TV-X264-DE &gt; TV-720P-DE (TV X264 
+GER.) 
+WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake 
+ @  AA &gt; DD (no.series)<br>
+<br>
+Zu guter letzt noch ein Schaubild, was die Handhabung nochmal an einem 
+anderen Beispiel zeigt, diesmal gibt es Site a mit nur console für 
+alles, auf site b gibts xbox, wii und ps3 getrennt.<br>
+Für die beiden Sektionen, die es auf der Site a nicht gibt, vergibt man 
+Fake Sektionen. Diese gezeigte Möglichkeit ist eine, ich nutze eben die 
+eine der 3 Sektionen von der einen Site für die Gesamte der anderen.<br>
+Ansonsten müsste man eine extra Sektion für Console machen, das erspare 
+ich mir nur und nutze einer der vorhandenen für Console..<br>
+Genauso mache ich es bei x264 und 1080p und 720p, die normale Sektion für x264 ist immer 720p, die extra Sektion ist 1080p.<br>
+<img src="_Redirections-Dateien/schaubild-redirs.png" class="postimage" alt="Bild"><br>
+Zuletzt noch wichtig: <strong class="text-strong">Niemals Fake-Sektionen aktivieren!!!</strong> <br>
+Also auf der Site "race in this section" aktivieren. Man braucht sie 
+nicht aktivieren um sie für Redirects zu nutzen, daher dann immer 
+deaktiviert lassen. Andernfalls, wenn man cbftp nutzt, könnte da mal was
+ durchrutschen und das kann üble folgen haben, denn cbftp bekommt 
+einfach die Obersektion, die beiden Sites, das rls und ab gehts, solange
+ von den Rules nichts dagegen spricht, da man für Fake sektionen niemals
+ Rules angibt, wird alles getradet.</div>
+
+			
+			
+									
+									<div id="sig15" class="signature"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="_Redirections-Dateien/jquery.js"></script>
+<script src="_Redirections-Dateien/core.js"></script>
+
+
+
+<script src="_Redirections-Dateien/forum_fn.js"></script>
+<script src="_Redirections-Dateien/ajax.js"></script>
+
+
+
+
+
+</body></html>
