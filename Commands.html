@@ -139,33 +139,31 @@ Vorher Release in die Zwischenablage kopieren und Sektion merken<br>
   <strong>/dtrc </strong>- Rushstats im Channel posten
   <br> 
   _____________________________________________________________</p>
-      <p class="normalschrift"><strong>/dse &lt;sitename&gt; &lt;suchwörter&gt;</strong> - Sitesearch-Funktion <br>
-        Sitenamen so angeben wie er in Rush ist<br>
-        <strong>/dsa &lt;suchwörter&gt;</strong> - Globalsuche<br>
-        <strong>/dtc &lt;site&gt; &lt;command&gt;</strong> - RAWCommand auf der Site ausführen<br>
-        <strong>/dtca &lt;command&gt;                        </strong>- RAWCommand auf allen Sites ausführen<br>
-        <strong>/dtcb &lt;site&gt; &lt;command&gt; </strong>- RAWCommand cbftp (single line response, fast)<br>
-        Wenn man nur Stats abfragen will emfiehlt sich dieser command 
-direkt über die udp api von cbftp, wenn die Antwort mehrere Zeilen 
-erfordert, wie z.B. eine Suche, dann muss man die nächsten Befehle 
+      <p class="normalschrift"><strong>/dse &lt;sitename&gt; &lt;suchwörter&gt;</strong> - Search:Rush<br>
+        <strong>/dsa &lt;suchwörter&gt;</strong> - Search:All:Rush<br>
+        <strong>/dtc &lt;site&gt; &lt;command&gt;</strong> - RawCmd:Rush<br>
+        <strong>/dtca &lt;command&gt;                        </strong>- RawCmd:All:Rush<br>
+        <strong>/dtcb &lt;site&gt; &lt;command&gt; </strong>- RawCmd:cbftp (single line response, fast)<br>
+        Wenn man nur Stats abfragen will, empfiehlt sich dieser Befehl 
+direkt über die UDP API von cbftp wenn die Antwort mehrere Zeilen 
+erfordert, wie z.B. eine Suche. Dann muss man die nächsten Befehle 
 nutzen. Diese gehen dann über JSON, lassen mIRC kurz etwas durchdrehen, 
 dann hat man seine Ergebnisse.
         <br />
-        <strong>/dtcbs</strong> <strong>&lt;site&gt; &lt;item&gt;</strong> - Search cbftp<br>
-        <strong>/dsc &lt;site&gt; &lt;item&gt; </strong>- Siteseach cbftp/json<br>
-        <strong>/dsca  &lt;item&gt; </strong>- Siteseach all cbftp/json<br>
-        <strong>/dcc &lt;site&gt; &lt;command&gt; </strong>- RawCommand cbftp/json<br>
-        <strong>/dcca  &lt;command&gt; </strong>- RawCommand all cbftp/json <br>
+        <strong>/dtcbs</strong> <strong>&lt;site&gt; &lt;item&gt;</strong> - Search:cbftp<br>
+        <strong>/dsc &lt;site&gt; &lt;item&gt; </strong>- Seach:cbftp/json<br>
+        <strong>/dsca  &lt;item&gt; </strong>- Search:All:cbftp/json<br>
+        <strong>/dcc &lt;site&gt; &lt;command&gt; </strong>- RawCmd:cbftp/json<br>
+        <strong>/dcca  &lt;command&gt; </strong>- RawCmd:All:cbftp/json <br>
         <strong>/dinv &lt;nick&gt; &lt;site1&gt; &lt;site2&gt; ...</strong> - Invite auf einer oder mehrere Sites<br>
         <strong>/dinvite</strong> - Invite auf allen Sites, falls die IRC-Nicks in den Siteeinstellungen stehen<br />
         <strong>/dtsite &lt;site&gt;</strong> - Siteinfo cbftp        <br />
-        /dtjobs - Active races cbftp<br>
+        <strong>/dtjobs</strong> - Active Races cbftp<br>
         <strong>/dtlc</strong> - Linecheck <br>
-        Für die Nummern der Wörter im Release, da die wegen Farbcodes <br>
-        etc. manchmal so nicht zählbar sind. Bevor man den Befehl 
-benutzt, muss man die komplette Zeile des NEW-Announce mit Farbcodes 
-etc. kopieren indem man beim markieren Strg drückt. Wenn man danach den 
-Befehl <span class="italic">/dtlc</span> ausführt, werden die Wörter etc. mit Nummern angezeigt. <br>
+        Für die Nummern der Wörter im Release, da diese wegen Farbcodes etc. manchmal so nicht zählbar sind. Bevor man den Befehl 
+nutzt, muss man die komplette Zeile des NEW Announce mit Farbcodes 
+etc. kopieren indem man beim markieren STRG drückt. Wenn man danach den 
+Befehl <span class="italic">/dtlc</span> ausführt, werden die Wörter mit den Nummern angezeigt wie mIRC sie versteht. <br>
         <strong>/dtedit</strong> - d-tool.ini öffnen<br />
         <strong>/dtdir</strong> - d-tool Verzeichnis öffnen        <br>
         <strong>/dtrf</strong> - Reqfill<br>
@@ -182,9 +180,9 @@ Befehl <span class="italic">/dtlc</span> ausführt, werden die Wörter etc. mit 
         _____________________________________________________________<br>
         <br>
         <strong>/triggers</strong> - Trigger anzeigen<br>
-        Trigger sind Wörter die man adden kann wenn man auf ein Release 
+        Trigger sind Wörter, die man adden kann wenn man auf ein Release 
         wartet. Wird etwas Released, was dieses Wort beinhaltet, öffnet sich ein
-        Fenster mit einer Meldung<br>
+        Fenster mit einer Meldung. Ganz einfach<br>
         <strong>/addtrigger &lt;wort&gt;</strong> - 3 mal darfst du raten<br>
         <strong>/edittriggers</strong> - Trigger ändern
         <br>
