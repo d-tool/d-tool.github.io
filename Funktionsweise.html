@@ -167,16 +167,20 @@ hängt das Script kein Datum an.<br>
         Man kann 2 verschiedene Clienten für die verschiedenen Aufgaben 
 wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br>
         Bei Suchen und Raw-Befehlen ist die Suche an sich, technisch 
-gesehen, mit RushFTP viel schneller und zuverlässiger. Doch leider in 
-der Praxis wiederum nicht zuverlässiger, zumindest wenn man cbftp zum 
+gesehen, mit RushFTP schneller und zuverlässiger. Doch leider in 
+der Praxis wiederum nicht, zumindest wenn man cbftp zum 
 racen benutzt, denn es werden meistens alls Logins geblockt und FTPRush 
-guckt in die Röhre...aber die Suche per dll und FTPRush ist um einges 
+guckt in die Röhre. Aber die Suche per dll und FTPRush ist um einges 
 schneller und weniger aufwendig. Wenn man mit dem JSON Api Script sucht,
  dreht mIRC kurz mal durch...also bleibt hängen für ein paar Sekunden. Man braucht aber das JSON Script, da man nur damit mehrere Sites gleichzeitig durchsuchen oder Raw-Refehle senden kann. Für einzelne Sites kann man auch die http API von cbftp nutzen ohne JSON. Das geht ebenso sehr schnell.<br>
         Zudem sind die Suchergebnisse nicht so zuverlässig wie mit 
 FTPRush wie es scheint. Aber was hilft eine gut funktionierende Suche wenn keine Logins
  frei sind. Und das ist eben bei cbftp immer der Fall, der nimmt sich 
-die Logins einfach, somit wieder ein Vorteil.</p>
+die Logins einfach, somit wieder ein Vorteil.<br />
+<br />
+      Bezüglich racing mit cbftp: <br />
+       d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Site auf der Site in cbftp nicht als Target angegeben ist, added d-tool sie. Andersherum löscht d-tool das Target aber nicht, wenn man sie wieder wegnimmt als Fillsite. Den Automatismus halte ich für unklug, da ich es für klug halte tendenziell eher mehreren Sites es zu erlauben auf einer Site  zu fillen, so hat man immer nette nebeneffekte bzw. so hat man schnell mal Vorteile durch das super spreadsystem von cbftp. Zudem würde das eben bedeuten, dass die Sources/Targets der Sites in cbftp immer den Fillsites in d-tool entsprechen. Aus zuvor genannten Gründen eben nicht wirklich schlau, es ist eher von Vorteil wenn man das nochmal selber durch den Befehl /dcbsync
+      managen kann wie man es gerne haben möchte. Das soll frei und unabhängig bleiben. Es macht eber eben keinen Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist, somit ist der einseitige automatismus sehr Hilfreich.</p>
     <p class="normalschrift">&nbsp;</p></td>
     <td width="228">&nbsp;</td>
   </tr>
