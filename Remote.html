@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de" class=" mmspxhixc idc0_330" lang="de"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="de" class=" mycohmrwrs idc0_330" lang="de"><head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="content-style-type" content="text/css">
@@ -16,6 +16,9 @@ li {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	font-weight: bold;
+}
+.Grüntext {
+	color: #BFFF40;
 }
 </style>
 
@@ -71,28 +74,42 @@ li {
 
 // ]]>
 </script>
-<script type="text/javascript" src="Remote-Dateien/styleswitcher.html"></script>
-<script type="text/javascript" src="Remote-Dateien/forum_fn.html"></script>
+<script type="text/javascript" src="Installation-Dateien/styleswitcher.html"></script>
+<script type="text/javascript" src="Installation-Dateien/forum_fn.html"></script>
 
-<link href="Remote-Dateien/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
-<link href="Remote-Dateien/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection">
+<link href="Installation-Dateien/print.css" rel="stylesheet" type="text/css" media="print" title="printonly">
+<link href="Installation-Dateien/stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection">
 
-<link href="Remote-Dateien/normal.html" rel="stylesheet" type="text/css" title="A">
-<link href="Remote-Dateien/medium.html" rel="alternate stylesheet" type="text/css" title="A+">
-<link href="Remote-Dateien/large.html" rel="alternate stylesheet" type="text/css" title="A++">
+<link href="Installation-Dateien/normal.html" rel="stylesheet" type="text/css" title="A">
+<link href="Installation-Dateien/medium.html" rel="alternate stylesheet" type="text/css" title="A+">
+<link href="Installation-Dateien/large.html" rel="alternate stylesheet" type="text/css" title="A++">
 <style type="text/css">
-body,td,th {
-	color: #CCC;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 12px;
-}
 body {
 	background-color: #262626;
 }
+body,td,th {
+	color: #CCCCCC;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+}
+.Grüntext-del {	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	color: #BFFF40;
+}
+.Normaltext-del {	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+}
+.lala {	color: #400040;
+}
+.Überschrifttext-del {	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
 </style>
+<link href="BlackWhitelist-Dateien/stylesheet.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="phpbb" class="section-remote ltr">
+<body id="phpbb" class="section-installation ltr">
 
 <div id="wrap">
   <div id="page-body">
@@ -101,42 +118,48 @@ body {
 
    <div class="content">
 
-   <table width="1043" height="96" border="0" align="left">
+<table width="1040" height="286" border="0" align="left">
   <tbody><tr>
-    <td colspan="3" align="left"><a href="https://d-tool.github.io/"><img src="Remote-Dateien/board-banner.png" alt="d-tool-Banner" width="1024" height="96" border="0"></a></td>
+    <td colspan="3" align="left"><a href="https://d-tool.github.io/"><img src="Installation-Dateien/board-banner.png" alt="d-tool-Banner" width="1024" height="96" border="0"></a></td>
   </tr>
   <tr>
-    <td width="150" valign="top"><a href="https://d-tool.github.io/index.html"><img src="Index-Dateien/button-home.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Installation.html"><img src="Index-Dateien/button-installation.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Funktionsweise.html"><img src="Index-Dateien/button-funktionsweise.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/MainSetup.html"><img src="Index-Dateien/button_allg_setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/SiteSetup.html"><img src="Index-Dateien/button-site-setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Windows.html"><img src="Index-Dateien/button-windows.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Commands.html"><img src="Index-Dateien/button-commands.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Remote.html"><img src="Remote-Dateien/button-remote-1.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Tips.html"><img src="Index-Dateien/button-tips.png" alt="" width="130" height="20" border="0" /></a></td>
-    <td width="650" valign="top" align="left"><p class="normalschrift"><br>
-    </p>
-      <p class="normalschrift"><strong>REMOTE</strong></p>
-      <p class="normalschrift">Sollte man den at auf einem Server bzw. 
-einer VM laufen lassen, kann man sich zb. dtinfo oder Rush-Stats remote 
-anzeigen lassen. <br>
-    Dazu dann die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
- at läuft. Die Befehle stehen im Rechtsklickmenü unter Remote im d-tool.<br>
-    Wenn man
-    d-tool Zuhause gar nicht geladen hat, kann man sich die 
-d-tool-remotemenü.mrc reinladen, um nur die Befehle für Remote zu 
-bekommen<br>
-      </p></td>
-    <td width="229">&nbsp;</td>
+    <td width="130" valign="top" height="182"><a href="https://d-tool.github.io/index.html"><img src="Index-Dateien/button-home.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Installation.html"><img src="Installation-Dateien/button-installation-1.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Funktionsweise.html"><img src="Index-Dateien/button-funktionsweise.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/MainSetup.html"><img src="Index-Dateien/button_allg_setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/SiteSetup.html"><img src="Index-Dateien/button-site-setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Windows.html"><img src="Index-Dateien/button-windows.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Commands.html"><img src="Index-Dateien/button-commands.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Remote.html"><img src="Index-Dateien/button-remote.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Tips.html"><img src="Index-Dateien/button-tips.png" alt="" width="130" height="20" border="0" /></a></td>
+    <td width="995" valign="top"><div id="wrap2">
+      <div id="page-body2">
+        <div id="p6" class="post has-profile bg2 online">
+          <div class="inner">
+            <div class="postbody">
+              <div id="post_content6">
+                <h3 align="left" class="Grüntext"><br />
+                  <strong>REMOTE</strong></h3>
+                <p class="normalschrift">Sollte man den at auf einem Server bzw. 
+                  einer VM laufen lassen, kann man sich zb. dtinfo oder Rush-Stats remote 
+                  anzeigen lassen. <br />
+                  Dazu dann die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
+                  at läuft. Die Befehle stehen im Rechtsklickmenü unter Remote im d-tool.<br />
+                  Wenn man
+                  d-tool Zuhause gar nicht geladen hat, kann man sich die 
+                  d-tool-remotemenü.mrc reinladen, um nur die Befehle für Remote zu 
+                  bekommen</p>
+              </div></div></div></div></div></div></td>
+    <td class="normalschrift" width="1" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
-<p class="normalschrift">&nbsp;</p>
-
    </div>
-
-   <span class="corners-bottom"><span></span></span></div>
-</div>
-
-
-<div class="action-bar actions-jump">
-	
-		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
-		  <script src="Remote-Dateien/ajax.js"></script>
-      </div>
+   </div>
 </div>
   </div>
 </div>
-</body></html>
+<script src="Installation-Dateien/jquery.js"></script>
+<script src="Installation-Dateien/core.js"></script>
+
+
+
+<script src="Installation-Dateien/forum_fn.js"></script>
+<script src="Installation-Dateien/ajax.js"></script>
+
+
+
+
+
+                     </body></html>
