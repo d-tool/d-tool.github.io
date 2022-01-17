@@ -122,100 +122,86 @@ body,td,th {
   </tr>
   <tr>
     <td width="130" valign="top" height="182"><a href="https://d-tool.github.io/index.html"><img src="Index-Dateien/button-home.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Installation.html"><img src="Index-Dateien/button-installation.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Funktionsweise.html"><img src="Index-Dateien/button-funktionsweise.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/MainSetup.html"><img src="Index-Dateien/button_allg_setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/SiteSetup.html"><img src="Index-Dateien/button-site-setup.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Windows.html"><img src="Index-Dateien/button-windows.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Commands.html"><img src="Index-Dateien/button-commands.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Remote.html"><img src="Index-Dateien/button-remote.png" alt="" width="130" height="20" border="0" /></a><a href="https://d-tool.github.io/Tips.html"><img src="Index-Dateien/button-tips.png" alt="" width="130" height="20" border="0" /></a></td>
-    <td width="995" valign="top"><br />
-      <div id="wrap2">
-      <div id="page-body2">
-        <div id="p18" class="post has-profile bg2 online">
-          <div class="inner">
-            <div class="postbody">
-              <div id="post_content18"> <strong>BLACK-/WHITELIST</strong>
-                <div class="content">                  <br />
-                  <br />
-                  Generell gilt Whitelist geht vor Blacklist. Man skipt mit der Blacklist   bestimmte Sachen oder ganze Sektionen und kann dann per Whitelist   wiederum etwas erlauben. <br />
-                    Zudem kann man dann per <strong class="Grüntext">+</strong> in der Blacklist wiederum skipen, auch wenn ein Eintrag in der Whitelist matcht. Und auch die Blacklist kann man mit einem <strong class="Grüntext">+</strong> in der Whitelist wieder toppen.<br />
-                    Möglich sind einfache Einträge wie <strong class="Grüntext">Subbed</strong> und Wildcards wie <strong class="Grüntext">*dTV*-Group</strong> mit Sternchen.<br />
-                    Per Wildcards kann man den Eintrag auch auf Sektionen festlegen. Nutzt man damit zB <strong class="Grüntext">XViD*-Group</strong>, also eine Sektion, muss der Sektionsname vor dem ersten Stern stehen (am besten Sektion aus der Picklist wählen).<br />
-                    Ein <strong class="Grüntext">+</strong> in der Blacklist macht den Eintrag stärker als die Whitelist, ein <strong class="Grüntext">+</strong> in der Whitelist macht den Eintrag stärker als die Blackerlist mit <strong class="Grüntext">+</strong> und die Global Blacklist.<br />
-                    Mit stärker ist gemeint, dass der Eintrag dann bewirkt, dass etwas   getradet wird, obwohl etwas in der anderen Liste dagegen spricht. <br />
-                    Man   hat zB. etwas auf der Blacklist stehen und das Release würde gekipped   werden, lässt aber über die Whitelist wiederum etwas durch und will dann   aber wieder etwas darüber hinaus verbieten.<br />
-                    Zuletzt kann man dann nochmal mit einem <strong class="Grüntext">!</strong> vor einem Eintrag in der Blacklist wiederum sagen, dieser Eintrag ist   wieder stärker als die Whitelist, wird das ausgelöst steht als   Skipeintrag Blackestlist. Dann ist aber auch Ende mit den Möglichkeiten.<br />
-                    Möchte man nur eine Sektion in die Blacklist eintragen, dann mit <strong class="Grüntext">^</strong>. Das deklariert den Eintrag als Sektion und muss genauso geschrieben werden wie der Sektionsname.<br />
-                    Man kann in der Black-/Whitelist auch mehrere Sachen mit einem Eintrag erlauben, dann mit <strong class="Grüntext">|</strong> trennen und an eine Sektion binden, zB. <strong class="Grüntext">TV*Grp|Grp|Grp</strong>.<br />
-                    Ausserdem kann man mit einem <strong class="Grüntext">~</strong> vor dem Eintrag bzw. mit einem <strong class="Grüntext">+</strong> gepaart per Regex skippen/allowen oder mit <strong class="Grüntext">TV*SPORT</strong> in der Black- sowie Whitelist Sport explizit regeln. Dann skipt/erlaubt man das, was man unter /dteditsport angegeben hat.<br />
-                    Die Besonderheit bei Regexeinträgen ist, dass man die Sektion mit einem <strong class="Grüntext">'</strong> separiert statt mit einem<span class="Grüntext"> <strong>*</strong></span> wie sonst. Also zb. <strong class="Grüntext">~TV-ENG-HD'.S[0-9][0-9]E[0-9][0-9]</strong>. Das macht die Picklist aber automatisch wenn man eine Sektion wählt und vorher das <strong class="Grüntext">~</strong> eintragen hat.<br />
-                  
-                  <p><br />
-                    <strong class="Grüntext">Blacklist:</strong><br />
-                    Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
-                    <br />
-                    <strong class="Grüntext">* = Eintrag wird als Wildcard auf Sektion+Rls angewendet ( zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</strong><br />
-                    Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
-                    Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
-                    <br />
-                    <strong class="Grüntext">^ = Sagt dem d-tool, dass es sich um eine Sektion handelt ( zB. ^APPS)</strong><br />
-                    Somit wird diese Sektion erstmal komplett verboten. Es sei denn etwas auf der Whitelist spricht dagegen.<br />
-                    <br />
-                    <strong class="Grüntext">+ = Eintrag ist stärker als die Whitelist (Blackerlist)</strong><br />
-                    Also angenommen man hat etwas auf der Blacklist stehen, zb. die ganze Sektion mit ^APPS. <br />
-                    Auf der Whitelist stehen die erlaubten Groups mit   APPS*ENGiNE|RESTORE|BIE. Somit würden erstmal nur die erlaubten Groups   durchgelassen werden. <br />
-                    Nun ist aber noch Alpha und Beta nicht erlaubt, und so hat man mit dem +   in der Blacklist nochmal die Möglichkeit, diesen Eintrag über einen   normalen Eintrag in der Whitelist zu stellen. <br />
-                    Also +APPS*Alpha|Beta auf die Blacklist und fertig.<br />
-                    Nun könnte nur noch ein Eintrag mit einem + in der Whiltelist es möglich   machen, dass doch etwas mit Alpha und Beta drin getradet wird..<br />
-                    <br />
-                    <strong class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</strong><br />
-                    Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
-                    <br />
-                    <span class="Grüntext"><strong>! = Eintrag ist stärker als die Whitelist mit + (Blackestlist)</strong><br />
-                      <br />
-                      <strong>~ = Eintrag mit Regex</strong></span><br />
-                    <br />
-                    Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
-                    zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
-                    <br />
-                    <br />
-                    <strong class="Grüntext">Whitelist:</strong><br />
-                    Erstmal ist alles, was in der Whitelist steht, &quot;stärker&quot; als die   Blacklisteinträge. Also kommt im Release etwas vor, das in der Blacklist   steht, aber auch auf der Whitelist, wird geraced.<br />
-                    Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
-                    <br />
-                    <strong class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </strong><br />
-                    Das heisst, möchte man etwas IMMER durchlassen, einfach mit einem + in die Whitelist<br />
-                    <br />
-                    <strong class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</strong><br />
-                    Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
-                    <br />
-                    <strong class="Grüntext">~ = Eintrag mit Regex</strong><br />
-                    <br />
-                    <br />
-                    <strong class="Grüntext">Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
-                    Verbotene Sektion in der Blacklist: <strong class="Grüntext">^GAMES</strong><br />
-                    Black- oder Whitelisteintrag mit Sektion: <strong class="Grüntext">GAMES*clone*-GRP</strong>, <strong class="Grüntext">GAMES*German</strong>, <strong class="Grüntext">+GAMES*german*clone*</strong>, <strong class="Grüntext">GAMES*Grp|Grp|Grp</strong><br />
-                    Einfacher Black- oder Whitelisteintrag: <strong class="Grüntext">EMU, *720p*PsO</strong> , <strong class="Grüntext">*dTV*GERMAN*</strong> oder <strong class="Grüntext">+PAL</strong> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom<br />
-                    Release steht und somit dahinter nichts mehr kommt)<br />
-                    Sport Skip Blacklist: <strong class="Grüntext">tv-de*SPORT</strong><br />
-                    Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <strong class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong> oder <strong class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong> oder <strong class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong><br />
-                  </p>
-                  <p><br />
-                    <strong class="Grüntext">Affilliste</strong><br />
-                    Die Affilliste ist case-sensitive und kann keine Wildcards. Affils müssen mit Strich eingetragen werden (z.B.<strong class="Grüntext"> -AEROHOLiCS</strong>), so werden die Affils beim &quot;/dtaffils&quot;-command richtig<br />
-                    angezeigt.<br />
-                    Möchte man neben den Affils auch banned Groups eintragen, dann ohne Strich und mit einem <strong><span class="Grüntext">|</span></strong> trennen: <strong class="Grüntext">grp|grp|grp</strong><br />
-                  </p>
-                  <p><br />
-                    <strong class="Grüntext">Globale Blacklist</strong><br />
-                    Es gehen nur Wildcards. Anders als in den Sitelisten müssen hier die   Einträge immer vorne und hinten einen Stern haben. Ein <span class="Grüntext"><strong>!</strong></span> macht den   Eintrag case-sensitive, falls man das braucht.<br />
-                  </p>
-                  <p><br />
-                    <strong class="Grüntext">Globale Whitelist</strong><br />
-                    Es gehen keine Wildcards. Also keine Sterne eintragen. In der Regel   packt man auf die Gobale Whitelist nur Groups die sowieso überall   erlaubt sind, also Majorgroups.<br />
-                  </p>
-              </div>
-                <div id="sig18" class="signature"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>      <h3 class="first">&nbsp;</h3></td>
+    <td width="995" valign="top"><p><strong><br />
+      BLACK-/WHITELIST</strong><br />
+      <br />
+      <br />
+      Generell gilt Whitelist geht vor Blacklist. Man skipt mit der Blacklist   bestimmte Sachen oder ganze Sektionen und kann dann per Whitelist   wiederum etwas erlauben. <br />
+      Zudem kann man dann per <strong class="Grüntext">+</strong> in der Blacklist wiederum skipen, auch wenn ein Eintrag in der Whitelist matcht. Und auch die Blacklist kann man mit einem <strong class="Grüntext">+</strong> in der Whitelist wieder toppen.<br />
+      Möglich sind einfache Einträge wie <strong class="Grüntext">Subbed</strong> und Wildcards wie <strong class="Grüntext">*dTV*-Group</strong> mit Sternchen.<br />
+      Per Wildcards kann man den Eintrag auch auf Sektionen festlegen. Nutzt man damit zB <strong class="Grüntext">XViD*-Group</strong>, also eine Sektion, muss der Sektionsname vor dem ersten Stern stehen (am besten Sektion aus der Picklist wählen).<br />
+      Ein <strong class="Grüntext">+</strong> in der Blacklist macht den Eintrag stärker als die Whitelist, ein <strong class="Grüntext">+</strong> in der Whitelist macht den Eintrag stärker als die Blackerlist mit <strong class="Grüntext">+</strong> und die Global Blacklist.<br />
+      Mit stärker ist gemeint, dass der Eintrag dann bewirkt, dass etwas   getradet wird, obwohl etwas in der anderen Liste dagegen spricht. <br />
+      Man   hat zB. etwas auf der Blacklist stehen und das Release würde gekipped   werden, lässt aber über die Whitelist wiederum etwas durch und will dann   aber wieder etwas darüber hinaus verbieten.<br />
+      Zuletzt kann man dann nochmal mit einem <strong class="Grüntext">!</strong> vor einem Eintrag in der Blacklist wiederum sagen, dieser Eintrag ist   wieder stärker als die Whitelist, wird das ausgelöst steht als   Skipeintrag Blackestlist. Dann ist aber auch Ende mit den Möglichkeiten.<br />
+      Möchte man nur eine Sektion in die Blacklist eintragen, dann mit <strong class="Grüntext">^</strong>. Das deklariert den Eintrag als Sektion und muss genauso geschrieben werden wie der Sektionsname.<br />
+      Man kann in der Black-/Whitelist auch mehrere Sachen mit einem Eintrag erlauben, dann mit <strong class="Grüntext">|</strong> trennen und an eine Sektion binden, zB. <strong class="Grüntext">TV*Grp|Grp|Grp</strong>.<br />
+      Ausserdem kann man mit einem <strong class="Grüntext">~</strong> vor dem Eintrag bzw. mit einem <strong class="Grüntext">+</strong> gepaart per Regex skippen/allowen oder mit <strong class="Grüntext">TV*SPORT</strong> in der Black- sowie Whitelist Sport explizit regeln. Dann skipt/erlaubt man das, was man unter /dteditsport angegeben hat.<br />
+      Die Besonderheit bei Regexeinträgen ist, dass man die Sektion mit einem <strong class="Grüntext">'</strong> separiert statt mit einem<span class="Grüntext"> <strong>*</strong></span> wie sonst. Also zb. <strong class="Grüntext">~TV-ENG-HD'.S[0-9][0-9]E[0-9][0-9]</strong>. Das macht die Picklist aber automatisch wenn man eine Sektion wählt und vorher das <strong class="Grüntext">~</strong> eintragen hat.<br />
+    </p>
+      <p><br />
+  <strong class="Grüntext">Blacklist:</strong><br />
+  Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
+  <br />
+  <strong class="Grüntext">* = Eintrag wird als Wildcard auf Sektion+Rls angewendet ( zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</strong><br />
+  Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
+  Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
+  <br />
+  <strong class="Grüntext">^ = Sagt dem d-tool, dass es sich um eine Sektion handelt ( zB. ^APPS)</strong><br />
+  Somit wird diese Sektion erstmal komplett verboten. Es sei denn etwas auf der Whitelist spricht dagegen.<br />
+  <br />
+  <strong class="Grüntext">+ = Eintrag ist stärker als die Whitelist (Blackerlist)</strong><br />
+  Also angenommen man hat etwas auf der Blacklist stehen, zb. die ganze Sektion mit ^APPS. <br />
+  Auf der Whitelist stehen die erlaubten Groups mit   APPS*ENGiNE|RESTORE|BIE. Somit würden erstmal nur die erlaubten Groups   durchgelassen werden. <br />
+  Nun ist aber noch Alpha und Beta nicht erlaubt, und so hat man mit dem +   in der Blacklist nochmal die Möglichkeit, diesen Eintrag über einen   normalen Eintrag in der Whitelist zu stellen. <br />
+  Also +APPS*Alpha|Beta auf die Blacklist und fertig.<br />
+  Nun könnte nur noch ein Eintrag mit einem + in der Whiltelist es möglich   machen, dass doch etwas mit Alpha und Beta drin getradet wird..<br />
+  <br />
+  <strong class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</strong><br />
+  Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
+  <br />
+  <span class="Grüntext"><strong>! = Eintrag ist stärker als die Whitelist mit + (Blackestlist)</strong><br />
+  <br />
+  <strong>~ = Eintrag mit Regex</strong></span><br />
+  <br />
+  Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
+  zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
+  <br />
+  <br />
+  <strong class="Grüntext">Whitelist:</strong><br />
+  Erstmal ist alles, was in der Whitelist steht, &quot;stärker&quot; als die   Blacklisteinträge. Also kommt im Release etwas vor, das in der Blacklist   steht, aber auch auf der Whitelist, wird geraced.<br />
+  Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
+  <br />
+  <strong class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </strong><br />
+  Das heisst, möchte man etwas IMMER durchlassen, einfach mit einem + in die Whitelist<br />
+  <br />
+  <strong class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</strong><br />
+  Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
+  <br />
+  <strong class="Grüntext">~ = Eintrag mit Regex</strong><br />
+  <br />
+  <br />
+  <strong class="Grüntext">Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
+  Verbotene Sektion in der Blacklist: <strong class="Grüntext">^GAMES</strong><br />
+  Black- oder Whitelisteintrag mit Sektion: <strong class="Grüntext">GAMES*clone*-GRP</strong>, <strong class="Grüntext">GAMES*German</strong>, <strong class="Grüntext">+GAMES*german*clone*</strong>, <strong class="Grüntext">GAMES*Grp|Grp|Grp</strong><br />
+  Einfacher Black- oder Whitelisteintrag: <strong class="Grüntext">EMU, *720p*PsO</strong> , <strong class="Grüntext">*dTV*GERMAN*</strong> oder <strong class="Grüntext">+PAL</strong> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom<br />
+  Release steht und somit dahinter nichts mehr kommt)<br />
+  Sport Skip Blacklist: <strong class="Grüntext">tv-de*SPORT</strong><br />
+  Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <strong class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong> oder <strong class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong> oder <strong class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</strong><br />
+</p>
+<p><br />
+  <strong class="Grüntext">Affilliste</strong><br />
+  Die Affilliste ist case-sensitive und kann keine Wildcards. Affils müssen mit Strich eingetragen werden (z.B.<strong class="Grüntext"> -AEROHOLiCS</strong>), so werden die Affils beim &quot;/dtaffils&quot;-command richtig<br />
+  angezeigt.<br />
+  Möchte man neben den Affils auch banned Groups eintragen, dann ohne Strich und mit einem <strong><span class="Grüntext">|</span></strong> trennen: <strong class="Grüntext">grp|grp|grp</strong><br />
+</p>
+<p><br />
+  <strong class="Grüntext">Globale Blacklist</strong><br />
+  Es gehen nur Wildcards. Anders als in den Sitelisten müssen hier die   Einträge immer vorne und hinten einen Stern haben. Ein <span class="Grüntext"><strong>!</strong></span> macht den   Eintrag case-sensitive, falls man das braucht.<br />
+</p>
+<p><br />
+  <strong class="Grüntext">Globale Whitelist</strong><br />
+  Es gehen keine Wildcards. Also keine Sterne eintragen. In der Regel   packt man auf die Gobale Whitelist nur Groups die sowieso überall   erlaubt sind, also Majorgroups.</p></td>
     <td class="normalschrift" width="1" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
