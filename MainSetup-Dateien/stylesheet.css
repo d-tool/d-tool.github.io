@@ -18,3 +18,7 @@
 @import url("icons.css?v=3.2");
 @import url("colours.css?v=3.2");
 @import url("responsive.css?v=3.2");
+.link-normal {
+	text-decoration: none;
+	color: #99E600;
+}
