@@ -18,3 +18,6 @@
 @import url("icons.css?v=3.2");
 @import url("colours.css?v=3.2");
 @import url("responsive.css?v=3.2");
+.Text-klein {
+	font-size: 11px;
+}
