@@ -137,7 +137,7 @@ body,td,th {
       <p class="normalschrift"><br />
         Bekanntes Problem:<br />
         Auf einer Site gibt es zB für x264 eine Sektion, auf der Zielsite gibt es dafür 2 Sektionen, und zwar 720p und 1080p...<br />
-        Bisher wurde dann nicht auf die richtigen Sektionen geleitet. Daher gibt es jetzt Redirections:<br />
+        Bisher wurde dann nicht auf die richtigen Sektionen geleitet, daher gibt es Redirections:<br />
   <br />
         Willst du dass ein<br />
         720p-Release von Site 1 aus Sektion x264 zur Site 2 in Sektion x264-720p<br />
@@ -146,15 +146,15 @@ body,td,th {
         gesendet wird, gibt es jetzt die möglichkeit es so zu adden:<br />
   <br />
         Gegebenheiten:<br />
-        Site 1 ist Sektion x264 - die passende Sektion auf Site 2 ist x264-720p.<br />
+        Site 1 ist Sektion 1 = x264 - die passende Sektion 1 auf Site 2 ist x264-720p.<br />
         Auf Site 2 gibt es zusätzlich die Sektion x264-1080p, wofür es auf Site 1 keine Sektion gibt.<br />
   <br />
-        So muss man dafür sorgen dass in Sektion 720p nicht 1080p gesendet wird und umgekehrt, also in der Blacklist adden.<br />
-        Dazu muss man dafür sorgen dass 1080p Releases in die andere Sektion gelenkt werden.<br />
+        So muss man dafür sorgen, dass in Sektion 720p nicht 1080p gesendet wird und umgekehrt, also in der Blacklist adden.<br />
+        Zudem muss man dafür sorgen, dass 1080p Releases in die andere Sektion gelenkt werden.<br />
         Dafür geht man im Sektionsmenü der Site 2 auf Redirections und trägt ein:<br />
   <span style="color:#BFFF00">x264-720p</span> + <span style="color:#FFBF00">x264-1080p</span> + <span style="color:#FF8000">1080p</span><br />
   <br />
-        Das heisst: Sende Releases auf dem Target von <span style="color:#BFFF40">x264-720p</span> nach <span style="color:#FFBF00">x264-1080p</span>, wenn <span style="color:#FF8000">1080p</span> drin vorkommt<br />
+        Das heisst: Sende Releases auf Site 2 von <span style="color:#BFFF40">x264-720p</span> nach <span style="color:#FFBF00">x264-1080p</span>, wenn <span style="color:#FF8000">1080p</span> drin vorkommt<br />
   <br />
         Umgekehrt muss man auch dafür sorgen, dass die Sektion 1080p von Site 2,
         die es auf Site 1 gar nicht gibt, nach x264 auf Site 1 geschoben wird.<br />
