@@ -148,13 +148,13 @@ Man bekommt aber auch noch einen freundlichen Hinweis wenn man es
 aktiviert.<br>
       -
       nocbftp:<br>
-      Damit schaltet man fuer diese Site speziell von cbftp auf Rush<br>
+      Damit schaltet man bei dieser Site speziell von cbftp auf FTPRush, wenn cbftp Standard ist.<br>
       - tv eng only:<br>
       Hiermit legt man fest was in TV Eng alles geschoben werden darf 
 bzw. worauf es limitiert werden soll. (sc=scripted, cu=current, 
 an=anime, dc=docu, rl=reality, us=USA, uk= UnitedKingdom) </p>
       <p class="normalschrift">- Unten bei Affils ist es eigentlich wie 
-oben bei den races, einfach den trigger eintragen und die Zahlen der 
+oben bei den races, einfach den Trigger eintragen und die Zahlen der 
 Wörter. Und natürlich wo hingetradet werden soll      </p>
       <p class="normalschrift">&nbsp;</p>
       <p class="normalschrift">&nbsp;</p>
@@ -162,15 +162,14 @@ Wörter. Und natürlich wo hingetradet werden soll      </p>
       <p class="normalschrift">SECTIONS:</p>
       <p class="normalschrift">- Man startet ohne Sektionen und muss sie
  erstmal unten über das Sektionsmanagement per "add new section" selbst 
-anlegen. Ich nehme als Beispiel APPS und nenne die Sektion APPS ENG. 
-GER.. Sprachen muss man immer mit eintragen. Auch empfiehlt es sich, 
+anlegen. Ich nehme als Beispiel APPS und nenne die Sektion &quot;APPS.ENG.GER.&quot;. Sprachen muss man immer mit eintragen. Auch empfiehlt es sich, 
 Videoformate mit einzutragen. Somit kann der Wankercheck gut arbeiten.<br>
         Das heisst, wenn man in die Sektionsbeschreibung zB. x264 
 schreibt, muss zwingend 1080p/720p im Rls vorkommen, ansonsten wird's 
 geskipped.<br>
         <a href="https://d-tool.github.io/Wankercheck.html" class="link-normal">Hier</a> sind alle Möglichkeiten, die man in dem Sektionsnamen eintragen kann, damit der Wankercheck greift.<br>
+        Links in der Liste wählt man dann die Sektion, die man bearbeiten möchte. So klick ich erstmal auf APPS
         <br>
-        Links in der Liste wählt man dann die Sektion, die man bearbeiten möchte. So klick ich erstmal auf APPS<br>
         - Es gibt Buttons für 'race..', precheck und <a href="https://d-tool.github.io/DatedSections.html" class="link-normal">dated section</a>.
  'race in this section' bedeutet, auf die Site wird die Sektion 
 getradet. 'enable precheck' bedeutet, dabei wird ein Precheck gemacht. 
@@ -229,7 +228,7 @@ vorkommt.<br>
         wird dann in die Sport Sektion geschoben.<br>
         Dazu noch ein Wort oder Zeichen in dem jeweiligem Release angeben auf das reagiert wird als "match"</p>
       <p class="normalschrift">Incompletes:<br>
-        Einfach anhaken, im Rechtsklickmenü kann man noch einstellen, ob
+        Einfach anhaken und der Incfiller ist aktiv, im Rechtsklickmenü kann man noch einstellen, ob
  das Land berücksichtigt werden soll und ob das Announce im Infofenster 
 gepostet werden soll</p>
       <p class="normalschrift">Section Management:<br>
@@ -240,15 +239,14 @@ gepostet werden soll</p>
       - add new section/delete section: ...<br>
       - show usage: Zeigt an auf welchen Sites es diese Sektion noch gibt<br>
       - showsections: 
-      Zeigt alle Sektionen an. Man kann den Pfad anklicken, dann wird er zum<br>
-      Eintragen in cbftp in die Zwischenablage kopiert.</p>
+      Zeigt alle Sektionen im d-tool Fenster an. Man kann den Pfad anklicken, dann wird er zum Eintragen in cbftp in die Zwischenablage kopiert.</p>
       <p class="normalschrift"><br>
         RULES:</p>
       <p class="normalschrift"><a href="https://d-tool.github.io/BlackWhitelist.html" class="link-normal">Black- und Whitelist</a>:<br>
 Generell gilt Whitelist geht vor Blacklist. Man skippt mit der Blacklist
  bestimmte Sachen oder ganze Sektionen und sagt dann per Whitelist, lass
  das und das durch. Zudem kann man dann per + in der Blacklist wiederum 
-sagen, lass das trotz Whitelist nicht durch.<br>
+sagen, lasse es trotz Whitelist nicht durch.<br>
 Möglich sind einfache Einträge wie Subbed und Wildcards wie <span class="broad">*dTV*-Group</span> mit Sternchen.<br>
 Per Wildcards kann man den Eintrag auch auf Sektionen festlegen. Nutzt man damit zB <span class="broad">XViD*-Group</span>, also eine Sektion, muss der Sektionsname exakt vor dem ersten Stern stehen, zB <span class="broad">TV*German*</span>.<br>
 Ein + in der Blacklist macht den Eintrag stärker als die Whitelist, ein +
