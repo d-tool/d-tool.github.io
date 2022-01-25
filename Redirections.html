@@ -160,8 +160,7 @@ body,td,th {
         die es auf Site 1 gar nicht gibt, nach x264 auf Site 1 geschoben wird.<br />
         Dazu erstellt man auf der Site 1 eine Dummie-Sektion, Namen kann man 
         vergeben wie man will, ich schreib immer &quot;fake&quot; mit rein, damit ich 
-        später noch bescheid weiss. Directory zeigt dann zu der x264 Sektion.<br />
-        Und erstellt dann auf der Site eine Redirection von der Dummie 1080p-Sektion nach x264 mit dem Match &quot;1080p&quot;.<br />
+        später noch bescheid weiss dass es eine echte Sektion ist. Dann erstellt dann auf der Site eine Redirection von der Dummie 1080p-Sektion nach x264 mit dem Match &quot;1080p&quot;.<br />
   <br />
         Fertig<br />
   <br />
@@ -177,16 +176,27 @@ body,td,th {
         Denn bei einem Release wie Rls.rls.1080p.HDTV.x264-RLS wäre nicht klar 
         was nun vorrangig ist, HDTV oder 1080p. Hier ist es 1080p und das rls 
         wird nicht zu TV-HDTV, sondern zu TV-x264 geschoben.<br />
-        Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.<br />
-  <br />
-  <br />
-  <br />
+        Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.
+        <br />
+  </p>
+      <p class="normalschrift"> Allgemein zu Fake-Sektionen:<br />
+ Man braucht die Sektion
+        nicht aktivieren um sie für Redirects zu nutzen, daher dann immer 
+        deaktiviert lassen. <br />
+        Den Pfad zu Fake-Sektionen muss man auch nicht angeben, hat sowieso keine Auswirkung. Zudem stellt man die Fake-Sektion nicht an, man muss einfach nur den Namen angeben damit man ihn als Redirection wählen kann, mehr nicht.<br />
+        Andernfalls, wenn man cbftp nutzt, könnte da mal was
+        durchrutschen und das kann üble folgen haben, denn cbftp bekommt 
+        einfach die Obersektion, die beiden Sites, das Rls und ab gehts. Solange
+        von den Rules nichts dagegen spricht, da man für Fake sektionen niemals
+        Rules angibt, wird alles getradet. <br />
+        </p>
+      <p class="normalschrift"><br />
         Hier mal ein Auszug aus meinem at-Fenster, hier hab ich eine Redirection
         für Sport bei Site BB eingetragen, die wurde richtig geleitet und 
         geschoben, die anderen nicht, weil es eine TV Sektion ist und ich TV  in
         die Sektionsbeschreibung geschrieben hab, somit greift der Wankercheck 
-        und sagt, NEIN. Denn es gibt kein ExxSxx oder ähnliches im 
-        Releasenamen..das muss drin vorkommen, wenn man TV bei der Beschreibung 
+        und skipt weil es kein ExxSxx oder ähnliches im 
+        Releasenamen gibt..das muss drin vorkommen, wenn man TV bei der Beschreibung 
         einträgt. Was drin steht sieht man hier: (TV X264 GER.)<br />
         <br />
         [06:53:06] TV-X264-DE AA  WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake<br />
@@ -212,15 +222,11 @@ body,td,th {
         Ansonsten müsste man eine extra Sektion für Console machen, das erspare 
         ich mir nur und nutze einer der vorhandenen für Console..<br />
         Genauso mache ich es bei x264 und 1080p und 720p, die normale Sektion für x264 ist immer 720p, die extra Sektion ist 1080p.<br />
-  <img src="Redirections-Dateien/schaubild-redirs.png" alt="Bild" width="829" height="462" class="postimage" /><br />
-        Zuletzt noch wichtig: <strong class="text-strong">Niemals Fake-Sektionen aktivieren!!!</strong> <br />
-        Also auf der Site &quot;race in this section&quot; aktivieren. Man braucht sie 
-        nicht aktivieren um sie für Redirects zu nutzen, daher dann immer 
-        deaktiviert lassen. Andernfalls, wenn man cbftp nutzt, könnte da mal was
-        durchrutschen und das kann üble folgen haben, denn cbftp bekommt 
-        einfach die Obersektion, die beiden Sites, das rls und ab gehts, solange
-        von den Rules nichts dagegen spricht, da man für Fake sektionen niemals
-        Rules angibt, wird alles getradet.</p></td>
+        <br />
+        Die durchgezogenen Linien zwischen den Kästen zeigen die Richtung mit Pfeil und die Umleitung mit Nummer entsprechend zur Auflistung darunter, die kaum sichtbare Linie die ursprüngliche Richtung ohne Redirection.
+        <br />
+        <img src="Redirections-Dateien/schaubild-redirs.png" alt="Bild" width="829" height="462" class="postimage" /><br />
+      </p></td>
     <td class="normalschrift" width="1" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
