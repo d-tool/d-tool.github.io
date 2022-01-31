@@ -149,10 +149,12 @@ body,td,th {
       Die Besonderheit bei Regexeinträgen ist, dass man die Sektion mit einem <strong class="Grüntext">'</strong> separiert statt mit einem<span class="Grüntext"> <strong>*</strong></span> wie sonst. Also zb. <span class="Grüntext">~TV-EN-HD'.S[0-9][0-9]E[0-9][0-9]</span>. Das macht die Picklist aber automatisch wenn man eine Sektion wählt und vorher das <strong class="Grüntext">~</strong> eintragen hat.<br />
     </p>
       <p><br />
+        <br />
   <strong>Blacklist:</strong><br />
-  Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
   <br />
-  * = Eintrag wird als Wildcard auf Sektion+Rls angewendet ( zB. XViD*Subbed, wobei XViD die Sektion der Site ist)<br />
+  Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
+  <span class="Grüntext"><br />
+  * = Eintrag wird als Wildcard auf Sektion+Rls angewendet ( zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</span><br />
   Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
   Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
   <br />
@@ -177,8 +179,10 @@ body,td,th {
   zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
   <br />
   <br />
+  <br />
   <strong>Whitelist:</strong><br />
-  Erstmal ist alles, was in der Whitelist steht, &quot;stärker&quot; als die   Blacklisteinträge. Also kommt im Release etwas vor, das in der Blacklist   steht, aber auch auf der Whitelist, wird geraced.<br />
+  <br />
+  Erstmal ist alles, was in der Whitelist steht, &quot;stärker&quot; als die   Blacklisteinträge. Also kommt im Release etwas vor, das zwar in der Blacklist   steht, aber auch etwas auf der Whitelist, wird geraced.<br />
   Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
   <br />
   <span class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
@@ -200,16 +204,22 @@ body,td,th {
   <span class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span><br />
 </p>
 <p><br />
+  <br />
   <strong>Affilliste</strong>:<br />
+  <br />
   Die Affilliste ist case-sensitive und kann keine Wildcards. Affils müssen mit Strich eingetragen werden (z.B.<span class="Grüntext"> -AEROHOLiCS</span>), so werden die Affils beim &quot;/dtaffils&quot;-command richtig angezeigt. <br />
   Möchte man neben den Affils auch banned Groups eintragen, dann ohne Strich und mit einem <strong><span class="Grüntext">|</span></strong> trennen:<span class="Grüntext"> grp|grp|grp</span><br />
+  <br />
 </p>
 <p><br />
   <strong>Globale Blacklist</strong>:<br />
+  <br />
   Es gehen nur Wildcards. Anders als in den Sitelisten müssen hier die   Einträge immer vorne und hinten einen Stern haben. Ein <span class="Grüntext"><strong>!</strong></span> macht den   Eintrag case-sensitive, falls man das braucht.<br />
+  <br />
 </p>
 <p><br />
   <strong>Globale Whitelist</strong>:<br />
+  <br />
   Es gehen keine Wildcards. Also keine Sterne eintragen. In der Regel   packt man auf die Gobale Whitelist nur Groups die sowieso überall   erlaubt sind, also Majorgroups.</p></td>
     <td class="normalschrift" width="2" valign="bottom" align="right">&nbsp;</td>
   </tr>
