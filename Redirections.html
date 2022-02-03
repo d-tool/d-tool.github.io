@@ -146,70 +146,53 @@ body,td,th {
         Auf einer Site gibt es z.B. für HD Filme eine Sektion Movie-HD, auf der Anderen gibt es dafür 2 Sektionen, Movie-1080p und Movie-720p.<br />
   Da d-tool normalerweise nur von z.B. Sektion Nr.34 auf Site 1 zu Sektion Nr.34 auf Site 2 sendet, hätte man ein Problem.<br />
   <br />
-  Site 1 ist z.B. Sektion <span class="Grüntext">Movie-HD</span> die Nr.34 - die passende Sektion Nr.34 auf Site 2 ist <span class="Grüntext">Movie-1080p</span>.<br />
-Auf Site 2 gibt es zusätzlich die Sektion <span class="orangetext">Movie-720p </span>Nr.35, wofür es auf Site 1 noch keine Sektion gibt, diese legt man noch an.</p>
-      <p class="normalschrift"><br />
-        <span class="Grüntext">1. </span>Ein 720p-Release soll von Site 1 aus Sektion  Movie-HD (Nr.34) zur Site 2 in Sektion Movie-720p (Nr.35) gesendet werden.<br />
-        <span class="Grüntext">2. </span>Ein 720p-Release soll von Site 2 aus Movie-720p (Nr.35) in Movie-HD (Nr.34) auf Site 1 gesendet werden.</p>
-      <p class="normalschrift"> <br />
-        <span class="Grüntext"><strong>1.</strong></span> <strong>720p Releases von Site 1 <span class="Grüntext">Movie-HD </span>(Nr.34) sollen von <span style="color:#BFFF00">Movie-1080p</span> in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-720p</span> (Nr.35) gelenkt werden</strong><br />
+  Site 1 ist z.B. Sektion Nr.34 <span class="Grüntext">Movie-HD</span>  - die passende Sektion Nr.34 auf Site 2 ist <span class="Grüntext">Movie-1080p</span>.<br />
+Auf Site 2 gibt es zusätzlich die Sektion Nr.35 <span class="orangetext">Movie-720p</span>, wofür es auf Site 1 keine Sektion gibt, diese legt man noch an:<br />
+<br />
+        <span class="Grüntext"><strong><u>1.</u></strong></span> <u><strong>720p Releases von Site 1 <span class="Grüntext">Movie-HD </span>(Nr.34) sollen von <span style="color:#BFFF00">Movie-1080p</span> in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-720p</span> (Nr.35) gelenkt werden</strong></u><br />
         <br />
         Dafür geht man im Sektionsmenü der Site 2 auf Redirections und trägt ein:<span style="color:#BFFF00"> Movie-1080p</span> + <span class="orangetext" style="color:#FFBF00">Movie-720p</span> + <span style="color:#FF8000">720p</span><br />
-        Bedeutet: Ändere die Sektion  von <span style="color:#BFFF40">Movie-1080p</span> zu <span class="hellorangetext">Movie-720p</span>, wenn <span class="orangetext">720p </span>im Release vorkommt</p>
-      <p class="normalschrift"><br />
-        <strong class="Grüntext">2. </strong> <strong>720p Releases von Site 2 <span class="Grüntext">Movie-720p </span>(Nr.35) sollen in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-HD</span> (Nr.34) von S</strong><strong>ite 1 gelenkt werden<br />
-        </strong><br />
-        Auf der Site 1 eine Dummie-Sektion Nr.35 anlegen, den Namen kann man 
-        vergeben wie man möchte. Ich schreib immer &quot;fake&quot; mit rein, damit ich 
-        immer weiss, dass es keine echte Sektion ist.  In diesem Fall also &quot;Movie-720p-Fake&quot;. <br />
+        Bedeutet: Ändere die Sektion  von <span style="color:#BFFF40">Movie-1080p</span> zu <span class="hellorangetext">Movie-720p</span>, wenn <span class="orangetext">720p </span>im Release vorkommt<br />
         <br />
-        Dann erstellt man auf der Site folgende Redirection: <span class="hellorangetext">Movie-720p-Fake </span>+ <span style="color: #BFFF00">Movie-HD</span> +<span style="color: #FF8000"> *</span><br />
-        Bedeutet: Ändere die Sektion  von <span class="hellorangetext">Movie-720p-Fake</span> zu <span class="Grüntext" style="color: #BFFF00">Movie-HD</span>, wegen dem<span style="color: #FF8000"> * </span>immer, egal was dort ankommt.        </p>
+        <strong class="Grüntext"><u>2. </u></strong> <u><strong>720p Releases von Site 2 <span class="Grüntext">Movie-720p </span>(Nr.35) sollen in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-HD</span> (Nr.34) von Site 1 gelenkt werden<br />
+        </strong></u><br />
+        Auf  Site 1 eine Dummie-Sektion Nr.35 anlegen, Name egal. Ich schreibe immer &quot;fake&quot; mit rein, damit klar ist es ist ein Dummie.  In diesem Fall also &quot;Movie-720p-Fake&quot;. Die Sektion wird nicht aktiviert und Pfadangabe ist egal.<br />
+        Dann geht man im Sektionsmenü der Site 1 auf Redirections und trägt ein:        <span class="hellorangetext">Movie-720p-Fake </span>+ <span style="color: #BFFF00">Movie-HD</span> +<span style="color: #FF8000"> *</span><br />
+        Bedeutet: Ändere die Sektion  von <span class="hellorangetext">Movie-720p-Fake</span> zu <span class="Grüntext" style="color: #BFFF00">Movie-HD</span>,  egal was  ankommt (<span class="orangetext">*</span>)</p>
+      <p class="normalschrift">Fertig</p>
       <p class="normalschrift"><br />
-        Mögliche Einträge als Match einer Redirection:<br />
+        <strong>Mögliche Einträge als Match einer Redirection:</strong><br />
         Einfache Einträge, Wildcards (*abc*fgh*), Mehrfacheinträge wie entry|entry... und der Eintrag SPORT sind möglich.<br />
         Man kann statt einem Match das im Release vorkommt auch SPORT als 
-        match eintragen. Dann wird alles umgeleitet, was die matches im Release 
+        Match eintragen. Dann wird alles umgeleitet, was die Matches im Release 
         hat, die bei /dteditsport eingetragen wurden.<br />
         <br />
         Und man kann, falls sich 2 Redirections zanken würden, eines der 
-        beiden forcen mit einem ! vor dem match, zb. TV-EN+TV-x264+!1080p. <br />
+        beiden Einträge forcen mit einem ! vor dem Match, zb. TV-EN+TV-x264+!1080p. <br />
         Wenn es nun noch eine Redirection mit TV-EN+TV-HDTV+HDTV gibt, wird immer die mit ! ausgeführt. <br />
         Bei einem Release wie Rls.rls.1080p.HDTV.x264-RLS wäre nicht klar 
         was nun vorrangig ist, HDTV oder 1080p. Hier ist es 1080p und das Release 
         wird nicht zu <br />
-        TV-HDTV, sondern zu TV-x264 geschoben.<br />
-        Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.        </p>
-      <p class="normalschrift"><br />
-        Leider funktionieren diese Umleitungen mit cbftp nur per Transferjob und nicht per Spreadjob, was  ineffektiver ist. Das sieht man auch an den zwei ** am Ende des at-Eintrags in mIRC. Ein Stern bedeutet race mit cbftp als Spreadjob, zwei Sterne bedeuten racemit cbftp als Transferjob.<br />
+        TV-HDTV, sondern zu TV-x264 geschoben. Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.        <br />
         <br />
+        Leider funktionieren Redirects mit cbftp nur per Transferjob und nicht per Spreadjob, was  ineffektiver ist. Dass es ein Transferjob ist sieht man auch an den zwei ** am Ende des at-Eintrags mit Redirection in mIRC. Ein Stern bedeutet race mit cbftp als Spreadjob, zwei Sterne bedeuten race mit cbftp als Transferjob.<br />
         <br />
         Redirects werden immer 2 mal ausgeführt, das bedeutet es kann sein, dass ein Release 2 mal umgeleitet wird.
-        Zum Beispiel ein Sport Release, das zuerst von Sport in eine TV-720p Sektion und dann in eine 1080p geleitet wird.</p>
-      <p class="normalschrift"><br />
+        Zum Beispiel ein Sport Release, das zuerst von Sport in eine TV-720p Sektion und dann in eine 1080p geleitet wird.<br />
+        <br />
         Allgemein zu Fake-Sektionen:<br />
         Man braucht die Sektion
         nicht aktivieren um sie für Redirects zu nutzen, daher dann immer 
-        deaktiviert lassen. <br />
-        Den Pfad zu Fake-Sektionen muss man auch nicht angeben, hat sowieso keine Auswirkung. Zudem stellt man die Fake-Sektion nicht an, man muss einfach nur den Namen angeben damit man ihn als Redirection wählen kann, mehr nicht.<br />
-        Andernfalls, wenn man cbftp nutzt, könnte da mal was
-        durchrutschen und das kann üble folgen haben, denn cbftp bekommt 
-        einfach die Obersektion, die beiden Sites, das Rls und ab gehts. Solange
-        von den Rules nichts dagegen spricht, da man für Fake sektionen niemals
-        Rules angibt, wird alles getradet.        </p>
-      <p class="normalschrift"><br />
+        deaktiviert lassen. Den Pfad zu Fake-Sektionen muss man auch nicht angeben, hat sowieso keine Auswirkung. Man muss einfach nur den Namen angeben damit man ihn als Redirection wählen kann, mehr nicht.</p>
+      <p class="normalschrift"> <br />
         Zum besseren Verständnis hier ein Schaubild, das die Handhabung nochmal an einem 
         anderen Beispiel zeigt, diesmal gibt es Site a mit nur console für 
-        alles, auf site b gibts xbox, wii und ps3 getrennt.<br />
-        Für die beiden Sektionen, die es auf der Site a nicht gibt, vergibt man 
-        Fake Sektionen. Diese gezeigte Möglichkeit ist eine, ich nutze eben die 
-        eine der 3 Sektionen von der einen Site für die Gesamte der anderen.<br />
-        Ansonsten müsste man eine extra Sektion für Console machen, das erspare 
-        ich mir  und nutze einer der vorhandenen für Console.<br />
-        Genauso mache ich es bei x264 und 1080p und 720p, die normale Sektion für x264 ist immer 1080p, die extra Sektion ist 720p.<br />
-        <br />
-        Die durchgezogenen Linien zwischen den Kästen zeigen die Richtung mit Pfeil und die Umleitung mit Nummer entsprechend zur Auflistung darunter, die kaum sichtbare Linie die ursprüngliche Richtung ohne Redirection.
-        <br />
+        alles, auf site b gibts xbox, wii und ps3 getrennt. Für die beiden Sektionen, die es auf der Site a nicht gibt, vergibt man 
+        wieder Fake Sektionen. Diese gezeigte Möglichkeit ist eine, ich nutze   
+        eine der 3 Sektionen einer Site immer für die Gesamte der anderen. Ansonsten müsste man eine extra Sektion für Console machen, das erspare 
+        ich mir  und nutze eine der vorhandenen für Console.<br />
+  </p>
+      <p class="normalschrift">Die durchgezogenen Linien zwischen den Kästen zeigen die Richtung mit Pfeil und die Umleitung mit Nummer entsprechend zur Auflistung darunter, die kaum sichtbare Linie die ursprüngliche Richtung ohne Redirection. <br />
         <img src="Redirections-Dateien/schaubild-redirs.png" alt="Bild" width="829" height="462" class="postimage" /><br />
       </p></td>
     <td class="normalschrift" width="1" valign="bottom" align="right">&nbsp;</td>
