@@ -137,51 +137,60 @@ body,td,th {
       <strong>REDIRECTS</strong><span class="normalschrift"><strong><br />
       </strong></span></p>
       <p class="normalschrift"><br />
-        Bekanntes Problem:<br />
-        Auf einer Site gibt es zB für x264 eine Sektion, auf der Zielsite gibt es dafür 2 Sektionen, und zwar 720p und 1080p...<br />
-        Bisher wurde dann nicht auf die richtigen Sektionen geleitet, daher gibt es Redirections:<br />
+        Redirect, also Umleitung, wird die Möglichkeit genannt von einer Sektion in eine andere umzulenken.<br />
+        <br />
+        Auf einer Site gibt es z.B. für HD Filme eine Sektion, auf der Anderen gibt es dafür 2 Sektionen, Movie-720p und Movie-1080p.<br />
+  Da d-tool immer nur von z.B. Sektion 34 auf Site 1 zu Sektion 34 auf Site 2 sendet, hätte man ein Problem.<br />
   <br />
         Willst du dass ein<br />
-        720p-Release von Site 1 aus Sektion x264 zur Site 2 in Sektion x264-720p<br />
+        720p-Release von Site 1 aus Sektion Movie-HD zur Site 2 in Sektion Movie-720p<br />
         gesendet wird, gleichzeitig aber willst dass<br />
-        1080p-Releases von Site 1 aus Sektion x264 zur Site 2 in Sektion x264-1080p<br />
-        gesendet wird, gibt es jetzt die möglichkeit es so zu adden:<br />
-  <br />
+        1080p-Releases von Site 1 aus Sektion Movie-HD zur Site 2 in Sektion Movie-1080p<br />
+        gesendet wird, gibt es die Möglichkeit es so zu adden:<br />
+        <br />
         Gegebenheiten:<br />
-        Site 1 ist Sektion 1 = x264 - die passende Sektion 1 auf Site 2 ist x264-720p.<br />
-        Auf Site 2 gibt es zusätzlich die Sektion x264-1080p, wofür es auf Site 1 keine Sektion gibt.<br />
-  <br />
-        So muss man dafür sorgen, dass in Sektion 720p nicht 1080p gesendet wird und umgekehrt, also in der Blacklist adden.<br />
-        Zudem muss man dafür sorgen, dass 1080p Releases in die andere Sektion gelenkt werden.<br />
+        Site 1 ist z.B. Sektion 20 = Movie-HD - die passende Sektion 20 auf Site 2 ist x264-720p.<br />
+        Auf Site 2 gibt es zusätzlich die Sektion x264-1080p, wofür es auf Site 1 noch keine Sektion gibt.<br />
+        Also muss man dafür sorgen, dass 1080p Releases von Site 1 Movie-HD in die andere Sektion gelenkt werden.<br />
         Dafür geht man im Sektionsmenü der Site 2 auf Redirections und trägt ein:<br />
-  <span style="color:#BFFF00">x264-720p</span> + <span style="color:#FFBF00">x264-1080p</span> + <span style="color:#FF8000">1080p</span><br />
-  <br />
-        Das heisst: Sende Releases auf Site 2 von <span style="color:#BFFF40">x264-720p</span> nach <span style="color:#FFBF00">x264-1080p</span>, wenn <span style="color:#FF8000">1080p</span> drin vorkommt<br />
-  <br />
+        <br />
+        <span style="color:#BFFF00">Movie-720p</span> + <span style="color:#FFBF00">Movie-1080p</span> + <span style="color:#FF8000">1080p</span><br />
+        <br />
+        Bedeutet: Ändere die Sektion  von <span style="color:#BFFF40">Movie-720p</span> zu <span style="color:#FFBF00">Movie-1080p</span>, wenn <span style="color:#FF8000">1080p</span> im Release drin vorkommt<br />
+        <br />
         Umgekehrt muss man auch dafür sorgen, dass die Sektion 1080p von Site 2,
-        die es auf Site 1 gar nicht gibt, nach x264 auf Site 1 geschoben wird.<br />
-        Dazu erstellt man auf der Site 1 eine Dummie-Sektion, Namen kann man 
-        vergeben wie man will, ich schreib immer &quot;fake&quot; mit rein, damit ich 
-        später noch bescheid weiss dass es eine echte Sektion ist. Dann erstellt dann auf der Site eine Redirection von der Dummie 1080p-Sektion nach x264 mit dem Match &quot;1080p&quot;.<br />
-  <br />
-        Fertig<br />
-  <br />
+        die es auf Site 1 gar nicht gibt, nach Movie-HD auf Site 1 geschoben wird.<br />
+        Dazu erstellt man auf der Site 1 eine Dummie-Sektion, den Namen kann man 
+        vergeben wie man will. Ich schreib immer &quot;fake&quot; mit rein, damit ich 
+         immer weiss dass es keine echte Sektion ist.  In diesem Fall also &quot;Movie-HD-Fake&quot;. Dann erstellt man auf der Site folgende Redirection:</p>
+      <p class="normalschrift"><span style="color:#BFFF00">Movie-HD-Fake</span> + <span style="color:#FFBF00">Movie-HD</span> +<span style="color: #FF8000"> *</span><br />
+        </p>
+      <p class="normalschrift">Bedeutet: Ändere die Sektion  von <span style="color:#BFFF40">Movie-HD-Fake</span> zu <span style="color:#FFBF00">Movie-HD</span>, wegen dem<span style="color: #FF8000"> * </span>immer, egal was dort ankommt.
+        <br />
+        <br />
+        <br />
         Mögliche Einträge:<br />
-        Einfache Einträge, Wildcards (*abc*fgh*), Mehrfacheinträge wie entry|entry und der Eintrag SPORT sind möglich.<br />
+        Einfache Einträge, Wildcards (*abc*fgh*), Mehrfacheinträge wie entry|entry... und der Eintrag SPORT sind möglich.<br />
         Man kann statt einem Match das im Release vorkommt eben auch SPORT als 
         match eintragen. Dann wird alles umgeleitet, was die matches im Release 
         hat, die bei /dteditsport eingetragen werden.<br />
         <br />
-        Und man kann nun, falls sich 2 Redirections zanken würden, eines der 
+        Und man kann, falls sich 2 Redirections zanken würden, eines der 
         beiden forcen mit einem ! vor dem match, zb. TV-EN+TV-x264+!1080p. <br />
         Wenn es nun noch eine Redirection mit TV-EN+TV-HDTV+HDTV gibt, wird immer die mit ! ausgeführt. <br />
-        Denn bei einem Release wie Rls.rls.1080p.HDTV.x264-RLS wäre nicht klar 
-        was nun vorrangig ist, HDTV oder 1080p. Hier ist es 1080p und das rls 
-        wird nicht zu TV-HDTV, sondern zu TV-x264 geschoben.<br />
+        Bei einem Release wie Rls.rls.1080p.HDTV.x264-RLS wäre nicht klar 
+        was nun vorrangig ist, HDTV oder 1080p. Hier ist es 1080p und das Release 
+        wird nicht zu <br />
+        TV-HDTV, sondern zu TV-x264 geschoben.<br />
         Das Funktioniert natürlich nicht bei Mehrfacheinträgen mit entry|entry.
         <br />
-  </p>
-      <p class="normalschrift"> Allgemein zu Fake-Sektionen:<br />
+        <br />
+        Leider funktionieren diese Umleitungen mit cbftp nur per Transferjob und nicht per Spreadjob, was  ineffektiver ist. Das sieht man auch an den zwei ** am Ende des at-Eintrags. Ein Stern bedeutet race mit cbftp als Spreadjob, zwei Sterne bedeuten racemit cbftp als Transferjob.<br />
+        <br />
+        Redirects werden immer 2 mal ausgeführt, das bedeutet es kann sein, dass ein Release 2 mal umgeleitet wird.
+Zum Beispiel ein Sport Release, das zuerst von Sport in eine TV-720p Sektion und dann in eine 1080p geleitet wird.<br />
+        <br />
+        Allgemein zu Fake-Sektionen:<br />
  Man braucht die Sektion
         nicht aktivieren um sie für Redirects zu nutzen, daher dann immer 
         deaktiviert lassen. <br />
@@ -190,40 +199,19 @@ body,td,th {
         durchrutschen und das kann üble folgen haben, denn cbftp bekommt 
         einfach die Obersektion, die beiden Sites, das Rls und ab gehts. Solange
         von den Rules nichts dagegen spricht, da man für Fake sektionen niemals
-        Rules angibt, wird alles getradet. <br />
-        </p>
-      <p class="normalschrift"><br />
-        Hier mal ein Auszug aus meinem at-Fenster, hier hab ich eine Redirection
-        für Sport bei Site BB eingetragen, die wurde richtig geleitet und 
-        geschoben, die anderen nicht, weil es eine TV Sektion ist und ich TV  in
-        die Sektionsbeschreibung geschrieben hab, somit greift der Wankercheck 
-        und skipt weil es kein ExxSxx oder ähnliches im 
-        Releasenamen gibt..das muss drin vorkommen, wenn man TV bei der Beschreibung 
-        einträgt. Was drin steht sieht man hier: (TV X264 GER.)<br />
+        Rules angibt, wird alles getradet. 
         <br />
-        [06:53:06] TV-X264-DE AA  WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake<br />
-        62 - [06:53:06] TV-X264-DE  AA &gt; BB  - 
-        WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake -
-        w - SPORT-DE*German* - INCOMING/TV-X264-DE &gt; SPORT-DE  (redirect) 
-        SPORT<br />
-        [06:53:07]  Wankercheck halted  TV-X264-DE &gt; TV-X264-DE (TV X264 
-        GER.) 
-        WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake 
-        @  AA &gt; CC (no.series)<br />
-        [06:53:07]  Wankercheck halted  TV-X264-DE &gt; TV-720P-DE (TV X264 
-        GER.) 
-        WWE.Friday.Night.Smackdown.2014-01-10.GERMAN.DL.WS.720p.HDTV.x264-aWake 
-        @  AA &gt; DD (no.series)<br />
         <br />
-        Zu guter letzt noch ein Schaubild, was die Handhabung nochmal an einem 
+        <br />
+        Zum besseren Verständnis hier ein Schaubild, das die Handhabung nochmal an einem 
         anderen Beispiel zeigt, diesmal gibt es Site a mit nur console für 
         alles, auf site b gibts xbox, wii und ps3 getrennt.<br />
         Für die beiden Sektionen, die es auf der Site a nicht gibt, vergibt man 
         Fake Sektionen. Diese gezeigte Möglichkeit ist eine, ich nutze eben die 
         eine der 3 Sektionen von der einen Site für die Gesamte der anderen.<br />
         Ansonsten müsste man eine extra Sektion für Console machen, das erspare 
-        ich mir nur und nutze einer der vorhandenen für Console..<br />
-        Genauso mache ich es bei x264 und 1080p und 720p, die normale Sektion für x264 ist immer 720p, die extra Sektion ist 1080p.<br />
+        ich mir  und nutze einer der vorhandenen für Console.<br />
+        Genauso mache ich es bei x264 und 1080p und 720p, die normale Sektion für x264 ist immer 1080p, die extra Sektion ist 720p.<br />
         <br />
         Die durchgezogenen Linien zwischen den Kästen zeigen die Richtung mit Pfeil und die Umleitung mit Nummer entsprechend zur Auflistung darunter, die kaum sichtbare Linie die ursprüngliche Richtung ohne Redirection.
         <br />
