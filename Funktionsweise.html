@@ -186,13 +186,25 @@ hängt das Script kein Datum an. Falls das Datum bei 0day/mp3 mitgepostet wird (
         Man kann 2 verschiedene Clienten für die verschiedenen Aufgaben 
 wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br />
 <br />
-      Bezüglich racing mit cbftp:<br />
+      <u>Bezüglich racing mit cbftp:</u><br />
       <br />
       Bei allen Sites die Transfer Policy von Source und Target auf &quot;Block&quot; stellen.<br />
        d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Site auf der Site in cbftp nicht als Target angegeben ist, added d-tool sie. Andersherum löscht d-tool das Target aber nicht, wenn man sie wieder wegnimmt als Fillsite. <br />
        Den Automatismus halte ich für unklug, da ich es für klug halte tendenziell eher mehreren Sites es zu erlauben auf einer Site  zu fillen, so hat man immer nette nebeneffekte bzw. so hat man schnell mal Vorteile durch das super spreadsystem von cbftp. Zudem würde das eben bedeuten, dass die Sources/Targets der Sites in cbftp immer den Fillsites in d-tool entsprechen. Aus zuvor genannten Gründen eben nicht wirklich schlau, es ist eher von Vorteil wenn man das nochmal selber durch den Befehl /dcbsync
       managen kann wie man es gerne haben möchte. 
-      Das soll frei und unabhängig bleiben. Es macht aber  wenig Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist. Somit nur der einseitige Automatismus.</p>
+      Das soll frei und unabhängig bleiben. Es macht aber  wenig Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist. Somit nur der einseitige Automatismus.<br />
+      <br />
+      d-tool sendet die Races in Sitepaaren die in cbftp zu einem Spreadjob zusammengesetzt werden. Da cbftp keine Source-/Targetsites kennt, sondern nur ein Release und Sites, auf die das Release geschoben werden soll. Somit prüft d-tool auch ob ein Release, das auf einer Site geraced wird, dort überhaupt erlaubt ist, ansonsten würde cbftp es dort ebenfalls fillen und man wäre beteiligt an dem Nuke der dann kommen sollte. In dem Fall wird der Job so logeschickt, dass die Source nichts abbekommt.<br />
+      <br />
+      </p>
+      <p class="normalschrift">&nbsp;</p>
+      <p class="normalschrift"><br />
+        Kurz noch etwas zur d-tool Geschichte:<br />
+        <br />
+        Dieser Autotrader ist zu einer Zeit entstanden in der es normal war per Hand zu traden, weshalb es zuerst auch ein Clicktrader war. Das heisst es ging ein Popup auf und man wurde gefragt ob man dies und das traden will.<br />
+        d-tool ist älter als die meisten AT's die es heute gibt und hat auch einige andere beeinflusst, z.B. der automatische !reqfilled cmd den d-tool als erstes hatte. Eine Zeit lang war es auch relativ verbreitet bis Linux FTP Clienten die Macht übernommen haben und d-tool weniger Beachtung fand. Da  ich auch nur einmal an eine pftp Version gelangt war die lief, ich aber dann niemanden mehr hatte der mir das ganze Ding erklärt, verlief das im Sande. d-tool konnte zwar immer pftp versorgen, jedoch war es eine Funktion die quasi verborgen war.<br />
+        Dann Ende 2018 habe ich von cbftp erfahren, das seit kurzem Publik war und seitdem entwickle ich d-tool wieder mehr, natürlich aufgrund der Notwendigkeit durch cbftp, aber nun macht es auch wieder mehr Spaß. auch wenn es für viele wahrscheinlich bescheuert ist ein Windows Programm für einen Linux Clienten zu nutzen. Aus meiner Sicht kann ich nun natürlich nicht mal eben wechseln, d-tool ist für mIRC und das wird auch so bleiben.<br />
+      </p>
     <p class="normalschrift">&nbsp;</p></td>
     <td width="228">&nbsp;</td>
   </tr>
