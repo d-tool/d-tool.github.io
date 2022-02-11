@@ -167,39 +167,17 @@ und verhindert, dass falsche Sachen in den Sektionen landen.<br>
 Releases in falschen Sektionen zu verhindern und umzuleiten in die
  richtige, mit Hilfe von <a href="https://d-tool.github.io/Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.
       </p>
-      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, <a href="https://d-tool.github.io/Prioritaeten.html" class="link-normal">hier</a> mal eine Reihenfolge wie d-tool arbeitet, damit auch alle Klarheiten beseitigt sind.
-        <br />
-        <br />
-        Neuerdings
-      werden die Rules einer Site nur noch 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es bei erneutem Race nicht nochmal geprüft werden muss. Das ist Prerule-Check genannt und so auch in dem Skip- bzw. At-Fenster angezeigt.</p>
-      <p class="normalschrift"> <a href="DatedSections.html" class="link-normal">mp3/0day</a>:<br />
-        <br>
+      <p class="normalschrift">Neuerdings
+        werden die Rules einer Site nur noch 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es bei erneutem Race nicht nochmal geprüft werden muss. Das ist Prerule-Check genannt und so auch in dem Skip- bzw. At-Fenster angezeigt.<br />
+      </p>
+      <p class="normalschrift"> <a href="DatedSections.html" class="link-normal">mp3/0day</a>:<br>
         Alles was nicht Deutsch oder Englisch ist wird automatisch 
 geskipped. Die Skipliste liegt im d-tool Ordner und kann bearbeitet 
-werden. Man muss nur den 0day bzw MP3 Ordner angeben, das Datum hängt 
-das Script alleine dran. Oder man gibt den MP3-Today ordner an, dann 
-hängt das Script kein Datum an. Falls das Datum bei 0day/mp3 mitgepostet wird (zb 0528/TEST-MP3) kann man das auch entsprechend einstellen, siehe Erklärung<br>
-        <br>
-        cbftp/FTPRush<br />
-        <br>
-        Man kann 2 verschiedene Clienten für die verschiedenen Aufgaben 
-wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br />
-<br />
-<br />
-      <u>Bezüglich racing mit cbftp:</u><br />
-      <br />
-      Bei allen Sites die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; stellen.<br />
-       d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Site auf der Site in cbftp nicht als Target angegeben ist, added d-tool sie. Andersherum löscht d-tool das Target aber nicht, wenn man sie wieder wegnimmt als Fillsite. <br />
-       Den Automatismus halte ich für unklug, da ich es für klug halte tendenziell eher mehreren Sites es zu erlauben auf einer Site  zu fillen, so hat man immer nette nebeneffekte bzw. so hat man schnell mal Vorteile durch das super spreadsystem von cbftp. Zudem würde das eben bedeuten, dass die Sources/Targets der Sites in cbftp immer den Fillsites in d-tool entsprechen. Aus zuvor genannten Gründen nicht wirklich schlau, es ist eher von Vorteil wenn man das nochmal selber durch den Befehl /dcbsync
-      einstellen kann. 
-      Das soll frei und unabhängig bleiben. Es macht aber  wenig Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist, somit nur der einseitige Automatismus.<br />
-      <br />
-      d-tool sendet die Races in Sitepaaren die in cbftp zu einem Spreadjob zusammengesetzt werden. Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind. Daher prüft das Script auch ob ein Release, das auf einer Site geraced wird, dort überhaupt erlaubt ist, ansonsten würde cbftp es dort ebenfalls fillen und man wäre beteiligt an dem Nuke der dann kommen sollte. In dem Fall wird der Job so logeschickt, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;<a href="MainSetup.html" class="link-normal">srcchk</a>&quot;.<br />
-      <br />
-      Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs.<br />
-      <br />
-      </p>
-      <p class="normalschrift">Zuletzt einmal die Vorgehensweise des ATs wenn er ein Release auswertet.<br />
+werden. Man muss nur den 0day bzw mp3 Ordner angeben, das Datum hängt 
+das Script alleine dran. Oder man gibt den mp3-Today ordner an, dann 
+hängt das Script kein Datum an. Falls das Datum bei 0day/mp3 mitgepostet wird (zb 0815/TEST-mp3) kann man das auch entsprechend einstellen, siehe Erklärung<br>
+        </p>
+      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.<br />
 Eigentlich checkt er genau andersherum als ich hier aufgeschrieben habe,
         der Priorität nach aufsteigend. Der Affilcheck kommt als erstes, trifft 
         etwas zu wird geskippt, wenn nicht gehts weiter zum Foreigncheck etc...<br />
@@ -208,7 +186,26 @@ Eigentlich checkt er genau andersherum als ich hier aufgeschrieben habe,
         <span style="color:#BFFF00">grün</span>: bei TRUE trade (mit einem orangen w im at-Eintrag)<br />
         <br />
         <span style="color:#FF0000">BACKLIST</span> &lt; <span style="color:#BFFF00">GLOBALWHITELIST</span> &lt; <span style="color:#BFFF00">WHITELIST</span> &lt; <span style="color:#FF0000">IMDB</span> &lt; <span style="color:#FF0000">TVMAZE</span> &lt; <span style="color:#FF0000">BLACKERLIST</span> (+) &lt; <span style="color:#FF0000">YEARCHECK</span> &lt; <span style="color:#FF0000">GLOBALBLACKLIST</span> &lt; <span style="color:#FF0000">WANKERCHECK</span> &lt; <span style="color:#BFFF00">WHITELIST</span> (+) &lt; <span style="color:#FF0000">BLACKESTLIST</span> (!) &lt; <span style="color:#FF0000">FOREIGN</span> &lt; <span style="color:#FF0000">AFFILCHECK</span><br />
-    </p>
+        </p>
+      <p class="normalschrift"><br>
+        cbftp/FTPRush:<br>
+        Man diese beiden Clienten für die verschiedenen Aufgaben 
+        wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br />
+        <br />
+        <br />
+        <u>Bezüglich racing mit cbftp:</u><br />
+        <br />
+        Bei allen Sites die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; stellen.<br />
+        d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Site auf der Site in cbftp nicht als Target angegeben ist, added d-tool sie. Andersherum löscht d-tool das Target aber nicht, wenn man sie wieder wegnimmt als Fillsite. <br />
+        Den Automatismus halte ich für unklug, da ich es für klug halte tendenziell eher mehreren Sites es zu erlauben auf einer Site  zu fillen, so hat man immer nette nebeneffekte bzw. so hat man schnell mal Vorteile durch das super spreadsystem von cbftp. Zudem würde das eben bedeuten, dass die Sources/Targets der Sites in cbftp immer den Fillsites in d-tool entsprechen. Aus zuvor genannten Gründen nicht wirklich schlau, es ist eher von Vorteil wenn man das nochmal selber durch den Befehl /dcbsync
+        einstellen kann. 
+        Das soll frei und unabhängig bleiben. Es macht aber  wenig Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist, somit nur der einseitige Automatismus.<br />
+        <br />
+        d-tool sendet die Races in Sitepaaren die in cbftp zu einem Spreadjob zusammengesetzt werden. Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind. Daher prüft das Script auch ob ein Release, das auf einer Site geraced wird, dort überhaupt erlaubt ist, ansonsten würde cbftp es dort ebenfalls fillen und man wäre beteiligt an dem Nuke der dann kommen sollte. In dem Fall wird der Job so logeschickt, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;<a href="MainSetup.html" class="link-normal">srcchk</a>&quot;.<br />
+        <br />
+        Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs.<br />
+        <br />
+      </p>
     <p class="normalschrift">&nbsp;</p></td>
     <td width="228">&nbsp;</td>
   </tr>
