@@ -139,14 +139,6 @@ Handelt es sich um einen Film oder eine TV-Sendung, wird
 wahlweise noch OMDBApi (für IMDb)  und TVMaze.com abgefragt. Zu guter 
 letzt noch den Jahrescheck (welcher die Jahre kontrolliert die in den 
 Sektionen angegeben sind) und den <a href="https://d-tool.github.io/Wankercheck.html" class="link-normal">Wankercheck</a>.<br>
-    </p>
-      <p class="normalschrift">Im Grunde läuft es dann bei den meisten 
-Sektionen so, zB. wenn es nur bestimmte erlaubte Groups gibt, dass man 
-die Sektion erst einmal komplett verbietet und dann die einzelnen Groups wieder 
-erlaubt.<br>
-        Die Listen haben verschiedene Funktionen und man kann mit 
-Sonderzeichen wie ^ oder + die Einträge in ihrer Handhabung noch 
-verändern, das wird beim klick auf "?" in den Rules oder <a href="https://d-tool.github.io/BlackWhitelist.html" class="link-normal">hier</a>  nochmal erklärt.<br>
         <br>
         Der Wankercheck ist ein System das  falsche Releases in falschen
  Sektionen und ähnliche crap races heraus zu filtern versucht. Das 
@@ -162,19 +154,25 @@ angeben, dies wird ebenfalls berücksichtigt.<br>
         Allgemein also immer Sprache und Formate in die 
 Sektionsbeschreibungen schreiben. So kann der Wankercheck gut arbeiten 
 und verhindert, dass falsche Sachen in den Sektionen landen.<br>
-        <br>
+        <br />
+        Im Grunde läuft es dann bei den meisten 
+Sektionen so, zB. wenn es nur bestimmte erlaubte Groups gibt, dass man 
+die Sektion erst einmal komplett verbietet und dann die einzelnen Groups wieder 
+erlaubt.<br />
+Die Listen haben verschiedene Funktionen und man kann mit 
+Sonderzeichen wie ^ oder + die Einträge in ihrer Handhabung noch 
+verändern, das wird beim klick auf &quot;?&quot; in den Rules oder <a href="https://d-tool.github.io/BlackWhitelist.html" class="link-normal">hier</a> nochmal erklärt.<br />
+<br>
         Dann gibt es noch eine Möglichkeit 
 Releases in falschen Sektionen zu verhindern und umzuleiten in die
- richtige, mit Hilfe von <a href="https://d-tool.github.io/Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.
-      </p>
-      <p class="normalschrift">Neuerdings
-        werden die Rules einer Site nur noch 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es bei erneutem Race nicht nochmal geprüft werden muss. Das ist Prerule-Check genannt und so auch in dem Skip- bzw. At-Fenster angezeigt.<br />
-      </p>
+ richtige, mit Hilfe von <a href="https://d-tool.github.io/Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.      </p>
+      <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check).<br />
+    </p>
       <p class="normalschrift"> <a href="DatedSections.html" class="link-normal">mp3/0day</a>:<br>
         Alles was nicht Deutsch oder Englisch ist wird automatisch 
 geskipped. Die Skipliste liegt im d-tool Ordner und kann bearbeitet 
-werden. Man muss nur den 0day bzw mp3 Ordner angeben, das Datum hängt 
-das Script alleine dran. Oder man gibt den mp3-Today ordner an, dann 
+werden. Man muss nur den 0day bzw. mp3 Ordner angeben, das Datum hängt 
+das Script alleine dran. Oder man gibt den Today Ordner an, dann 
 hängt das Script kein Datum an. Falls das Datum bei 0day/mp3 mitgepostet wird (zb 0815/TEST-mp3) kann man das auch entsprechend einstellen, siehe Erklärung<br>
         </p>
       <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.<br />
@@ -187,13 +185,13 @@ Eigentlich checkt er genau andersherum als ich hier aufgeschrieben habe,
         <br />
         <span style="color:#FF0000">BACKLIST</span> &lt; <span style="color:#BFFF00">GLOBALWHITELIST</span> &lt; <span style="color:#BFFF00">WHITELIST</span> &lt; <span style="color:#FF0000">IMDB</span> &lt; <span style="color:#FF0000">TVMAZE</span> &lt; <span style="color:#FF0000">BLACKERLIST</span> (+) &lt; <span style="color:#FF0000">YEARCHECK</span> &lt; <span style="color:#FF0000">GLOBALBLACKLIST</span> &lt; <span style="color:#FF0000">WANKERCHECK</span> &lt; <span style="color:#BFFF00">WHITELIST</span> (+) &lt; <span style="color:#FF0000">BLACKESTLIST</span> (!) &lt; <span style="color:#FF0000">FOREIGN</span> &lt; <span style="color:#FF0000">AFFILCHECK</span><br />
         </p>
-      <p class="normalschrift"><br>
-        cbftp/FTPRush:<br>
-        Man diese beiden Clienten für die verschiedenen Aufgaben 
-        wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. <br />
+      <p class="normalschrift"><u><br>
+        </u><strong>cbftp/FTPRush:</strong><br />
+        <br>
+        Man kann diese beiden Clienten für die verschiedenen Aufgaben 
+        wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. Alle wichtigen Funktionen sind mit beiden Clienten möglich, aber FTPRush wird immer benötigt, wenn man per Hotlink zu einem Suchergebnis connecten möchte.<br />
         <br />
-        <br />
-        <u>Bezüglich racing mit cbftp:</u><br />
+        <strong>racen mit cbftp:</strong><br />
         <br />
         Bei allen Sites die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; stellen.<br />
         d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Site auf der Site in cbftp nicht als Target angegeben ist, added d-tool sie. Andersherum löscht d-tool das Target aber nicht, wenn man sie wieder wegnimmt als Fillsite. <br />
