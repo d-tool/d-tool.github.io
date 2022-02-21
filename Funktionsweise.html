@@ -131,8 +131,7 @@ body {
         d-tool zuerstmal alles. Man gibt auf der Site an zu welchen anderen gefillt werden soll und dann schiebt dt alles was kommt, wenn 
         nichts in den Rules steht.<br />
         Dann gibt es die <a href="BlackWhitelist.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. <br />
-Zudem gibt es die Global Skip und die Global Whitelist, womit man Sachen skippen kann, sie treffen auf alle Sites zu.<br>
-        In der GlobalSkip stehen halt Sachen die immer geskippt werden 
+Zudem gibt es die Global Skip und die Global Whitelist, womit man Sachen skippen kann, sie treffen auf alle Sites zu. In der GlobalSkip stehen halt Sachen die immer geskippt werden 
 sollen. Die Global Whitelist ist für Majorgroups gedacht, die überall 
 erlaubt sind. <br />
 Handelt es sich um einen Film oder eine TV-Sendung, wird 
@@ -199,9 +198,10 @@ Eigentlich checkt er genau andersherum als ich hier aufgeschrieben habe,
         einstellen kann. 
         Das soll frei und unabhängig bleiben. Es macht aber  wenig Sinn eine Fillsite irgendwo einzustellen, die nicht als Target in cbftp eingestellt ist, somit nur der einseitige Automatismus.<br />
         <br />
-        d-tool sendet die Races in Sitepaaren die in cbftp zu einem Spreadjob zusammengesetzt werden. Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind. Daher prüft das Script auch ob ein Release, das auf einer Site geraced wird, dort überhaupt erlaubt ist, ansonsten würde cbftp es dort ebenfalls fillen und man wäre beteiligt an dem Nuke der dann kommen sollte. In dem Fall wird der Job so logeschickt, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;<a href="MainSetup.html" class="link-normal">srcchk</a>&quot;.<br />
+        d-tool sendet die Races in Sitepaaren, die in cbftp zu einem Spreadjob zusammengesetzt werden. Das hat den zeitlichen Vorteil, dass nicht alle Rules der einzelnen Fillsites gecheckt werden müssen, bevor etwas gesendet wird. <br />
+        Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob ein Release, das auf einer Site  geraced wird, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;<a href="MainSetup.html" class="link-normal">srcchk</a>&quot;.<br />
         <br />
-        Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs.<br />
+        Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs, bedeutet also immer eher einen Nachteil. <br />
         <br />
       </p>
     <p class="normalschrift">&nbsp;</p></td>
