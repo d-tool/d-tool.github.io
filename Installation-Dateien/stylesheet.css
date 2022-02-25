@@ -21,4 +21,10 @@
 .Text-klein {
 	font-size: 11px;
 	color: #CCCCCC;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.textklein {
+	font-weight: normal;
+	font-size: 11px;
 }
