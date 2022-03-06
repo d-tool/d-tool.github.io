@@ -131,28 +131,13 @@ body {
         d-tool zuerstmal alles. Man gibt auf der Site an zu welchen anderen gefillt werden soll und dann schiebt dt alles was kommt, wenn 
         nichts in den Rules steht.<br />
         Dann gibt es die <a href="BlackWhitelist.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. <br />
-Zudem gibt es die Global Skip und die Global Whitelist, womit man Sachen skippen kann, sie treffen auf alle Sites zu. In der GlobalSkip stehen halt Sachen die immer geskippt werden 
+Zudem gibt es die Global Skip- und Global Whitelist,  die Site-Übergeordnet arbeiten. In der GlobalSkip stehen Sachen die immer geskippt werden 
 sollen. Die Global Whitelist ist für Majorgroups gedacht, die überall 
 erlaubt sind. <br />
 Handelt es sich um einen Film oder eine TV-Sendung, wird 
-wahlweise noch OMDBApi (für IMDb)  und TVMaze.com abgefragt. Zu guter 
-letzt noch den Jahrescheck (welcher die Jahre kontrolliert die in den 
-Sektionen angegeben sind) und den <a href="https://d-tool.github.io/Wankercheck.html" class="link-normal">Wankercheck</a>.<br>
-        <br>
-        Der Wankercheck ist ein System das  falsche Releases in falschen
- Sektionen und ähnliche crap races heraus zu filtern versucht. Das 
-heisst, dass bei Konsolengames zB. gecheckt wird ob auch ein 
-entsprechendes Tag im Release vorkommt etc. <br>
-        Somit können auch keine Filme ins XBOX-Dir getradet werden. 
-Serien in Filmsektionen werden ebenfalls geskippt und ein paar andere 
-Missgeschicke. Ausserdem filtert er Englisch und Deutsch (bzw. alle 
-anderen eingestellten Sprachen) raus wenn es mal in der falschen Sektion
- ist, falls man GER. oder ENG. in die Sektionsbeschreibungen geschrieben
- hat. Bei Videosektionen kann man auch immer x264, xvid oder dvdr 
-angeben, dies wird ebenfalls berücksichtigt.<br>
-        Allgemein also immer Sprache und Formate in die 
-Sektionsbeschreibungen schreiben. So kann der Wankercheck gut arbeiten 
-und verhindert, dass falsche Sachen in den Sektionen landen.<br>
+wahlweise noch OMDBApi (für IMDb)  und TVMaze abgefragt. Zu guter 
+Letzt ist da noch der Jahrescheck (welcher die Jahre kontrolliert die in den 
+Sektionen angegeben sind) und der <a href="https://d-tool.github.io/Wankercheck.html" class="link-normal">Wankercheck</a>.<br>
         <br />
         Im Grunde läuft es dann bei den meisten 
 Sektionen so, zB. wenn es nur bestimmte erlaubte Groups gibt, dass man 
@@ -167,15 +152,15 @@ Releases in falschen Sektionen zu verhindern und umzuleiten in die
  richtige, mit Hilfe von <a href="https://d-tool.github.io/Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.      </p>
       <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check).<br />
     </p>
-      <p class="normalschrift"> <a href="DatedSections.html" class="link-normal">mp3/0day</a>:<br>
+      <p class="normalschrift"> music/0day/:<br>
         Alles was nicht Deutsch oder Englisch ist wird automatisch 
 geskipped. Die Skipliste liegt im d-tool Ordner und kann bearbeitet 
-werden. Man muss nur den 0day bzw. mp3 Ordner angeben, das Datum hängt 
+werden. Man muss nur den 0day bzw. mp3/flac Ordner angeben, das Datum hängt 
 das Script alleine dran. Oder man gibt den Today Ordner an, dann 
-hängt das Script kein Datum an. Falls das Datum bei 0day/mp3 mitgepostet wird (zb 0815/TEST-mp3) kann man das auch entsprechend einstellen, siehe Erklärung<br>
+hängt das Script kein Datum an. Falls das Datum mitgepostet wird (zb 0815/Oh_No-The_Funk-DEL) kann man das auch entsprechend einstellen, siehe <a href="DatedSections.html" class="link-normal">Erklärung</a>.<br>
         </p>
       <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.<br />
-Eigentlich checkt er genau andersherum als ich hier aufgeschrieben habe,
+Eigentlich checkt er genau andersherum als hier gezeigt,
         der Priorität nach aufsteigend. Der Affilcheck kommt als erstes, trifft 
         etwas zu wird geskippt, wenn nicht gehts weiter zum Foreigncheck etc...<br />
         <br />
