@@ -118,7 +118,7 @@ body {
         </span><strong>ALLGEMEINES SETUP</strong><span class="normalschrift"> (Hauptmenü)<strong><br />
         <br />
         </strong></span></p>
-      <p>STATUS:<br />
+      <p><strong>Status</strong><br />
         info -  d-tool und site infos<br>
         on - d-tool de-/aktivieren (deaktiviert alle funktionen)<br>
         at - Autotrader an/aus<br>
@@ -130,17 +130,15 @@ body {
         <br />
         <br>
       </p>
-      <p>SITEMENÜ:<br />
+      <p><strong>Sitemenü</strong><br />
         Im Pulldownmenü kann man eine Site auswählen, aber nur wenn man vorher über den &quot;+&quot;-Button eine Site geadded hat.<br />
         <br />
       </p>
-      <p> BLACKLIST:<br>
+      <p> <strong>Blacklist</strong><br>
         - Globale Skipliste. Steht über den Siteeinstellungen, es sei 
 denn in der Whitelist der Site passt ein Eintrag mit einem + davor.<br>
-        - Alle Einträge mit Sternchen versehen! Ansonsten eintragen wie zb. *NTERNAL* oder *NTERNAL*XViD*, normale Wildcards<br>
-      - ein ! vor dem Eintrag macht den Eintrag case-sensitive (dann wird <br>
-      Gross- und Klein-schreibung beachtet) </p>
-      <p>WHITELIST:<br>
+      </p>
+      <p><strong>Whitelist</strong><br>
         - Globale Autoapprove Liste. Wildcards, also Sterne, sind nicht möglich. <br>
         In der Regel packt man auf die Gobale Whitelist nur Groups die 
         sowieso überall erlaubt sind, also Majorgroups.      </p>
@@ -150,55 +148,55 @@ denn in der Whitelist der Site passt ein Eintrag mit einem + davor.<br>
       <p><br />
         <br />
       </p>
-      <p>PRESETS:<br>
-- Man kann mit "+" die Fillsites aller Sites als Preset speichern und bei Bedarf laden, also die aktuelle Tradeconfig.<br>
-- Bei "?" gibt der Dialog das markierte Preset aus, bei "!" wird es nach
- nochmaliger Anfrage eingestellt und bei "-" wird das Preset gelöscht.  
-    </p>
-      <p>PRE:<br>
-        - Man braucht mindestens einen Announce-Channel in dem alle Rels <br>
-        gepred werden die man traden will. Ansonsten kann man den 
+      <p><strong>presets<br />
+      </strong><br>
+        - Man kann per "+" die Fillsites aller Sites, also die aktuelle Tradeconfig, als Preset speichern und bei Bedarf laden.<br>
+        - Bei "?" gibt der Dialog das markierte Preset aus, bei "!" wird es nach
+        nochmaliger Anfrage eingestellt und bei "-" wird das Preset gelöscht.      </p>
+      <p><strong>pre</strong><br />
+        <br>
+        - Man braucht mindestens einen Pre-Channel, ansonsten kann man den 
 Precheck auch deaktivieren. Ist kein Prebot eingestellt und der Precheck
  nicht ausgestellt, tradet das Script nicht.<br>
         Zudem muss das Release in richtiger Form gepostet werden, dh. so
- wie das Release wirklich heisst und nicht mit einem Leerzeichen davor 
-und dahinter oder sonstwas<br>
-        <br>
-        - Es sind 3 Bots hinzufügbar, Botnamen am besten über das Nicklistmenü adden<br>
-        - Bei "trigger" ein Wort eintragen das der Bot beim posten immer
- benutzt, zb "PRE". Auf dieses Wort reagiert der Precheck und es muss 
-genau stimmen. Kommt in dem Wort zB. eine Klammer vor, muss man die auch eintragen
-        <br>
-        - "rls#" - die Nummer des Releases im Pre-Announce<br>
-        - Recheck: Wenn er angeschaltet ist und daneben die Sekunden 
+ wie das Release wirklich heisst und nicht mit einem Zeichen davor 
+und dahinter.<br>
+        <strong>bot 1/2/3</strong><br>
+        - Es sind 3 Bots hinzufügbar, Botnamen am besten über das Nicklistmenü adden.<br>
+        - Bei "trigger" ein Wort eintragen das der Bot beim Announce immer
+ benutzt, zB. "PRE". Auf dieses Wort reagiert der Precheck und es muss 
+genau stimmen. Kommt in dem Wort zB. eine Klammer vor, muss man die auch eintragen.<br>
+        - "rls#" die Nummer des Releases im Pre-Announce<br>
+        <strong>- Recheck</strong><br />
+        Wenn er angeschaltet ist und daneben die Sekunden 
 eingetragen werden, checkt d-tool nach der eingestellten Zeit nochmal ob
- ein Preeintrag vorhanden ist<br>
-        - Um die richtigen Wörter zu finden, am besten den Linecheck benutzen, dazu mehr bei den <a href="https://d-tool.github.io/Commands.html" class="link-normal">Commands</a><br>
+ ein Preeintrag vorhanden ist.<br>
+        - Um die richtigen Wörter zu finden am besten den Linecheck benutzen, dazu mehr bei den <a href="https://d-tool.github.io/Commands.html" class="link-normal">Commands</a>.<br>
         <br>
-      </p>
-      <p>-rush: <br />
+    </p>
+      <p><strong>-cbftp/rush</strong><br />
         (alles unwichtig wenn man cbftp benutzt, dann weiter unten zu cbftp)<br>
-        - windows:<br>
+        <strong>- win</strong><br>
       Anzahl der Fenster, die in FTPRush genutzt werden sollen. Hier ist
  wichtig, dass sie, wenn Windowcycle aus ist, nur noch für den Req- und 
 Incfiller relevant sind. Dann stellt man am besten 10 ein oder so, das 
 sollte dafür reichen. Ist Windowcycle an, sollte man die Anzahl an die 
 Menge der Sites anpassen.
       <br>
-      - start with:<br>
+      <strong>- start</strong><br>
       Mit dem wievielten Fenster in Rush angefangen werden soll. Trägt 
 man 5 ein und hat insgesamt 50 Fenster bei windows eingestellt, nutzt 
 d-tool insgesamt 55 Fenster wenn Windowcycle an ist. Die ersten 5 werden
  aber nicht genutzt.
       <br>
-      - regular/big rls:<br>
+      <strong>- regular/big rls</strong><br>
       Zur Erklärung gibt es einen extra  Button "?"<br>
-      - restart all:<br>
+      <strong>- restart all</strong><br>
       Wie oft Rush neu gestartet werden soll, in Stunden<br>
-      - del queue:<br>
+      <strong>- del queue</strong><br>
       Wie oft der Queue in Rush gelöscht werden soll
       <br>
-      - windowcycle:<br>
+      <strong>- windowcycle</strong><br>
       Bei windowcycle werden die Races immer im Durchlauf losgeschickt, 
 zuerst Fenster 1 in Rush, dann 2, usw...ohne windowcycle bekommt jede 
 Site seine festen Fenster in Rush. Ist gedacht falls man auf der Site 
@@ -206,37 +204,39 @@ dann zwischen den Races idlen möchte. Ist auch viel übersichtlicher</p>
       <p>Die Timer für Logincheck, Restart und Del Queue kann man alle im Rechtsklickmenü aktivieren und einstellen<br />
         <br />
       </p>
-      <p>- cbftp:<br>
+      <p><strong>cbftp</strong><br />
+        <br>
         Statt FTPRush kann man auch cbftp unter Linux nutzen. Einfach 
 die entsprechenden Daten eintragen und los gehts. Ab dann sind die 
 Einstellungen rush betreffend natürlich egal.<br>
         Zusätzlich kann man wählen ob man einzelne Funktionen im d-tool auch mit cbftp abwickeln lassen will. Der Sourcecheck ist <a href="Funktionsweise.html" class="link-normal">hier</a> erklärt.<br />
         <br />
       </p>
-      <p>WINDOWS: <br>
-  - at<br>
+      <p><strong>windows</strong><br />
+        <br>
+        <strong>- at</strong><br>
 Zeigt alle Autotrades an<br>
-- skip   <br>
+<strong>- skip </strong><br>
 Zeigt an wenn etwas gestoppt wird, wenn eine Sektion in der Blacklist 
 greift (Sektionskip), Wankercheck, NoPre/Backfill, TVMaze/IMDb oder 
 Yearcheck<br>
-        - done<br>
+        <strong>- done</strong><br>
       Gibt in einem Fenster an was man getradet hat. Reagiert auf den/die Nick(s)<br>
-      -nukes<br>
+      <strong>- nukes</strong><br>
 Rate mal<br>
-        - new<br>
+        <strong>- new</strong><br>
       Zeigt Neue Races auf allen Sites an<br>
-        -db    <br>
+        <strong>- db </strong><br>
       Zeigt die Suchergebnisse von IMDb und TVMaze an<br>
-      -reqfill<br>
+      <strong>- reqfill</strong><br>
       Zeigt die Requests an (wenn aktiviert) und Reqfills.<br>
-      -incfill<br>
+      <strong>- incfill</strong><br>
 Zeigt die Incomplete fills an <br>
-        -speed<br>
+        <strong>- speed</strong><br>
         Zeigt die Completezeiten der Races aller Sites. die Races werden
  getrennt, somit bekommt man eine Übersicht, welche Sites immer die 
 schnellsten oder langsamsten sind      </p>
-      <p>Racechans:<br>
+      <p><strong>channels</strong><br>
         - Wichtig! Unbedingt die Chans angeben, ob alle oder einzelne, 
 ansonsten reagiert das Script nicht.Gibt man ein # an, werden alle chans
  genommen. Ich würde nur dazu raten, alle Chans einzeln einzutragen, 
