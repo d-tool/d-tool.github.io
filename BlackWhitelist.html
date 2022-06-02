@@ -159,7 +159,7 @@ body,td,th {
   Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
   Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
   <br />
-  <span class="Grüntext">^ = Sagt dem d-tool, dass es sich um eine Sektion handelt ( zB. ^APPS)</span><br />
+  <span class="Grüntext">^ = Sektionsskip. So definiert man, dass es sich um eine Sektion handelt ( zB. ^APPS)</span><br />
   Somit wird diese Sektion erstmal komplett verboten. Es sei denn etwas auf der Whitelist spricht dagegen.<br />
   <br />
   <span class="Grüntext">+ = Eintrag ist stärker als die Whitelist (Blackerlist)</span><br />
@@ -182,12 +182,10 @@ body,td,th {
   <br />
   <br />
   <strong>Whitelist:</strong><br />
-  <br />
-  Erstmal ist alles, was in der Whitelist steht, &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced.<br />
-  Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
+  Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
   <br />
   <span class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
-  Das heisst, möchte man etwas IMMER durchlassen, einfach mit einem + in die Whitelist<br />
+  Möchte man etwas IMMER approven, einfach mit einem + in die Whitelist. Das geht über alles<br />
   <br />
   <span class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
   Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
