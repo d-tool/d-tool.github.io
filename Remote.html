@@ -136,26 +136,24 @@ body,td,th {
       <br />
       <span class="normalschrift">Sollte man den at auf einem Server bzw. 
         einer VM laufen lassen, kann man sich zb. dtinfo, Affils oder Rush-Stats remote 
-        anzeigen lassen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer).<br />
-        Dazu ist notwendig, dass beide seiten mIRC gestartet haben und man auf denselben Netzwerken ist.<br />
-        d-tool hörcht dann Standardmäßig auf Notices vom eigenen Nick. Man kann aber auch  alternative Nicks festlegen, zum Beispiel wenn man mit irssi nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"><br />
-        Dann kann man die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
-        at läuft, die Befehle stehen im Rechtsklickmenü unter Remote im d-tool.<br />
-        Wenn man
-        selber dann in dem 2ten mIRC das d-toolnicht geladen hat, kann man sich die 
-        d-tool-remotemenü.mrc reinladen, um nur die Befehle für Remote im Kontextmenü zu 
-        bekommen</span>.<br />
-        <br />
-        Die Funktion der alternativen Nicks ist aber mit Vorsicht
-        zu geniessen, denn jeder der dann diesen Nick hat, auch wenn man es nicht selber ist, kann sich dann die Affils anzeigen lassen oder die Sitenamen über dtinfo zum Beispiel.<br />
-        </span></p>
-      <p>Hat man zB. irssi oder sonstiges nebenher am laufen und möchte die Remote Funktion nutzen kann man folgende Befehle eingeben:<br />
+        anzeigen lassen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig dass man auf denselben Netzwerken ist.<br />
+        d-tool reagiert dann  auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann. Wenn man mit irssi nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"> <br />
+        So mache ich es, cbftp und irssi laufen in einer Screen Session, in die ich mich von Zuhause von UbuntuMate aus einlogge. Dann kann ich von dort aus die Infos erhalten indem ich die unten stehenden Befehle eingebe.<br />
+        Dazu muss man die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
+        at läuft. Die Befehle stehen im Rechtsklickmenü unter Remote im d-tool.<br />
+        Wenn man in dem 2ten mIRC das d-tool nicht geladen hat, kann man sich die 
+        d-tool-remotemenu.mrc reinladen, um  die Befehle für Remote im Kontextmenü zu 
+        bekommen</span>.</span></p>
+      <p>Dies sind die Befehle, die man  eingeben kann, wenn man die Befehle über Kontextmenu nicht nutzt oder hat:<br />
         <br />
         /notice &lt;nick&gt; !info - dtinfo anzeigen lassen<br />
         /notice &lt;nick&gt; !affils - Affils anzeigen lassen<br />
         /notice &lt;nick&gt; !cpu - Derzeitige CPU Auslastung<br />
         /notice &lt;nick&gt; !rushstats - FTPRush Stats anzeigen lassen<br />
-        /notice &lt;nick&gt; !rushinfo - FTPRush Info anzeigen lassen</p></td>
+        /notice &lt;nick&gt; !rushinfo - FTPRush Info anzeigen lassen<br />
+      </p>
+      <p><span class="normalschrift">Die Funktion der alternativen Nicks ist mit Vorsicht
+        zu geniessen. Jeder der  den festgelegten Nick hat, kann sich die Infos anzeigen lassen.</span></p></td>
     <td class="normalschrift" width="2" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
