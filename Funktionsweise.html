@@ -124,7 +124,7 @@ body {
       <p class="normalschrift"> <br />
         Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum absenden von Raw-Befehlen und Suchen sowie das erhalten von den Ergebnissen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat Möglichkeiten gefundenes per Mausklick automatisch herunter zu laden oder im Channel gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls etwas bestimmtes, auf das man wartet, Released wird.<br />
         <br />
-        Allgemein wartet der AT auf announces in entsprechenden Sitechannels, nicht auf Pre.<br />
+        Allgemein wartet der AT auf Announces in entsprechenden Sitechannels, nicht auf Pre.<br />
         Das einmal aus dem Grund, da es wenig Sinn macht von einer Site zu schieben, auf der das Release noch  nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit, d-tool ist ein sehr sicheres Script, das von einer Sektion in die passenden Sektionen der Fillsites schiebt, ohne <strong>etwas selbst</strong> zu<strong> versuchen zu erkennen</strong>. Denn das <strong>ist immer Fehlerbehaftet</strong>. Siehe an den Releases die ab und zu in sonstwelchen Sektionen landen. Das sind genau die AT'S die versuchen die Sektionen anhand des Namens zu erkennen. Da es aber Sektionen gibt bei denen das gar nicht richtig möglich ist...naja. Und deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten von Releases und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll machen.<br />
         <br />
         Wenn man Sites eingestellt hat tradet 
@@ -153,9 +153,10 @@ Releases in falschen Sektionen zu verhindern und umzuleiten in die
       <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check).<br />
     </p>
       <p class="normalschrift"> music/0day/:<br>
-        Alles was nicht den eingestellten Sprachen entspricht oder Englisch ist wird automatisch 
-geskipped. Die Skipliste liegt im d-tool Ordner und kann bearbeitet 
-werden. Man muss nur den 0day bzw. mp3/flac Ordner angeben, das Datum hängt 
+        Alles was nicht den eingestellten Sprachen entspricht oder nicht Englisch ist wird automatisch 
+skipped, die entsprechende Liste &quot;foreign-mp3.db&quot; liegt im d-tool Ordner und muss den Befürnissen nach bearbeitet 
+werden. Standard ist erstmal Ger+Eng.<br />
+Bezüglich Announces/Ordner mit Datum: Man muss nur den 0day bzw. mp3/flac Ordner angeben, das Datum hängt 
 das Script alleine dran. Oder man gibt den Today Ordner an, dann 
 hängt das Script kein Datum an. Falls das Datum mitgepostet wird (zb 0815/Oh_No-The_Funk-DEL) kann man das auch entsprechend einstellen, siehe <a href="DatedSections.html" class="link-normal">Erklärung</a>.<br>
         </p>
