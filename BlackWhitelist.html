@@ -155,7 +155,7 @@ body,td,th {
   <br />
   Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
   <span class="Grüntext"><br />
-  * = Eintrag wird als Wildcard auf Sektion+Rls angewendet ( zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</span><br />
+  * = Eintrag wird als Wildcard auf Sektion+Rls angewendet (zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</span><br />
   Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
   Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
   <br />
@@ -169,39 +169,41 @@ body,td,th {
   Also +APPS*Alpha|Beta auf die Blacklist und fertig.<br />
   Nun könnte nur noch ein Eintrag mit einem + in der Whiltelist es möglich   machen, dass doch etwas mit Alpha und Beta drin getradet wird..<br />
   <span class="Grüntext"><br />
-  | = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
+  | = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw oder mit Regex zB. ~TV-HD-EN'&lt;regex&gt;|&lt;regex&gt;|...)</span><br />
   Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
   <br />
   <span class="Grüntext">! = Eintrag ist stärker als die Whitelist mit + (Blackestlist)<br />
   <br />
-  ~ = Eintrag mit Regex</span><br />
-  <br />
-  Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
-  zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
-  <br />
-  <br />
-  <br />
-  <strong>Whitelist:</strong><br />
-  Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
-  <br />
-  <span class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
-  Möchte man etwas IMMER approven, einfach mit einem + in die Whitelist. Das geht über alles<br />
-  <br />
-  <span class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
-  Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
-  <br />
-  <span class="Grüntext">~ = Eintrag mit Regex</span><br />
-  <br />
-  <br />
-  <strong>Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
-  Verbotene Sektion in der Blacklist: <span class="Grüntext">^GAMES</span><br />
-  Black- oder Whitelisteintrag mit Sektion: <span class="Grüntext">GAMES*clone*-GRP</span>, <span class="Grüntext">GAMES*German</span>, <span class="Grüntext">+GAMES*german*clone*</span>, <span class="Grüntext">GAMES*Grp|Grp|Grp</span><br />
-  Einfacher Black- oder Whitelisteintrag: <span class="Grüntext">EMU, *720p*PsO , *dTV*GERMAN*</span> oder <span class="Grüntext">+PAL</span> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom<br />
-  Release steht und somit dahinter nichts mehr kommt)<br />
-  Sport Skip Blacklist: <span class="Grüntext">tv-de*SPORT</span><br />
-  Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <span class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <br />
-  <span class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span><br />
-</p>
+  ~ = Eintrag mit Regex (zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;|&lt;regex&gt;|...)</span> <br />
+  Wichtig bei ist, dass zum sepatieren der Sektion ein ' notwendig ist statt einem* wie bei allen anderen Einträgen mit Sektion.<br />
+        <br />
+        Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
+        zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
+        <br />
+        <br />
+        <br />
+        <strong>Whitelist:</strong><br />
+        Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
+        <br />
+        <span class="Grüntext">+=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
+        Möchte man etwas IMMER approven, einfach mit einem + in die Whitelist. Das geht über alles.<br />
+        <br />
+        <span class="Grüntext">| = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
+        Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
+        <br />
+        <span class="Grüntext">~ = Eintrag mit Regex</span> <span class="Grüntext">(zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;|&lt;regex&gt;|...)</span><br />
+        Wichtig bei ist, dass zum sepatieren der Sektion ein ' notwendig ist statt einem* wie bei allen anderen Einträgen mit Sektion.<br />
+        <br />
+        <br />
+        <strong>Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
+        Verbotene Sektion in der Blacklist: <span class="Grüntext">^GAMES</span><br />
+        Black- oder Whitelisteintrag mit Sektion: <span class="Grüntext">GAMES*clone*-GRP</span>, <span class="Grüntext">GAMES*German</span>, <span class="Grüntext">+GAMES*german*clone*</span>, <span class="Grüntext">GAMES*Grp|Grp|Grp</span><br />
+        Einfacher Black- oder Whitelisteintrag: <span class="Grüntext">EMU, *720p*PsO , *dTV*GERMAN*</span> oder <span class="Grüntext">+PAL</span> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom<br />
+        Release steht und somit dahinter nichts mehr kommt)<br />
+        Sport Skip Blacklist: <span class="Grüntext">tv-de*SPORT</span><br />
+        Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <span class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <br />
+        <span class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span><br />
+      </p>
 <p><br />
   <br />
   <strong>Affilliste</strong>:<br />
