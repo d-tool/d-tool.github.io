@@ -10,7 +10,7 @@ It can execute several functions on text from IRC channels <br>
 - Extended black-/whitelists allow nearly every rule
 - Section redirections for special cases
 - Wankercheck (prevents from sending crap)
-- Search-/download- und raw-command function with output in mIRC
+- Search-/download- and raw-command function with output in mIRC
 - Automatic logincheck
 - Autoinvite on command
 - Precheck with recheckfunction
