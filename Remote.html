@@ -136,9 +136,9 @@ body,td,th {
       <br />
       <span class="normalschrift">Sollte man den at auf einem Server bzw. 
         einer VM laufen lassen, kann man sich zb. dtinfo, Affils oder Rush-Stats remote 
-        anzeigen lassen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig dass man auf denselben Netzwerken ist.<br />
+        anzeigen lassen oder den Logintimer an oder aus stellen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig, dass man mindestens auf einem selben Netzwerk ist.<br />
         d-tool reagiert dann  auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann, wenn man mit irssi oder sonst einem Clienten nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"><br />
-        So mache ich es zum Beispiel, cbftp und irssi laufen in einer Screen Session, in die ich mich von Zuhause von Ubuntu aus einlogge. Dann kann ich von dort aus die Infos erhalten indem ich die unten stehenden Befehle eingebe. Das Ganze läuft dann in einem xfce4-Terminal, bei dem man alles transparent und die Fensterrahmen abschalten kann und somit nur noch einen interaktiven Text auf dem Bildschirm hat in Form des laufenden cbftps oder zB. irssi zum erhalten der dtinfos.<br />
+        So mache ich es zum Beispiel, cbftp und irssi laufen in einer Screen Session auf dem root, in die ich mich von Zuhause von Ubuntu aus einlogge. Dann kann ich Zuhause in einer Shell die Infos erhalten indem ich die unten stehenden Befehle eingebe.<br />
         <br />
         Dazu muss man die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
         at läuft. Die Befehle stehen im Rechtsklickmenü unter Remote..<br />
@@ -148,13 +148,15 @@ body,td,th {
       <p>Dies sind die Befehle, die man  eingeben kann, wenn man die Befehle über Kontextmenu nicht nutzt oder hat:<br />
         <br />
         /notice &lt;nick&gt; !info - dtinfo anzeigen lassen<br />
+        /notice &lt;nick&gt; !login - logintimer starten/stoppen<br />
         /notice &lt;nick&gt; !affils - Affils anzeigen lassen<br />
         /notice &lt;nick&gt; !cpu - Derzeitige CPU Auslastung<br />
         /notice &lt;nick&gt; !rushstats - FTPRush Stats anzeigen lassen<br />
         /notice &lt;nick&gt; !rushinfo - FTPRush Info anzeigen lassen<br />
       </p>
       <p><span class="normalschrift">Die Funktion der alternativen Nicks ist mit Vorsicht
-        zu geniessen. Jeder der  den festgelegten Nick hat, kann sich die Infos anzeigen lassen.</span></p></td>
+        zu geniessen. Jeder der  den festgelegten Nick hat, kann sich die Infos anzeigen lassen.</span><br />
+      Aus dem Grund kann man den AT remote auch nicht wirklich steuern in seiner Funktion.</p></td>
     <td class="normalschrift" width="2" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
