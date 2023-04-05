@@ -121,13 +121,10 @@ body {
     </a><a href="https://d-tool.github.io/Tips.html"><img src="Index-Dateien/button-tips.png" alt="" width="130" height="20" border="0" /></a></td>
     <td width="663" valign="top"><p class="normalschrift"><span class="normalschrift"><br>
     </span><strong>ALLGEMEINE FUNKTIONSWEISE</strong></p>
-      <p class="normalschrift"> <br />
-        Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder im Channel gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls etwas bestimmtes, auf das man wartet, Released wird.<br />
+      <p class="normalschrift">Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder im Channel gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls etwas bestimmtes, auf das man wartet, Released wird.<br />
         <br />
         Allgemein wartet der AT auf Announces in entsprechenden Sitechannels, nicht auf Pre.<br />
-        Das einmal aus dem Grund, da es ja eher wenig Sinn macht von einer Site zu schieben, auf der das Release noch  nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist ein sehr sicheres Script, das von einer Sektion in die passenden Sektionen der Fillsites schiebt, ohne <strong>etwas selbst</strong> zu<strong> versuchen zu erkennen</strong>. Denn das <strong>ist immer Fehlerbehaftet</strong>. Siehe an den Releases die ab und zu in sonstwelchen Sektionen landen. Das sind genau die AT'S die versuchen die Sektionen anhand des Namens zu erkennen. Da es aber Sektionen gibt bei denen das gar nicht richtig möglich ist...naja. Und deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten von Releases und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll machen.<br />
-        Natürlich 
-        <br />
+        Das einmal aus dem Grund, da es  keinen Sinn macht von einer Site zu schieben, auf der das Release noch  nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist ein sehr sicheres Script, das von einer Sektion in die selbe Sektionen der Fillsites schiebt, ohne <strong>etwas selbst</strong> zu<strong> versuchen zu erkennen</strong>. Denn das <strong>ist immer Fehlerbehaftet</strong>. Siehe an den Releases die ab und zu in sonstwelchen Sektionen landen. Das sind genau die AT'S die versuchen die Sektionen anhand des Namens zu erkennen. Da es aber Sektionen gibt bei denen das  nicht richtig möglich ist ohne Grouplisten zu pflegen oder so...naja. Und deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten von Releases und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll machen.<br />
         <br />
         Wenn man Sites eingestellt hat tradet 
         d-tool zuerstmal alles. Man gibt auf der Site an zu welchen anderen gefillt werden soll und dann schiebt dt alles was kommt, wenn 
@@ -148,12 +145,12 @@ body {
         Die Listen haben verschiedene Funktionen und man kann mit 
         Sonderzeichen wie ^ oder + die Einträge in ihrer Handhabung noch 
         verändern, das wird beim klick auf &quot;?&quot; in den Rules oder <a href="https://d-tool.github.io/BlackWhitelist.html" class="link-normal">hier</a> nochmal erklärt.<br />
-  <br>
+        <br>
         Es gibt noch eine Möglichkeit 
         Releases in falschen Sektionen zu verhindern und umzuleiten in die
         richtige, mit Hilfe von <a href="https://d-tool.github.io/Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.      </p>
       <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check).<br />
-  </p>
+</p>
       <p class="normalschrift"> music/0day/:<br>
         Alles was nicht den eingestellten Sprachen entspricht oder nicht Englisch ist wird automatisch 
 skipped, die entsprechende Liste &quot;foreign-mp3.db&quot; liegt im d-tool Ordner und muss den Befürnissen nach bearbeitet 
@@ -188,10 +185,7 @@ Eigentlich checkt er genau andersherum als hier gezeigt,
         d-tool sendet die Races in Sitepaaren, die in cbftp zu einem Spreadjob zusammengesetzt werden. Das hat den zeitlichen Vorteil, dass nicht alle Rules der einzelnen Fillsites gecheckt werden müssen, bevor etwas gesendet wird. <br />
         Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob ein Release, das auf einer Site  geraced wird, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;srcchk&quot;.<br />
         <br />
-        Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs, bedeutet also immer eher einen Nachteil. <br />
-        <br />
-      </p>
-    <p class="normalschrift">&nbsp;</p></td>
+        Eine andere Besonderheit von cbftp sind die festgelegten Pfade zu den Sektionen, die bei Spreadjobs genutzt werden. Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Und Transferjobs sind meistens nicht so effektiv wie Spreadjobs, bedeutet also immer eher einen Nachteil. </p></td>
     <td width="228">&nbsp;</td>
   </tr>
 </tbody></table>
