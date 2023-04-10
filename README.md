@@ -17,4 +17,5 @@ It can execute several functions on text from IRC channels <br>
 - Racesimulation
 - BNC launcher
 - Incfiller
-- uvm.
+and some more...
+
