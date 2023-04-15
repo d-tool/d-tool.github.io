@@ -16,5 +16,6 @@ It can execute several functions on text from IRC channels <br>
 - Precheck with recheckfunction
 - Racesimulation
 - BNC launcher
-- Incfiller
-- uvm.
+- Incfiller<br>
+and some more...
+
