@@ -118,13 +118,15 @@ body {
         Es liegen Textdateien im d-tool Ordner, die manuell an die eigenen Bedürfnisse angepasst werden müssen.
         <br />
         Bezüglich der erlaubten Sprachen normaler Races gibt es die Datei<strong> languages.db</strong> im d-tool Ordner.<br />
- Das Script tradet erstmal natürlich ENG, das muss  nicht angegeben werden und ist erstmal immer erlaubt. Alle anderen  Sprachen die man traden möchte müssen in diese Datei eingetragen werden. <br />
+ Das Script tradet natürlich englische Releases, das muss  nicht angegeben werden und ist  immer erlaubt. Alle anderen  Sprachen, die man traden möchte, müssen in diese Datei eingetragen werden. <br />
  <br />
- Out of the Box steht in dieser Datei &quot;GER GERMAN&quot;, das bedeutet d-tool   tradet englisch und deutsch. Ist es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein damit der Wankercheck greift und falsche Sprachen herausfiltert (wohlgemerkt immer mit einem Punkt am Ende, das ist wichtig). in dem Fall muss   .GERMAN. im Release vorkommen. <br />
- Für Französisch müsste zB. zusätzlich &quot;FR FRENCH&quot; in die nächste Zeile eintragen werden. Dann muss allerdings auch  FRENCH aus der foreign.db genommen werden, die noch erwähnt wird.<br />
- Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden. <br />
+ Out of the Box steht in dieser Datei &quot;GER GERMAN,German&quot;, das bedeutet d-tool   tradet englisch und deutsch. Ist es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein, damit der Wankercheck greift und falsche Sprachen herausfiltert (wohlgemerkt immer mit einem Punkt am Ende, das ist wichtig). In dem Fall muss   .GERMAN. oder .German. im Release vorkommen (ist also case-sensitive). <br />
+ Für Französisch müsste zB. zusätzlich &quot;FR FRENCH,French,TRUEFRENCH&quot; in die nächste Zeile eintragen werden.<br />
+ Somit: Die erste Stelle ist die Bezeichnung, die man im Sektionsnamen eintragen muss, die Zweite das was im Release zur Erkennung vorkommen muss.
+ <br />
 <br />
-        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden. </p>
+        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden.<br />
+        In der <strong>foreign.db </strong>können und sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit in der <strong>languages.db</strong> stehen.</p>
       <p>Zusammengefasst:<br />
         <br />
         <strong>languages.db = alle erlaubten Sprachen<br />
