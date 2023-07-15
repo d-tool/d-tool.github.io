@@ -2,6 +2,7 @@
 d-tool is a mIRC addon that can execute several functions on text <br>
 
 - All languages
+- supports cb and rush
 - TVMaze und IMDb Check over APIs
 - Reqfiller with auto !reqfilled command (chan/site) - was first back then with command
 - Affilraces
