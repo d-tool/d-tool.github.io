@@ -118,13 +118,18 @@ body {
         Es liegen Textdateien im d-tool Ordner, die manuell an die eigenen Bedürfnisse angepasst werden müssen.
         <br />
         Bezüglich der erlaubten Sprachen normaler Races gibt es die Datei<strong> languages.db</strong> im d-tool Ordner.<br />
- Das Script tradet natürlich englische Releases, das muss  nicht angegeben werden und ist  immer erlaubt. Alle anderen  Sprachen, die man traden möchte, müssen in diese Datei eingetragen werden. <br />
+ Das Script tradet natürlich englische Releases, das muss  nicht angegeben werden und ist  immer erlaubt. Alle anderen  Sprachen die man traden möchte, müssen in diese Datei eingetragen werden. <br />
  <br />
- Out of the Box steht in dieser Datei &quot;GER GERMAN,German&quot;, das bedeutet d-tool   tradet englisch und deutsch. Ist es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein, damit der Wankercheck greift und falsche Sprachen herausfiltert (wohlgemerkt immer mit einem Punkt am Ende, das ist wichtig). In dem Fall muss   .GERMAN. oder .German. im Release vorkommen (ist also case-sensitive). <br />
- Für Französisch müsste zB. zusätzlich &quot;FR FRENCH,French,TRUEFRENCH&quot; in die nächste Zeile eintragen werden.<br />
- Somit: Die erste Stelle ist die Bezeichnung, die man im Sektionsnamen eintragen muss, die Zweite das was im Release zur Erkennung vorkommen muss.
- <br />
+ Folgendes ist notwendig damit der Wankercheck greift und falsche Sprachen herausfiltert:<br />
+ Out of the Box steht in dieser Datei &quot;GER GERMAN,German&quot;, das bedeutet es wird neben englisch auch deutsch getraded. </span>Das erste Wort in der Zeile steht dabei für den Eintrag im Sektionsnamen. Wird es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein (also gefolgt von einem Punkt).        <br />
+<span class="helpdesk">In dem Beispiel muss   dann .GERMAN. oder .German. im Release vorkommen  (check ist case-sensitive). <br />
 <br />
+Warum der Punkt am Ende von GER.? Im Sektionsnamen müssen Sprachen, die man definieren möchte und in diese Datei eingetragen wurden,  immer von einem Punkt gefolgt sein, damit sie erkannt werden.<br />
+        Für Französisch müsste zB. zusätzlich &quot;FR FRENCH,French,TRUEFRENCH&quot; in die nächste Zeile eintragen werden.<br />
+</span><span class="helpdesk"> <br />
+        Somit: Die erste Stelle in einer Zeile ist die Bezeichnung, die man im Sektionsnamen eintragen muss, die Zweite das was im Release zur Erkennung vorkommen muss.
+        <br />
+        <br />
         </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden.<br />
         In der <strong>foreign.db </strong>können und sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit in der <strong>languages.db</strong> stehen.</p>
       <p>Zusammengefasst:<br />
@@ -133,7 +138,7 @@ body {
         foreign.db = alle verbotenen Sprachen </strong>(inkl. der erlaubten Sprachen in languages.db)<strong><br />
         foreign-mp3.db = alle verbotenen Sprachen in mp3</strong><br />
         <br />
-        Die languages.db und foreign.db ist case-sensitive, die foreign-mp3.db   nicht. Da hier automatisch ein - an Anfang und Ende gesetzt werden ist   hier eine Verwechslung ausgeschlossen.<br />
+        Die languages.db und foreign.db sind case-sensitive, die foreign-mp3.db   nicht. Da hier automatisch ein - an Anfang und Ende gesetzt werden ist   hier eine Verwechslung ausgeschlossen.<br />
         <br />
          Es werden nur Sprachen aussortert wenn man vorher die   Sektion per Sektionsnamen auf bestimmte Sprachen festlegt. Also muss auch bei APPS oder PCGames ENG. oder/und GER. angeben werden, im Sektionsnamen der Obersektion von d-tool, nicht der jeweiligen Site. Kombinationen wie zB. in Sektionen wie 0day in Form von GER.ENG. sollten genutzt werden. Es muss nur immer der Punkt hinter der Sprache kommen, dann wird es berücksichtigt.<br />
         <br />
@@ -143,7 +148,7 @@ body {
         Leider wird dann auch auf Releases in zB. Filmsektionen reagiert, wenn dort zB. .Italian. im Titel vorkommt.<br />
         Sowas passiert zwar nicht oft, aber ist  trotzdem ärgerlich. Es ist aber die bessere Alternative als Nukes in 0day zu bekommen, weil die entsprechenden Sprachen nicht geskippt werden.
         <br>
-      </p></td>
+    </p></td>
     <td width="228" align="center"><p>&nbsp;</p></td>
   </tr>
 </tbody></table>
