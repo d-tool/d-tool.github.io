@@ -18,7 +18,7 @@ d-tool is a mIRC addon that can execute several functions on text <br>
 - BNC launcher
 - Incfiller<br>
 - Redirects
-- Automatic logincheck and deactivation
+- Automatic logincheck with de- and reactivation
 - Trigger words to get notice on certain stuff <br>
 
 and some more...
