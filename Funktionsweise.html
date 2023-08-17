@@ -123,20 +123,20 @@ body {
     </span><strong>ALLGEMEINE FUNKTIONSWEISE<br />
     <br />
     <br />
-    </strong>Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder im Channel gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls etwas bestimmtes, auf das man wartet, Released wird.<br />
+    </strong>Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder im Channel gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls etwas bestimmtes, auf das man wartet, released wird.<br />
         <br />
         Allgemein wartet d-tool auf Announces in entsprechenden Sitechannels, nicht auf Pre.<br />
         Das einmal aus dem Grund, da es  keinen Sinn macht von einer Site zu schieben, auf der es noch  nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist ein sehr sicheres Script, das von einer Sektion in die selben Sektionen der Fillsites schiebt, ohne <strong>etwas selbst</strong> zu<strong> versuchen zu erkennen</strong>. Denn das <strong>ist immer Fehlerbehaftet</strong>. Zu bemerken an den Releases die ab und zu in sonstwelchen Sektionen landen, da es Sektionen gibt bei denen das  automatische erkennen gar nicht richtig möglich ist ohne Grouplisten zu pflegen. Und Grouplisten zu pflegen ist fehleranfällig. Deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten von Releases und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll machen.<br />
         <br />
-        Wenn man die Sites und alles weitere konfiguriert hat tradet 
-        d-tool zuerstmal alles was kommt auf die Fillites, die man eingestellt hat, solange 
+        Wenn man die Sites und alles weitere konfiguriert hat, tradet 
+        d-tool zuerstmal alles was kommt auf die Fillsites die man eingestellt hat, solange 
         nichts in den Rules steht.<br />
-        Dann gibt es die <a href="BlackWhitelist.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. Zudem gibt es die Global Skip-/Whitelist,  die übergeordnet arbeiten. In der GlobalSkip stehen Sachen die immer geskippt werden 
+        Dann gibt es die <a href="BlackWhitelist.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. Zudem gibt es die Global Skip- und Whitelist,  die übergeordnet arbeiten. In der Global Skiplist stehen Sachen die immer geskippt werden 
         sollen, die Global Whitelist ist für Majorgroups gedacht die überall 
         erlaubt sind. <br />
         Handelt es sich um einen Film oder eine TV-Serie, wird 
-        wahlweise noch IMDb (per OFDb)  oder TVMaze abgefragt. Dann ist da da noch der Jahrescheck (welcher die Jahre kontrolliert die in den 
-        Sektionen angegeben sind) und der <a href="Wankercheck.html" class="link-normal">Wankercheck</a>. Und dem übergeordnet ist noch der Foreigncheck für das Auseinanderhalten der Sprachen. was durch die <a href="Languages.html" class="link-normal">Länderlisten</a> passiert. <br>
+        wahlweise noch IMDb (per OFDb)  oder TVMaze abgefragt. Dann ist da noch der Jahrescheck (welcher die Jahre kontrolliert die in den 
+        Sektionen angegeben sind) und der <a href="Wankercheck.html" class="link-normal">Wankercheck</a>. Und dem übergeordnet ist der Foreigncheck für das Auseinanderhalten der Sprachen, was durch die <a href="Languages.html" class="link-normal">Länderlisten</a> passiert. <br>
         <br />
         In den Listen kann man Einträge gegeneinander bestärken wodurch man viele Möglichkeiten hat Regeln zu definieren.  Und man kann mit 
         Sonderzeichen wie ^ oder + die Einträge in ihrer Handhabung noch 
@@ -144,16 +144,8 @@ body {
         <br>
         Es gibt noch eine Möglichkeit 
         Releases in falschen Sektionen zu verhindern und umzuleiten in die
-        richtige, mit Hilfe von <a href="Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.</p>
-      <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check). Dadurch ist das Script relativ schnell in der Verarbeitung oder zumindest wurde alles dafür getan, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
-      <p class="normalschrift"> music/0day/:<br>
-        Alles was nicht den eingestellten Sprachen entspricht oder nicht Englisch ist wird automatisch 
-skipped, die entsprechende Liste &quot;foreign-mp3.db&quot; liegt im d-tool Ordner und muss den Befürnissen nach bearbeitet 
-werden. Standard ist erstmal Ger+Eng.<br />
-Bezüglich Announces/Ordner mit Datum: Man muss nur den 0day bzw. mp3/flac Ordner angeben, das Datum hängt 
-das Script alleine dran. Oder man gibt den Today Ordner an, dann 
-hängt das Script kein Datum an. Falls das Datum mitgepostet wird (zb 0815/Oh_No-The_Funk-DEL) kann man das auch entsprechend einstellen, siehe <a href="DatedSections.html" class="link-normal">Erklärung</a>.<br>
-        </p>
+        Richtige, mit Hilfe von <a href="Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.</p>
+      <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check). Dadurch ist das Script relativ schnell in der Verarbeitung, auch weil immer darauf geachtet wurde, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
       <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.<br />
 Eigentlich checkt er genau andersherum als hier gezeigt,
         der Priorität nach aufsteigend. Der Foreigncheck kommt als erstes, trifft 
@@ -163,12 +155,12 @@ Eigentlich checkt er genau andersherum als hier gezeigt,
         <span style="color:#BFFF00">grün</span>: bei TRUE trade (mit einem orangen w im at-Eintrag)<br />
         <br />
         <span style="color:#FF0000">BACKLIST</span> &lt; <span style="color:#BFFF00">GLOBALWHITELIST</span> &lt; <span style="color:#BFFF00">WHITELIST</span> &lt; <span style="color:#FF0000">IMDB</span> &lt; <span style="color:#FF0000">TVMAZE</span> &lt; <span style="color:#FF0000">BLACKERLIST</span> (+) &lt; <span style="color:#FF0000">YEARS</span> &lt; <span style="color:#FF0000">GLOBALBLACKLIST</span> &lt; <span style="color:#FF0000">WANKER</span> &lt; <span style="color:#BFFF00">WHITELIST</span> (+) &lt; <span style="color:#FF0000">BLACKESTLIST</span> (!) &lt; <span style="color:#FF0000">AFFIL</span> &lt; <span style="color: #FF0000">PRERULES </span>&lt; <span style="color: #FF0000">PRE </span>&lt; <span style="color:#FF0000">FOREIGN</span><br />
-        </p>
+      </p>
       <p class="normalschrift">d-tool ist  schmal gehalten und besteht nur aus 2 relativ kleinen  Scripten  die das gesamte System darstellen, es sollte nicht überladen sein mit unnötigen Funktionen und diese Funktionen sollten so effizient arbeiten wie möglich. Es gibt neben den 2 Hauptscripten und unwichtigeren anderen Dateien einmal die d-tool.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bekommen und immer wieder ans laufen bekommen. <br />
 d-tool ist absolut stabil, wenn es einmal eingestellt wurde läuft es ewig. Die Siteinis kann man untereinander austauschen solange man dieselbe Sektionsreihenfolge hat, ansonsten muss man sie selber umordnen über den Sektionsdialog. Und da gleich der Hinweis, NUR über den Sektionsdialog, alles andere könnt ihr mal schön vergessen.<br />
 Denn da kann man d-tool kaputt bekommen oder zumindest die Siteinis, aber man fängt ja auch nicht einfach an in config-Dateien von Programmes herumzufuschen...<br />
 <br />
-Deshalb gibt es bei d-tool auch keine bescheuerten Gimmicks oder irgendeinen Scheiss den man nicht braucht wie fancy Menus oder sonstwas. Ich sehe auch davon ab fremde dll's zu verwenden, da dies eine Abhängigkeit verankert. Es ist einfach gehalten, aber soll seine Aufgabe effizient, genau und ohne Fehler erledigen. Und das tut es. </p>
+Deshalb gibt es bei d-tool auch keine bescheuerten Gimmicks oder irgendeinen Scheiss den man nicht braucht wie fancy Menus oder sonstwas. Ich sehe auch davon ab fremde dll's zu verwenden, da dies eine Abhängigkeit verankert. Es ist einfach gehalten, aber soll seine Aufgabe schnell, effizient und ohne Fehler erledigen. </p>
       <p class="normalschrift"><br />
         <strong>cbftp/FTPRush:</strong><br />
         <br>
