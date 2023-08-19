@@ -158,24 +158,24 @@ Eigentlich checkt er genau andersherum als hier gezeigt,
       </p>
       <p class="normalschrift">d-tool ist  schmal gehalten und besteht nur aus 2 relativ kleinen  Scripten  die das gesamte System darstellen, es sollte nicht überladen sein mit unnötigen Funktionen und diese Funktionen sollten so effizient arbeiten wie möglich. Es gibt neben den 2 Hauptscripten und unwichtigeren anderen Dateien einmal die d-tool.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bekommen und immer wieder ans laufen bekommen. <br />
 d-tool ist absolut stabil, wenn es einmal eingestellt wurde läuft es ewig. Die Siteinis kann man untereinander austauschen solange man dieselbe Sektionsreihenfolge hat, ansonsten muss man sie selber umordnen über den Sektionsdialog. Und da gleich der Hinweis, NUR über den Sektionsdialog, alles andere könnt ihr mal schön vergessen.<br />
-Denn da kann man d-tool kaputt bekommen oder zumindest die Siteinis, aber man fängt ja auch nicht einfach an in config-Dateien von Programmes herumzufuschen...<br />
+Denn da kann man d-tool kaputt bekommen oder zumindest die Siteinis, aber man fängt ja auch nicht einfach an in config-Dateien von Programmen herum zu fuschen...<br />
 <br />
 Deshalb gibt es bei d-tool auch keine bescheuerten Gimmicks oder irgendeinen Scheiss den man nicht braucht wie fancy Menus oder sonstwas. Ich sehe auch davon ab fremde dll's zu verwenden, da dies eine Abhängigkeit verankert. Es ist einfach gehalten, aber soll seine Aufgabe schnell, effizient und ohne Fehler erledigen. </p>
       <p class="normalschrift"><br />
         <strong>cbftp/FTPRush:</strong><br />
         <br>
         Man kann diese beiden Clienten für die verschiedenen Aufgaben 
-        wählen, wobei klar dazu geraden wird cbftp zum racen zu nutzen. Alle wichtigen Funktionen sind mit beiden Clienten möglich, aber FTPRush wird immer benötigt, wenn man per Hotlink zu einem Suchergebnis connecten möchte.<br />
+        wählen, wobei klar dazu geraten wird cbftp zum racen zu nutzen. Alle wichtigen Funktionen sind mit beiden Clienten möglich, FTPRush wird aber immer benötigt wenn man per Hotlink zu einem Suchergebnis connecten möchte.<br />
       </p>
       <p class="normalschrift"><br />
         <strong>racen mit cbftp:</strong><br />
         <br />
-        Bei allen Sites ist die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; zu stellen!<br />
+        Bei allen Sites ist die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; zu stellen.<br />
         <br />
-        d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Sourcesite auf der Targetsite in cbftp nicht als Source angegeben ist, added d-tool sie. Wenn man eine Site als Fillsite wegnimmt, wird sie auf der Fillsite aber nicht automatisch als Source entfernt. Das kann man ändern indem man den Eintrag &quot;-cb.rmv-&quot;  statt &quot;-none-&quot; wählt, dann wird die Site von den Fillsites in d-tool genommen und in cbftp als Source von der Site entfernt, die man als Fillsite eingestellt hatte.<br />
+        d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Sourcesite auf der Targetsite in cbftp nicht als Source angegeben ist, added d-tool sie. Wenn man eine Site als Fillsite weg nimmt, wird sie auf der Fillsite aber nicht automatisch als Source entfernt. Das kann man ändern indem man den Eintrag &quot;-cb.rmv-&quot;  statt &quot;-none-&quot; wählt, dann wird die Site von den Fillsites in d-tool genommen und in cbftp als Source von der Site entfernt, die man als Fillsite eingestellt hatte.<br />
         <br />
         d-tool sendet die Races in Sitepaaren, die in cbftp zu einem Spreadjob zusammengesetzt werden. Das hat den zeitlichen Vorteil, dass nicht alle Rules der einzelnen Fillsites gecheckt werden müssen bevor etwas gesendet wird. <br />
-        Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob ein Release, das auf einer Site  geraced wird, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;srcchk&quot;.<br />
+        Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob ein Release, das auf einer Site  geraced wird, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;srcchk&quot;. Wäre das nicht der Fall, würde man immer fleißig bei Nukes dabei sein. Es ist also eine Notwendigkeit aufgrund der arbeitsweise von cbftp.<br />
         <br />
         Eine andere Besonderheit von cbftp sind die festgelegten Pfade der Sektionen, die bei Spreadjobs genutzt werden.<br />
         Genauso wie d-tool nutzt auch cbftp Obersektionen, die auf den einzelnen Sites  definiert werden in Form eines Namens und eines Pfades.
