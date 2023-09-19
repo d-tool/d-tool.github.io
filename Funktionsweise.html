@@ -146,8 +146,7 @@ body {
         Releases in falschen Sektionen zu verhindern und umzuleiten in die
         Richtige, mit Hilfe von <a href="Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.</p>
       <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check). Dadurch ist das Script relativ schnell in der Verarbeitung, auch weil immer darauf geachtet wurde, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
-      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.<br />
-Eigentlich checkt er genau andersherum als hier gezeigt,
+      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind. Eigentlich checkt er genau andersherum als hier gezeigt,
         der Priorität nach aufsteigend. Der Foreigncheck kommt als erstes, trifft 
         etwas zu wird geskippt, wenn nicht gehts weiter zum Precheck etc...<br />
         <br />
@@ -156,10 +155,13 @@ Eigentlich checkt er genau andersherum als hier gezeigt,
         <br />
         <span style="color:#FF0000">BACKLIST</span> &lt; <span style="color:#BFFF00">GLOBALWHITELIST</span> &lt; <span style="color:#BFFF00">WHITELIST</span> &lt; <span style="color:#FF0000">IMDB</span> &lt; <span style="color:#FF0000">TVMAZE</span> &lt; <span style="color:#FF0000">BLACKERLIST</span> (+) &lt; <span style="color:#FF0000">YEARS</span> &lt; <span style="color:#FF0000">GLOBALBLACKLIST</span> &lt; <span style="color:#FF0000">WANKER</span> &lt; <span style="color:#BFFF00">WHITELIST</span> (+) &lt; <span style="color:#FF0000">BLACKESTLIST</span> (!) &lt; <span style="color:#FF0000">AFFIL</span> &lt; <span style="color: #FF0000">PRERULES </span>&lt; <span style="color: #FF0000">PRE </span>&lt; <span style="color:#FF0000">FOREIGN</span><br />
       </p>
-      <p class="normalschrift">d-tool ist  schmal gehalten und besteht nur aus 2 relativ kleinen  Scripten  die das gesamte System darstellen, es sollte nicht überladen sein mit unnötigen Funktionen und diese Funktionen sollen so effizient arbeiten wie möglich. Es gibt neben den 2 Hauptscripten und unwichtigeren anderen Dateien einmal die d-tool.ini, die sections.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bekommen und immer wieder ans laufen bekommen. <br />
+      <p class="normalschrift">d-tool ist  schmal gehalten und besteht nur aus 2 kleinen  Scripten  die das gesamte System darstellen, es soll nicht überladen sein mit unnötigen Funktionen und es soll so effizient arbeiten wie möglich.<br />
+        Es gibt neben den 2 Hauptscripten  die d-tool.ini, die sections.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bzw. immer wieder ans laufen bekommen. <br />
+        <br />
 d-tool ist absolut stabil, wenn es einmal eingestellt wurde läuft es ewig. Die Siteinis kann man untereinander tauschen solange man dieselbe Sektionsreihenfolge hat, ansonsten muss man sie selber umordnen über den Sektionsdialog. Und da gleich der Hinweis, nur über den Sektionsdialog.<br />
 <br />
-Deshalb gibt es bei d-tool auch keine  Gimmicks. Ich sehe auch davon ab fremde dll's zu verwenden (außer natürlich die rushmirc.dll), da dies eine Abhängigkeit verankert. Es ist einfach gehalten, aber soll seine Aufgabe schnell, effizient und ohne Fehler erledigen. </p>
+Es bei   keine  Gimmicks wie fancy Dialoge in mIRC mit Hilfe von fremden dlls, da das eine Abhängigkeit verankern würde.<br />
+      </p>
       <p class="normalschrift"><br />
         <strong>cbftp/FTPRush:</strong><br />
         <br>
