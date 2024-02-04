@@ -183,8 +183,8 @@ body,td,th {
         <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT<br />
         </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.<br />
         <br />
-        <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. TV-SP*!SCRIPTED<br />
-        </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per !SCRIPTED mit Ausrufezeichen, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
+        <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. +TV-SP*!SCRIPTED<br />
+        </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per !SCRIPTED mit Ausrufezeichen und muss an eine Sektion gebunden werden mit einem +, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
       <p> <br />
         <strong>Whitelist:<br />
         </strong><br />
@@ -209,7 +209,6 @@ body,td,th {
         Einfacher Black- oder Whitelisteintrag: <span class="Grüntext">EMU, *720p*PsO , *dTV*GERMAN*</span> oder <span class="Grüntext">+PAL</span> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom<br />
         Release steht und somit dahinter nichts mehr kommt)<br />
         Sport Skip Blacklist: <span class="Grüntext">tv-de*SPORT<br />
-        </span>In TV Foreign Sektionen alles außer Scripted Releases skippen per Blacklist: <span class="Grüntext">tv-sp*!SCRIPTED</span><br />
         Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <span class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <br />
         <span class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~tv'&lt;regex&gt;°&lt;regex&gt;°&lt;regex&gt;°...</span> (&lt;regex&gt; steht für einen Regex Eintrag)<br />
     </p>
