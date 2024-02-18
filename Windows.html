@@ -97,6 +97,10 @@ body {
 }
 </style>
 <link href="MainSetup-Dateien/stylesheet.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.RiesenschriftfuerStern {	font-size: 16px;
+}
+</style>
 </head>
 
 <body id="phpbb" class="section-windows ltr">
@@ -132,7 +136,7 @@ body {
         Zeigt die Autotrades an. Affils werden gesondert angezeigt. <br />
         Die erste 
         Zahl ist, wenn Rush aktiviert ist, die Fensternummer in Rush zur Kontrolle. <br />
-        Sollte cbftp genutzt werden wird statt Nummern für normale Races &quot;&lt;&gt;&quot; angezeigt , für einseitige dlonly-Races, </span>ausgelöst durch den <a href="Funktionsweise.html" class="link-normal">Source-Rulecheck</a> ein &quot;&gt;&gt;&quot; und für Prerule Races wird ein<strong> ☆ </strong>angezeigt.<span class="helpdesk"><br />
+        Sollte cbftp genutzt werden wird statt Nummern für normale Races &quot;&lt;&gt;&quot; angezeigt , für einseitige dlonly-Races, </span>ausgelöst durch den <a href="Funktionsweise.html" class="link-normal">Source-Rulecheck</a> ein &quot;&gt;&gt;&quot; und für Prerule Races wird ein <span class="RiesenschriftfuerStern">☆</span> angezeigt.<span class="helpdesk"><br />
           Trades über Whitelist 
           sind mit einem  <strong class="link-normal">w</strong> markiert, trades über Globale Whitelist mit </span><strong><span class="link-normal">gw</span></strong><span class="helpdesk">.<br />
           Am Ende der Einträge kann   noch eine Information zum Redirect kommen wie zB.  </span><span class="link-normal">(redirect) 720p </span><span class="helpdesk">oder zum tvmaze-Check, gefolgt von entweder einem</span><span class="orange"> *</span><span class="helpdesk"> für transfers per cbftp als Spreadjob oder</span><span class="orange"> **</span><span class="helpdesk"> für transfers per cbftp als Transferjob. <br />
@@ -140,11 +144,9 @@ body {
           </span>
     </p>
       <p class="helpdesk"><strong>d-tool_skip</strong><br>
-Zeigt an was die Blacklist stoppt. Und explizit wenn eine Sektion in der
- Blacklist greift (Sektionskip). Es gibt auch einen Wankercheck der 
-Angezeigt wird, IMDB-, TVRage-Check und Affil-Check. Backfills werden 
-auch angezeigt.<br />
-Kann man auch ins at-Fenster leiten (empfohlen).<br>
+Zeigt an was die Blacklist stoppt und explizit wenn eine Sektion in der
+ Blacklist greift (<strong>Sektionskip</strong>). Blacklisteinträge mit + werden als <strong>Blackerlist </strong>angezeigt. Es gibt auch den <strong><a href="Wankercheck.html" class="link-normal">Wankercheck</a></strong>, <strong>IMDB-</strong>, <strong>TVRage-</strong> und <strong>Affil-Check</strong>. Backfills werden 
+auch angezeigt. Beim Prerule-Check wird <strong>Preruleskip </strong>ausgegeben. Kann man auch in das at-Fenster leiten (empfohlen).<br>
 <br>
         <strong>d-tool_done</strong><br>
         Gibt in einem Fenster an was man getradet hat (auch wenn dein 

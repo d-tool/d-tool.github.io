@@ -21,6 +21,9 @@ li {
 	color: #99E600;
 	text-decoration: none;
 }
+.RiesenschriftfuerStern {
+	font-size: 16px;
+}
 </style>
 
 <title>d-tool Helpdesk • How it works</title>
@@ -147,7 +150,7 @@ body {
         Es gibt noch eine Möglichkeit 
         Releases in falschen Sektionen zu verhindern und umzuleiten in die
         Richtige, mit Hilfe von <a href="Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.</p>
-      <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss (Prerule-Check). Dadurch ist das Script relativ schnell in der Verarbeitung, auch weil immer darauf geachtet wurde, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
+      <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss, Prerule-Check genannt. Prerule-races sind zu erkennen an einem <span class="RiesenschriftfuerStern">☆</span> am Anfang eines race Eintrags, Prerule-Skips an dem Wort &quot;Preskip&quot;. Dadurch ist das Script relativ schnell in der Verarbeitung, auch weil immer darauf geachtet wurde, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
       <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind. Eigentlich checkt er genau andersherum als hier gezeigt,
         der Priorität nach aufsteigend. Der Foreigncheck kommt als erstes, trifft 
         etwas zu wird geskippt, wenn nicht gehts weiter zum Precheck etc...<br />
