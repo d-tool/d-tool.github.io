@@ -149,11 +149,13 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k�
           Missgeschicke. Bei Videosektionen kann man  x264, xvid oder dvdr 
           angeben, dies wird ebenfalls berücksichtigt und was nicht passt, automatisch geskippt.</span><br />
         <br />
-        Eingetragen werden die Optionen direkt im übergeordneten Sektionsnamen. Man schreibt die Optionen einfach mit hinein. zB. <span style="color:#BFFF40">Movie.SD.GER.</span><br />
+        Eingetragen werden die Optionen direkt im globalen Sektionsnamen, man schreibt die Optionen einfach mit hinein, zB. <span style="color:#BFFF40">Movie.SD.GER.</span><br />
         <br />
-        Nachfolgend die Funktionen des Wankerchecks mit dem nötigen Eintrag im Sektionsnamen und der Meldung im Skip-/AT-Fenster:<br />
+        Nachfolgend die <strong>Funktionen</strong> des Wankerchecks mit dem nötigen <strong>Eintrag</strong> im Sektionsnamen und der <strong>Ausgabe</strong> im Skip-/AT-Fenster:<br />
         (! bedeutet darf nicht im Sektionsnamen vorkommen, mit Ausnahme von 
         !tv/!serie. Dies kann man eintragen um es explizit nicht zu erlauben)<br />
+        <br />
+        Sieht man zB. einen Wankercheck Eintrag, kann man anhand der Ausgabe auf die Funktion und den entsprechenden Eintrag schliessen, der es verursacht hat.<br />
         <br />
   </p>
       <table width="790" height="104%" border="0" class="lala">
@@ -179,7 +181,7 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k�
           <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del"><span class="Text-klein">wrong.format</span></span></p></td>
         </tr>
         <tr>
-          <td height="2%" class="Normaltext-del">Wenn ein HD Format wie 720p/1080p/2160p im Sektionsnamen vorkommt aber nicht im Release</td>
+          <td height="2%" class="Normaltext-del">Wenn ein HD Format wie 720p/1080p/2160p im globalen Sektionsnamen oder im Sektionsnamen der Site vorkommt, aber nicht im Release</td>
           <td class="Normaltext-del">720p,1080p,2160p</td>
           <td class="Normaltext-del">no.720p/no.1080p/no.2160p</td>
         </tr>
@@ -196,31 +198,29 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k�
           <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">doku.section/no.doku</span></p></td>
         </tr>
         <tr>
-          <td height="2%"><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">Wenn SxxExx,SxxDxx,.Sxx,.Exx oder yyyy-mm-dd nicht 
-            vorkommt</span></p></td>
-          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">tv,serie</span></p></td>
+          <td height="2%"><p style="font-size:85%;line-height:116%"><span class="Normaltext-del"> SxxExx,SxxDxx,.Sxx,.Exx, .Dxx, yyyy.mm.tt oder yyyy-mm-dd kommt nicht im Release vor</span></p></td>
+          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">tv</span></p></td>
           <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">no.series</span></p></td>
+        </tr>
+        <tr>
+          <td height="2%"><span style="font-size:85%;line-height:116%"><span class="Normaltext-del">Wenn Sport (definiert durch /dteditsport) im Release erkannt wird<br />
+          </span><span class="Grüntext">Möchte man Sport explizit erlauben, muss man es in die Whitelist eintragen mit einem +</span></span></td>
+          <td><span class="Normaltext-del">tv</span></td>
+          <td><span class="Normaltext-del">...is.Sport</span></td>
         </tr>
         <tr>
           <td height="2%"><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">Wenn SxxExx,SxxDxx,.Sxx,.Exx oder .EPxx vorkommt (außer 
             Sport)</span></p></td>
-          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">tv/serie nicht 
+          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">tv nicht 
             enthalten</span></p></td>
           <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">no.tv.section</span></p></td>
         </tr>
         <tr>
           <td height="2%"><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">Wenn SxxExx,SxxDxx,.Sxx,.Exx oder 20xx.xx.xx vorkommt (außer 
             Sport)<br />
-          </span><span class="Grüntext-del"><span class="Grüntext"><span class="Grüntext">(Ausnahme! Hier kann man !tv oder !serie eintragen, um Serien in einer Sektion explizit zu verbieten)</span></span></span></p></td>
-          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">!tv,!serie</span></p></td>
+            </span><span class="Grüntext-del"><span class="Grüntext"><span class="Grüntext">(Ausnahme! Hier kann man !tv oder !serie eintragen, um Serien in einer Sektion explizit zu verbieten)</span></span></span></p></td>
+          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">!tv</span></p></td>
           <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">no.tv.section!</span></p></td>
-        </tr>
-        <tr>
-          <td height="4%"><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">Wenn zB. 20xx-xx-xx vorkommt, hält er es für eine Show, somit kein 
-            TV</span></p></td>
-          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">tv,serie</span></p></td>
-          <td><p style="font-size:85%;line-height:116%"><span class="Normaltext-del">date.looks.like.show <br />
-            </span><span class="Grüntext" style="color:#BFFF40"> deaktiv!</span></p></td>
         </tr>
         <tr>
           <td height="2%"><p style="font-size:85%;line-height:116%"><span class="Text-klein"><span class="Normaltext-del"><span class="Normaltext-del">Im Release Videoformate wie XVid,DVDR,x264,HDTV oder 
