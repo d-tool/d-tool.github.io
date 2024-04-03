@@ -136,26 +136,26 @@ body,td,th {
       <br />
       <span class="normalschrift">Sollte man den at auf einem Server bzw. 
         einer VM laufen lassen, kann man sich zb. dtinfo, Affils oder Rush-Stats remote 
-        anzeigen lassen oder den Logintimer an oder aus stellen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig, dass man mindestens auf einem selben Netzwerk ist.<br />
-        d-tool reagiert dann  auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann, wenn man mit irssi oder sonst einem Clienten nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"><br />
-        So mache ich es zum Beispiel, cbftp und irssi laufen in einer Screen Session auf dem root, in die ich mich von Zuhause von Ubuntu aus einlogge. Dann kann ich Zuhause in einer Shell die Infos erhalten indem ich die unten stehenden Befehle eingebe.<br />
+        anzeigen lassen oder den Logintimer an oder aus stellen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig, dass man mindestens auf demselben Netzwerk ist.<br />
+        d-tool reagiert dann  auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann, wenn man mit irssi oder sonst einem Clienten nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"> Zudem muss man ein Passwort angeben, das vorher  festgelegt wurde.<br />
+        Beispiel: cbftp und irssi laufen in einer Screen Session auf dem root, in die man sich von Zuhause unter Linux oder Windows per Putty aus einloggt. Dann kann ich Zuhause in einer Shell die Infos erhalten und den at auch steuern,  indem ich die unten stehenden Befehle eingebe.<br />
         <br />
-        Dazu muss man die dtoolremote-at.mrc in das mIRC laden, mit dem auch der
-        at läuft. Die Befehle stehen im Rechtsklickmenü unter Remote..<br />
-        Wenn man in dem 2ten mIRC das d-tool nicht geladen hat, kann man sich die 
-        d-tool-remotemenu.mrc reinladen, um  die Befehle für Remote im Kontextmenü zu 
+        Dazu muss man die dtoolremote-at.mrc in das mIRC laden mit dem auch der
+        at läuft, die Befehle stehen im Rechtsklickmenü unter Remote.<br />
+        Wenn man die Befehle in einem 2ten mIRC nutzen möchte, in dem d-tool nicht geladen ist, kann man die 
+        d-tool-remotemenu.mrc laden, um nur die Befehle für Remote Befehle im Kontextmenü zu 
         bekommen</span>.</span></p>
       <p>Dies sind die Befehle, die man  eingeben kann, wenn man die Befehle über Kontextmenu nicht nutzt oder hat:<br />
         <br />
-        /notice &lt;nick&gt; !info - dtinfo anzeigen lassen<br />
-        /notice &lt;nick&gt; !dton - d-tool einschalten<br />
-        /notice &lt;nick&gt; !dtoff - d-tool ausschalten        <br />
-        /notice &lt;nick&gt; !login - logintimer starten/stoppen<br />
-        /notice &lt;nick&gt; !sync - site mit cbftp syncen - funktioniert wie der /dcbsync Befehl, nur schreibt man statt /dcbsync eben !sync<br />
-        /notice &lt;nick&gt; !affils - Affils anzeigen lassen<br />
+        /notice &lt;nick&gt; !info &lt;passwd&gt; - dtinfo anzeigen lassen<br />
+        /notice &lt;nick&gt; !dton &lt;passwd&gt; - d-tool einschalten<br />
+        /notice &lt;nick&gt; !dtoff &lt;passwd&gt; - d-tool ausschalten <br />
+        /notice &lt;nick&gt; !login &lt;passwd&gt; - logintimer starten/stoppen<br />
+        /notice &lt;nick&gt; !sync &lt;passwd&gt; &lt;site&gt; s/t &lt;site1&gt; &lt;site2&gt; ...  - site mit cbftp syncen - funktioniert wie der /dcbsync Befeh<br />
+        /notice &lt;nick&gt; !affils &lt;passwd&gt; - Affils<br />
+        /notice &lt;nick&gt; !rushstats &lt;passwd&gt; - FTPRush Stats<br />
+        /notice &lt;nick&gt; !rushinfo &lt;passwd&gt; - FTPRush Info<br />
         /notice &lt;nick&gt; !cpu - Derzeitige CPU Auslastung<br />
-        /notice &lt;nick&gt; !rushstats - FTPRush Stats anzeigen lassen<br />
-        /notice &lt;nick&gt; !rushinfo - FTPRush Info anzeigen lassen<br />
       </p>
       <p><span class="normalschrift">Die Funktion der alternativen Nicks ist mit Vorsicht
         zu geniessen. Jeder der  den festgelegten Nick hat, kann sich die Infos anzeigen lassen.</span><br />
