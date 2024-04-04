@@ -135,16 +135,17 @@ body,td,th {
       <br />
       <br />
       <span class="normalschrift">Sollte man den at auf einem Server bzw. 
-        einer VM laufen lassen, kann man sich zb. dtinfo, Affils oder Rush-Stats remote 
-        anzeigen lassen oder den Logintimer an oder aus stellen (mIRC.to.mIRC oder irssi.to.mirc oder was auch immer). Dazu ist notwendig, dass man mindestens auf demselben Netzwerk ist.<br />
-        d-tool reagiert dann  auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann, wenn man mit irssi oder sonst einem Clienten nochmal in demselben Netz ist, aber mit einem anderen Nick.</span></span><span class="normalschrift"><span class="normalschrift"> Zudem muss man ein Passwort angeben, das vorher  festgelegt wurde.<br />
-        Beispiel: cbftp und irssi laufen in einer Screen Session auf dem root, in die man sich von Zuhause unter Linux oder Windows per Putty aus einloggt. Dann kann ich Zuhause in einer Shell die Infos erhalten und den at auch steuern,  indem ich die unten stehenden Befehle eingebe.<br />
+        einer virtuellen Maschine laufen lassen, kann man sich remote Infos</span></span> holen oder den at auch steuern.
+        <span class="normalschrift"><span class="normalschrift"> Dazu ist notwendig, dass man mit irssi oder sonst einem Clienten nochmal auf demselben IRC Netzwerk ist.<br />
+        d-tool reagiert   auf Notices vom eigenen Nick und  alternativen Nicks, die man festlegen kann, z</span></span><span class="normalschrift"><span class="normalschrift">udem muss man in d-tool  ein Passwort festlegen, das der Client beim senden der Anfragen mit schicken muss.<br />
         <br />
-        Dazu muss man die dtoolremote-at.mrc in das mIRC laden mit dem auch der
-        at läuft, die Befehle stehen im Rechtsklickmenü unter Remote.<br />
-        Wenn man die Befehle in einem 2ten mIRC nutzen möchte, in dem d-tool nicht geladen ist, kann man die 
-        d-tool-remotemenu.mrc laden, um nur die Befehle für Remote Befehle im Kontextmenü zu 
-        bekommen</span>.</span></p>
+          Beispiel: cbftp und irssi laufen in einer Screen Session auf dem root, in die man sich von Zuhause unter Linux oder Windows per Putty aus einloggt. Mit irssi bin ich in demselben Netzwerk wie ich mit mIRC und d-tool bin. Dann kann ich Zuhause per shell die Infos erhalten und den at auch steuern,  indem ich die unten stehenden Befehle eingebe. In meinem Fall eher spielerei, aber für Tradegroups  interessant. Da könnte man die config des anderen sehen, verändern oder notfalls d-tool oder den Logincheck an- und ausschalten.<br />
+          <br />
+          Dazu muss man die dtoolremote-at.mrc in das mIRC laden mit dem auch der
+          at läuft, die Befehle stehen im Rechtsklickmenü unter Remote.<br />
+          Wenn man die Befehle in einem 2ten mIRC nutzen möchte, in dem d-tool nicht geladen ist, kann man die 
+          d-tool-remotemenu.mrc laden, um nur die Befehle für Remote Befehle im Kontextmenü zu 
+          bekommen</span>.</span></p>
       <p>Dies sind die Befehle, die man  eingeben kann, wenn man die Befehle über Kontextmenu nicht nutzt oder hat:<br />
         <br />
         /notice &lt;nick&gt; !info &lt;passwd&gt; - dtinfo anzeigen lassen<br />
@@ -153,9 +154,9 @@ body,td,th {
         /notice &lt;nick&gt; !login &lt;passwd&gt; - logintimer starten/stoppen<br />
         /notice &lt;nick&gt; !sync &lt;passwd&gt; &lt;site&gt; s/t &lt;site1&gt; &lt;site2&gt; ...  - site mit cbftp syncen - funktioniert wie der /dcbsync Befeh<br />
         /notice &lt;nick&gt; !affils &lt;passwd&gt; - Affils<br />
+        /notice &lt;nick&gt; !cpu - Derzeitige CPU Auslastung        <br />
         /notice &lt;nick&gt; !rushstats &lt;passwd&gt; - FTPRush Stats<br />
-        /notice &lt;nick&gt; !rushinfo &lt;passwd&gt; - FTPRush Info<br />
-        /notice &lt;nick&gt; !cpu - Derzeitige CPU Auslastung</p></td>
+        /notice &lt;nick&gt; !rushinfo &lt;passwd&gt; - FTPRush Info</p></td>
     <td class="normalschrift" width="2" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
