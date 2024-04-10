@@ -126,22 +126,20 @@ body {
     </span><strong>ALLGEMEINE FUNKTIONSWEISE<br />
     <br />
     <br />
-    </strong>Neben dem AT und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls man auf etwas bestimmtes wartet.<br />
+    </strong>Neben dem Racesystem und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls man auf etwas bestimmtes wartet. Dies kann man dann auch per Hotlink auf allen Sites suchen.<br />
         <br />
         <strong>Allgemein wartet d-tool auf Announces in entsprechenden Sitechannels, nicht auf Pre</strong>.<br />
-        Das einmal aus dem Grund, da es  keinen Sinn macht von einem Ort zu racen, ohne dass es dort vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist ein (vorausgesetzt gut eingestellt) sehr sicheres Script, das Neues <strong>von einer Sektion in dieselbe Sektion der Fillsites </strong>schiebt<strong>, ohne etwas selbst zu versuchen zu erkennen.</strong> Denn das ist immer Fehlerbehaftet, zu bemerken an races die ab und zu in sonstwelchen Sektionen landen, da es Sektionen gibt bei denen das  automatische erkennen gar nicht richtig möglich ist ohne Grouplisten zu pflegen. Und allgemein muss man Listen pflegen, was fehleranfällig und aufwendig ist. Deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten  und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll fabrizieren.<br />
-        Somit stellt man nur ein mal die Rules der Sites ein und hat danach Ruhe, d-tool regelt alles.
+        Zum Einen aus dem Grund, da es  keinen Sinn macht von einem Ort zu racen, auf dem es noch nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist (vorausgesetzt gut eingestellt) ein recht sicheres Script, das <strong>Neues in</strong> <strong> einer Sektion in dieselbe Sektion der Fillsites </strong>schiebt<strong>, ohne etwas selbst zu versuchen zu erkennen.</strong> Denn das automatische erkennen ist immer fehlerbehaftet, zu bemerken an races die ab und zu in falschen Sektionen landen. Da es Sektionen gibt bei denen das  automatische erkennen gar nicht möglich ist ohne Listen zu pflegen und das erfordert ständige anpassung.  Deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten  und ein System zum verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll fabrizieren.<br />
+        Somit stellt man nur ein mal die Rules der Sites ein und hat danach nichts mehr damit zutun.<br />
         <br />
-        <br />
-        Wenn man die Sites und alles weitere konfiguriert hat, tradet 
+        Wenn man die Sites und Sektionen konfiguriert hat, sendet
         d-tool erstmal alles was kommt auf die Fillsites die man eingestellt hat, solange 
         nichts in den Rules steht.<br />
-        Dann gibt es die <a href="SiteRules.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. Zudem gibt es die Global Skip- und Whitelist,  die übergeordnet arbeiten. In der Global Skiplist stehen Sachen die immer geskippt werden 
+        Dann gibt es die <a href="SiteRules.html" class="link-normal">Black- und Whitelist</a> der einzelnen Sites und die Affill- und Banlist, sie stellen die eigentlichen Rules der Site dar. Zudem gibt es die Global Skip- und Whitelist,  die übergeordnet arbeiten. In der Global Skiplist stehen Einträge die immer geskippt werden 
         sollen, die Global Whitelist ist für Majorgroups gedacht die überall 
         erlaubt sind. <br />
         Handelt es sich um einen Film oder eine TV-Serie, wird 
-        wahlweise noch IMDb (per OFDb)  oder TVMaze abgefragt. Dann ist da noch der Jahrescheck (welcher die Jahre kontrolliert die in den 
-        Sektionen angegeben sind) und der <a href="Wankercheck.html" class="link-normal">Wankercheck</a>. Und dem übergeordnet ist der Foreigncheck für das Auseinanderhalten der Sprachen, was durch die <a href="Languages.html" class="link-normal">Länderlisten</a> passiert. <br>
+        wahlweise noch IMDb (per OFDb)  oder TVMaze abgefragt. Dann ist da noch der Jahres- und <a href="Wankercheck.html" class="link-normal">Wankercheck</a>. Dem übergeordnet ist dann noch der Foreigncheck für das Auseinanderhalten der Sprachen, was durch die <a href="Languages.html" class="link-normal">Länderlisten</a> passiert. <br>
         <br />
         In den Listen kann man Einträge gegeneinander bestärken wodurch man viele Möglichkeiten hat Regeln zu definieren.  Und man kann mit 
         Sonderzeichen wie ^ oder + die Einträge in ihrer Handhabung noch 
