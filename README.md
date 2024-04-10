@@ -15,6 +15,7 @@ d-tool is a mIRC addon that can execute several functions on text
 - Autoinvite on command
 - Precheck with re-check
 - Race simulations for rule testing
+- Remote control over IRC for enabled users
 - BNC launcher
 - Incfiller
 - Redirects for neccessary cross-section operations
