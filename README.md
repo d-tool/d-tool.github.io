@@ -1,5 +1,5 @@
-# d-tool Helpdesk
-d-tool is a mIRC addon that can execute several functions on text <br>
+# d-tool Helpsite
+d-tool is a mIRC addon that can execute several functions on text
 
 - All languages
 - supports cb and rush
@@ -16,10 +16,12 @@ d-tool is a mIRC addon that can execute several functions on text <br>
 - Precheck with re-check
 - Race simulations for rule testing
 - BNC launcher
-- Incfiller<br>
-- Redirects
+- Incfiller
+- Redirects for neccessary cross-section operations
 - Automatic logincheck with de- and reactivation
-- Trigger words to get notice on certain stuff <br>
+- Trigger words to get notice on certain stuff
+- Inviteblocker
+- Network identifier
 
 and some more...
 
