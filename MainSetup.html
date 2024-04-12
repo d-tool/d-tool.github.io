@@ -89,6 +89,9 @@ body,td,th {
 body {
 	background-color: #262626;
 }
+.Grüntext {	color: #BFFF40;
+	font-style: normal;
+}
 </style>
 </head>
 
@@ -134,12 +137,11 @@ body {
         Im Pulldownmenü kann man eine Site auswählen wenn man vorher über den &quot;+&quot;-Button eine Site eingestellt hat.</p>
       <p> <strong>Blacklist</strong><br>
         Globale Skipliste - Steht über den Siteeinstellungen, es sei 
-denn in der Whitelist der Site passt ein Eintrag mit einem + davor.<br>
+denn in der Whitelist der Site passt ein Eintrag mit einem + davor.<br />
+Es gehen Wildcards und Regex. Anders als in den Sitelisten müssen hier die   normalen Einträge immer vorne und hinten einen Stern haben, außer es sind Regex Einträge, dann mit einem <span class="Grüntext"><strong>~</strong></span> davor. Mit einem <span class="Grüntext"><strong>!</strong></span> kann man einen normalen  Eintrag case-sensitive machen, falls man das braucht.<br>
       </p>
       <p><strong>Whitelist</strong><br>
-        Globale Autoapprove Liste - Wildcards, also Sterne, sind nicht möglich. <br>
-        In der Regel packt man auf die Gobale Whitelist nur Groups die 
-        sowieso überall erlaubt sind, also Majorgroups.      </p>
+        Globale Autoapprove Liste - Es gehen Groupnamen und Regex mit<span class="Grüntext"><strong> ~</strong></span> davor, keine Wildcards. In der Regel   packt man auf die Gobale Whitelist nur Groups die sowieso überall   erlaubt sind, also Majorgroups.</p>
       <p><strong>dBNC</strong><br />
         Öffnen des BNC Launcher Dialogs, der <a href="BNCLauncher.html" class="link-normal">hier</a> erklärt wird.<br />
     </p>
