@@ -129,7 +129,7 @@ body {
     </span><strong>ALLGEMEINE FUNKTIONSWEISE<br />
     <br />
     <br />
-    </strong>Neben dem Racesystem und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites. Man hat die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen und einen BNC Launcher zum automatischen starten von BNCs. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls man auf etwas bestimmtes wartet. Dies kann man dann auch per Hotlink auf allen Sites suchen.<br />
+    </strong>Neben dem Race- bzw. Affilsystem und dem Req- bzw. Incfiller gibt es Funktionen zum Absenden von Raw-Befehlen und Suchen,  auf einer einzelnen oder gleichzeitig allen Sites, dessen Ergebnisse dann in einem mIRC Fenster angezeigt werde. Man hat dann die Möglichkeit gefundenes per Mausklick automatisch herunter zu laden oder gepostete Sachen per Mausklick auf allen Sites zu suchen. Zudem gibt es  die Möglichkeit manuell iMDB/TVMaze abzufragen, einen BNC Launcher zum automatischen starten von BNCs und einen Network Identifier zum automatischen Identifizieren auf einem Netzwerk, falls dort eine Registrierung erforderlich ist. Es ist auch noch eine &quot;Trigger&quot; Funktion enthalten, durch die man Meldung erhält, falls man auf etwas bestimmtes wartet. Dies kann man dann auch per Hotlink auf allen Sites suchen. Was der at so treibt kann man sich über diverse @windows anzeigen lassen.<br />
         <br />
         <strong>Allgemein wartet d-tool auf Announces in entsprechenden Sitechannels, nicht auf Pre</strong>.<br />
         Zum Einen aus dem Grund, da es  keinen Sinn macht von einem Ort zu racen, auf dem es noch nicht vorhanden ist. Zum Anderen aus Gründen der Sicherheit. d-tool ist (vorausgesetzt gut eingestellt) ein recht sicheres Script, das <strong>Neues in</strong> <strong> einer Sektion in dieselbe Sektion der Fillsites </strong>sendet<strong>, ohne etwas selbst zu versuchen zu erkennen.</strong> Denn das automatische erkennen ist immer fehlerbehaftet, zu bemerken an races die ab und zu in falschen Sektionen landen. Es gibt Sektionen bei denen das  automatische Erkennen nicht möglich ist ohne Listen zu pflegen und das erfordert ständige anpassung.  Deshalb macht d-tool es anders, hat ein System zum gezielten Umleiten  und ein System zum Verhindern von crap. Vorteil: keine Nukes, können andere noch so viel Müll fabrizieren.<br />
@@ -152,7 +152,7 @@ body {
         Releases in falschen Sektionen zu verhindern und umzuleiten in die
         Richtige, mit Hilfe von <a href="Redirections.html" class="link-normal">Redirects</a> in den Sektionseinstellungen. Das zu verstehen dauert erfahrungsgemäß etwas, aber wenn der Groschen gefallen ist, kommt man damit gut klar.</p>
       <p class="normalschrift">Die Rules einer Site werden 1 mal pro Race gecheckt und das Ergebnis danach gespeichert, sodass es nicht nochmal geprüft werden muss, Prerule-Check genannt. Prerule-races sind zu erkennen an einem <span class="RiesenschriftfuerStern">☆</span> am Anfang eines race Eintrags, Prerule-Skips an dem Wort &quot;Preskip&quot;. Dadurch ist das Script relativ schnell in der Verarbeitung, auch weil immer darauf geachtet wurde, dass nur das gemacht wird, was wirklich notwendig ist um ein Race zu verarbeiten.</p>
-      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, hier mal eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.  Der Foreigncheck kommt als erstes, trifft 
+      <p class="normalschrift">So und da das alles schon relativ undurchsichtig ist, nachfolgend eine Reihenfolge wie d-tool arbeitet wenn es ein Release auswertet, damit auch alle Klarheiten beseitigt sind.  Der Foreigncheck kommt als erstes, trifft 
         etwas zu wird geskippt, wenn nicht gehts weiter zum Precheck etc...Beim Prerulecheck ist natürlich offen ob er skipt oder raced.<br />
         <br />
         <span class="orange">orange</span>: bei TRUE &gt;&gt; skip<br />
@@ -160,35 +160,29 @@ body {
         <strong><br />
         SITEANNOUNCE &gt; <span class="orange">FOREIGN</span> &gt;  <span class="orange">PRE </span>&gt; <span class="link-normal">PRE</span><span class="orange">RULES </span>&gt;  <span class="orange">AFFIL</span> &gt; <span class="orange">BLACKESTLIST </span>(!) &gt; <span style="color:#BFFF00">WHITELIST</span> (+) &gt; <span class="orange">WANKER</span> &gt; <span class="link-normal">GLOBAL WHITELIST</span> &gt;  <span class="orange">GLOBAL BLACKLIST</span> &gt;  <span class="orange">YEARS</span> &gt;  <span class="orange">BLACKERLIST</span> (+) &gt;  <span class="orange">TVMAZE</span> &gt;  <span class="orange">IMDb</span> &gt; <span class="link-normal" style="color:#BFFF00">WHITELIST</span> &gt; <span class="orange">BLACKLIST</span></strong><strong> <br />
         <br />
-        </strong>d-tool ist  schmal gehalten und besteht nur aus 2 kleinen  Scripten  die das gesamte System darstellen, es soll nicht überladen sein mit unnötigen Funktionen und es soll so effizient arbeiten wie möglich.<br />
-        Es gibt neben den 2 Hauptscripten  die d-tool.ini, die sections.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bzw. immer wieder ans laufen bekommen. <br />
+        </strong>d-tool ist  schmal gehalten und besteht nur aus 2 kleinen  Scripten  die das gesamte System darstellen, es soll nicht überladen sein mit unnötigen Funktionen und  so effizient arbeiten wie möglich.<br />
+        Es gibt neben den 2 Hauptscripten  d-tool.mrc und d-tool.dialogs.mrc die d-tool.ini, die sections.ini und die einzelnen Siteinis. Wenn man die hat, kann man d-tool nicht wirklich kaputt bzw. immer wieder ans laufen bekommen. <br />
         <br />
 Zudem ist es absolut stabil, wenn es einmal eingestellt wurde läuft es ewig. Die Siteinis kann man untereinander tauschen solange man dieselbe Sektionsreihenfolge hat, ansonsten muss man sie selber umordnen über den Sektionsdialog. Und da gleich der Hinweis, nur über den Sektionsdialog.<br />
-<br />
-Es bei   keine  Gimmicks wie fancy Dialoge in mIRC mit Hilfe von fremden dlls, da das eine Abhängigkeit verankern würde.<br />
-Die Länge von Groupnamen wurde aufgrund von besonders lustigen Leuten auf 30 Zeichen begrenzt.<br />
-  </p>
+      </p>
       <p class="normalschrift"><br />
         <strong>cbftp/FTPRush:</strong><br />
         <br>
-        Man kann diese beiden Clienten für die verschiedenen Aufgaben 
+        Man kann einen der beiden Clienten für die verschiedenen Aufgaben 
         wählen, wobei klar dazu geraten wird cbftp zum racen zu nutzen. Alle wichtigen Funktionen sind mit beiden Clienten möglich, FTPRush wird aber immer benötigt wenn man per Hotlink zu einem Suchergebnis connecten möchte.<br />
-    </p>
-      <p class="normalschrift"><br />
+        <br />
         <strong>racen mit cbftp:</strong><br />
         <br />
         d-tool sendet die races in Sitepaaren, die in cbftp zu einem Spreadjob zusammengesetzt werden. Das hat den zeitlichen Vorteil, dass nicht alle Rules der einzelnen Fillsites gecheckt werden müssen bevor etwas gesendet wird. <br />
-Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob etwas, das irgendwo ankommt, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;srcchk&quot;. Wäre das nicht der Fall, würde man immer fleißig bei Nukes dabei sein. Es ist also eine Notwendigkeit aufgrund der arbeitsweise von cbftp.        <br />
-        Bei allen Sites ist die Transfer Policy von Source und Target grundsätzlich auf &quot;Block&quot; zu stellen.<br />
+Da cbftp bei Spreadjobs keine Source-/Targetsites kennt, sondern nur ein Release und Sites, die daran beteiligt sind (und zu allen Sites auch verteilt), prüft das Script auch ob etwas, das irgendwo ankommt, dort überhaupt erlaubt ist.  In dem Fall wird der Job so gesendet, dass die Source nichts abbekommt. Genannt wird das <a href="MainSetup.html" class="link-normal">Sourcecheck</a> bzw. in den cbftp einstellungen &quot;srcchk&quot;. Wäre das nicht der Fall, würde man immer fleißig bei Nukes dabei sein, da man alles, was von dort kommt, gleichzeitig auch dort hin senden würde. Es ist also eine Notwendigkeit aufgrund der arbeitsweise von cbftp.        <br />
+Und allgemein wichtig: 
+<strong>Bei allen Sites ist die Transfer Policy von Source und Target  auf &quot;Block&quot; zu stellen!</strong><br />
         <br />
         d-tool gleicht die Fillsites, die man auf einer Site einstellt, immer auch mit cbftp ab. Wenn die Sourcesite auf der Targetsite in cbftp nicht als Source angegeben ist, added d-tool sie. Wenn man eine Site als Fillsite weg nimmt, wird sie auf der Fillsite aber nicht automatisch als Source entfernt. Das kann man ändern indem man beim deaktivieren der Fillsite den Eintrag &quot;-cb.rmv-&quot;  statt &quot;-none-&quot; wählt, dann wird die Site von den Fillsites in d-tool genommen und in cbftp als Source von der Site entfernt, die man als Fillsite eingestellt hatte.<br />
         <br />
         Eine andere Besonderheit von cbftp sind die festgelegten Pfade der Sektionen, die bei Spreadjobs genutzt werden.<br />
         Genauso wie d-tool nutzt auch cbftp Obersektionen, die auf den einzelnen Sites  definiert werden in Form eines Namens und eines Pfades.
-        Da es sowohl Redirects als auch Dated Sections ohne Today Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob und nicht als Spreadjob senden. Transferjobs sind meistens nicht so effektiv wie Spreadjobs, es bedeutet also immer eher einen Nachteil.<br />
-        Die Alternative wäre allerdings es gar nicht zu schicken, weil cbftp eben seine festgelegten Pfade hat. Und dann ist es besser es als Transferjob zu senden als gar nicht.
-        <br />
-        <br />
+        Da es sowohl Redirects als auch Dated Sections ohne Today-Ordner notwendig machen, dass man den Pfad anpasst, muss d-tool es in dem Fall als Transferjob. Transferjobs sind meistens nicht so effektiv wie Spreadjobs, es bedeutet also immer eher einen Nachteil. Die Alternative wäre allerdings es gar nicht zu schicken, weil cbftp beim Spreadsystem eben seine festgelegten Pfade hat.<br />
       </p></td>
     <td width="228">&nbsp;</td>
   </tr>
