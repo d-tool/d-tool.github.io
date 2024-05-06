@@ -166,48 +166,48 @@ body,td,th {
         Normale Einträge ohne Sonderzeichen werden nur auf das Release angewendet (nicht auf die Sektion)<br />
         <span class="Grüntext"><br />
           <strong>*</strong> = Eintrag wird als Wildcard auf Sektion+Rls angewendet (zB. XViD*Subbed, wobei XViD die Sektion der Site ist)</span><br />
-        Wildcard bedeutet, es sind Einträge wie *German*XViD* möglich, und man   kann die auch mit den Sektionen verbinden, zB XViD*German*XViD*<br />
+        Wildcard bedeutet, es sind Einträge wie <span class="Grüntext">*German*XViD*</span> möglich, und man   kann die auch mit den Sektionen verbinden, zB<span class="Grüntext"> XViD*German*XViD*</span><br />
         Es muss aber, wenn man den Eintrag an eine Sektion binden will, vor dem   ersten Stern exakt eine Sektion stehen, wie sie in den Sektionen   definiert sind (am besten aus der Picklist wählen).<br />
         <br />
         <span class="Grüntext"><strong>^</strong> = Sektionsskip. So definiert man, dass es sich um eine Sektion handelt ( zB. ^APPS)</span><br />
         Somit wird diese Sektion erstmal komplett verboten. Es sei denn etwas auf der Whitelist spricht dagegen.<br />
         <br />
         <span class="Grüntext"><strong>+</strong> = Eintrag ist stärker als die Whitelist (Blackerlist)</span><br />
-        Also angenommen man hat etwas auf der Blacklist stehen, zb. die ganze Sektion mit ^APPS. <br />
-        Auf der Whitelist stehen die erlaubten Groups mit   APPS*ENGiNE|RESTORE|BIE. Somit würden erstmal nur die erlaubten Groups   durchgelassen werden. <br />
-        Nun ist aber noch Alpha und Beta nicht erlaubt, und so hat man mit dem +   in der Blacklist nochmal die Möglichkeit, diesen Eintrag über einen   normalen Eintrag in der Whitelist zu stellen. <br />
-        Also +APPS*Alpha|Beta auf die Blacklist und fertig.<br />
-        Nun könnte nur noch ein Eintrag mit einem + in der Whiltelist es möglich   machen, dass doch etwas mit Alpha und Beta drin getradet wird..<br />
+        Also angenommen man hat etwas auf der Blacklist stehen, zb. die ganze Sektion mit <span class="Grüntext">^</span>APPS. <br />
+        Auf der Whitelist stehen die erlaubten Groups mit   <span class="Grüntext">APPS*ENGiNE|RESTORE|BIE</span>. Somit würden erstmal nur die erlaubten Groups   durchgelassen werden. <br />
+        Nun ist aber noch Alpha und Beta nicht erlaubt, und so hat man mit dem <span class="Grüntext">+</span> in der Blacklist nochmal die Möglichkeit, diesen Eintrag über einen   normalen Eintrag in der Whitelist zu stellen. <br />
+        Also <span class="Grüntext">+APPS*Alpha|Beta</span> auf die Blacklist und fertig.<br />
+        Nun könnte nur noch ein Eintrag mit einem <span class="Grüntext">+</span> in der Whiltelist es möglich   machen, dass doch etwas mit Alpha und Beta drin getradet wird..<br />
         <span class="Grüntext"><br />
-          <strong>|</strong> = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw oder mit Regex zB. ~TV-HD-EN'&lt;regex&gt;|&lt;regex&gt;|...)</span><br />
-        Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
+          <strong>|</strong> = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
+        Mit dem<span class="Grüntext"> |</span> kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
         <br />
-        <span class="Grüntext"><strong>!</strong> = Eintrag ist stärker als die Whitelist mit + (Blackestlist)<br />
+        <span class="Grüntext"><strong>!</strong> = Eintrag ist stärker als die Whitelist mit + und der Global Whitelist (Blackestlist)  (!TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit !TV-HD-EN*Entry|Entry...)<br />
+          </span>Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<span class="Grüntext"><br />
           <br />
-          <strong>~</strong> = Eintrag mit Regex (zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;|&lt;regex&gt;|...)</span> <br />
-        Wichtig bei ist, dass zum sepatieren der Sektion ein ' notwendig ist statt einem* wie bei allen anderen Einträgen mit Sektion.<br />
+          <strong>~</strong> = Eintrag mit Regex (zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;°&lt;regex&gt;°...)</span> <br />
+          Wichtig bei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> ' </span>notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
         <br />
         Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
-        zB. +^XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein + ist)<br />
+        zB. <span class="Grüntext">+^</span>XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein <span class="Grüntext">+</span> ist)<br />
         <br />
         <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT<br />
           </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.<br />
         <br />
         <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. +TV-SP*!SCRIPTED<br />
-        </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per !SCRIPTED mit Ausrufezeichen und muss an eine Sektion gebunden werden mit einem +, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
+        </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per <span class="Grüntext">!SCRIPTED</span> mit Ausrufezeichen und muss an eine Sektion gebunden werden mit einem <span class="Grüntext">+</span>, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
       <p><strong>Whitelist<br />
         </strong><br />
-        Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein + vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
+        Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein <span class="Grüntext">+</span> vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
         <br />
         <span class="Grüntext"><strong>+</strong>=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
-        Möchte man etwas IMMER approven, einfach mit einem + in die Whitelist. Das geht über alles.<br />
+        Möchte man etwas IMMER approven, einfach mit einem <span class="Grüntext">+</span> in die Whitelist. Das geht über alles.<br />
         <br />
         <span class="Grüntext"><strong>|</strong> = Mehrere Einträge in einem (zB. APPS*RESTORE|SUBSTANCE|BIE....usw)</span><br />
-        Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
+        Mit dem <span class="Grüntext">|</span> kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
         <br />
         <span class="Grüntext"><strong>~</strong> = Eintrag mit Regex</span> <span class="Grüntext">(zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;°&lt;regex&gt;°&lt;regex&gt;°...)</span><br />
-        Wichtig bei ist, dass zum separieren der Sektion ein ' notwendig ist statt einem* wie bei allen anderen Einträgen mit Sektion.<br />
-        Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> statt wie sonst ein <span class="Grüntext">|</span>.<br />
+        Wichtig bei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> '</span> notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
     </p>
       <p><span class="Grüntext">SPORT = Hiermit kann man Sport Releases erlauben, zB. TV*SPORT<br />
 </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.      <br />
