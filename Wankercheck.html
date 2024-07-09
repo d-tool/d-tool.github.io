@@ -150,8 +150,8 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
         Eingetragen werden die Optionen direkt im globalen Sektionsnamen, man schreibt die Optionen einfach mit hinein, zB. <span style="color:#BFFF40">Movie.SD.GER.</span><br />
         <br />
         Nachfolgend die <strong>Funktionen</strong> des Wankerchecks mit dem n√∂tigen <strong>Eintrag</strong> im Sektionsnamen und der <strong>Ausgabe</strong> im Skip-/AT-Fenster:<br />
-        (! bedeutet darf nicht im Sektionsnamen vorkommen, mit Ausnahme von 
-        !tv/!serie. Dies kann man eintragen um es explizit nicht zu erlauben)<br />
+        (! bedeutet der Eintrag kommt nicht im Sektionsnamen vor, mit Ausnahme von 
+        !tv/!serie. Das kann man als Eintrag nutzen um TV explizit nicht zu erlauben)<br />
         <br />
         Sieht man zB. einen Wankercheck Eintrag, kann man anhand der Ausgabe auf die Funktion und den entsprechenden Eintrag schliessen, der es verursacht hat.<br />
         <br />
@@ -174,8 +174,7 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
               x264 Rips kommen, muss man dies √ºber die Siterules verbieten. Wenn man 
               x264 Eintr√§gt, sind hier <strong class="text-strong">NUR</strong> 720p/1080p/2160p Filme erlaubt. Es bedeutet NICHT, dass x264-sd Releases 
               erlaubt sind. Dies geschieht mit dem Eintrag sd/xvid, siehe oben. Mit anderen Worten: sd/xvid steht f√ºr SD - hd/x264 steht f√ºr HD, also 720p, 1080p und 2160p). Tr√§gt man bluray und complete ein werden nur Releases durchgelassen die entweder das Tag &quot;COMPLETE.BLURAY&quot; oder &quot;COMPLETE.UHD.BLURAY&quot; beinhalten.</span></span></span></p></td>
-          <td><p class="Normaltext-del"><span class="Normaltext-del"><span class="Text-klein">sd/xvid,x264/x265/hd,uhd,dvdr,mdvdr,<br />
-            complete.bluray</span></span></p></td>
+          <td><p class="Normaltext-del"><span class="Normaltext-del"><span class="Text-klein">sd/xvid,x264/x265/hd,uhd,dvdr,complete.bluray</span></span></p></td>
           <td><p class="Normaltext-del"><span class="Text-klein">wrong.format</span></p></td>
         </tr>
         <tr>
@@ -189,11 +188,23 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
           <td class="Normaltext-del"><p>no.HEVC/no.AVC</p></td>
         </tr>
         <tr>
+          <td height="2%" class="Normaltext-del">COMPLETE.BLURAY oder COMPLETE.UHD.BLURAY nicht im 
+            Release</td>
+          <td class="Normaltext-del">complete.bluray</td>
+          <td class="Normaltext-del">no.complete.bluray</td>
+        </tr>
+        <tr>
+          <td height="2%" class="Normaltext-del">COMPLETE.BLURAY oder COMPLETE.UHD.BLURAY im 
+            Release</td>
+          <td class="Normaltext-del">!complete.bluray</td>
+          <td class="Normaltext-del">no.complete.bluray.section</td>
+        </tr>
+        <tr>
           <td height="2%"><p><span class="Normaltext-del">Wenn Doku im Sektionsnamen vorkommt muss Doku auch im Release vorkommen, genauso anders 
             herum</span> <span class="Gr√ºntext"><br />
-            </span> </p></td>
+              </span> </p></td>
           <td><p class="Normaltext-del">doku,docu/!doku,!docu</p></td>
-          <td><p class="Normaltext-del">doku.section/no.doku</p></td>
+          <td><p class="Normaltext-del">no.doku/doku.wrong</p></td>
         </tr>
         <tr>
           <td height="2%"><p class="Normaltext-del"> SxxExx,SxxDxx,.Sxx,.Exx, .Dxx, yyyy.mm.tt oder yyyy-mm-dd kommt nicht im Release vor</p></td>
@@ -219,6 +230,12 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
           </span><span class="Gr√ºntext-del"><span class="Gr√ºntext"><span class="Gr√ºntext">(Ausnahme! Hier kann man !tv oder !serie eintragen, um Serien in einer Sektion explizit zu verbieten)</span></span></span></p></td>
           <td><p class="Normaltext-del">!tv</p></td>
           <td><p class="Normaltext-del">no.tv.section!</p></td>
+        </tr>
+        <tr>
+          <td height="2%"><span class="Normaltext-del">Wenn MDVDR im Sektionsnamen vorkommt muss MDVDR auch im Release vorkommen, genauso anders 
+            herum</span></td>
+          <td class="Normaltext-del">mdvdr,!mdvdr</td>
+          <td class="Normaltext-del">no.mdvdr,mdvdr.section</td>
         </tr>
         <tr>
           <td height="2%"><p class="Text-klein"><span class="Normaltext-del"><span class="Normaltext-del">Im Release Videoformate wie XVid,DVDR,x264,HDTV oder 
@@ -255,27 +272,21 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
           <td><p class="Normaltext-del">no.app</p></td>
         </tr>
         <tr>
-          <td height="2%"><p class="Normaltext-del">Kein Ebook 
-            Release</p></td>
-          <td><p class="Normaltext-del">ebook</p></td>
-          <td><p class="Normaltext-del">no.ebook</p></td>
+          <td height="2%"><p class="Normaltext-del">Wenn EBOOK im Sektionsnamen vorkommt muss EBOOK auch im Release vorkommen, genauso anders 
+            herum</p></td>
+          <td><p class="Normaltext-del">ebook,!ebook</p></td>
+          <td><p class="Normaltext-del">no.ebook,ebook.section</p></td>
         </tr>
         <tr>
-          <td height="2%"><p class="Normaltext-del">Keine Ebook 
-            Sektion</p></td>
-          <td><p class="Normaltext-del">!ebook</p></td>
-          <td><p class="Normaltext-del">ebook.section</p></td>
-        </tr>
-        <tr>
-          <td height="2%"><p class="Normaltext-del">COMPLETE.BLURAY oder COMPLETE.UHD.BLURAY im 
-            Release</p></td>
-          <td><p class="Normaltext-del">!complete.bluray</p></td>
-          <td><p class="Normaltext-del">no.bluray.section</p></td>
+          <td height="2%"><p class="Normaltext-del">DVDR,XViD,x264,XXX und 
+            Konsolenzeugs</p></td>
+          <td><p class="Normaltext-del">pc,game</p></td>
+          <td><p class="Normaltext-del">no.pcgame</p></td>
         </tr>
         <tr>
           <td height="2%"><p class="Normaltext-del">Eintrag muss im Release 
             vorkommen</p></td>
-          <td><p class="Normaltext-del">wii,ps2,ps3,nds,xbox360</p></td>
+          <td><p class="Normaltext-del">xbox360,wii,ps2,ps3,ps4,nds,nsw</p></td>
           <td><p class="Normaltext-del">no.wii,no.ps2...</p></td>
         </tr>
         <tr>
@@ -283,12 +294,6 @@ entsprechendes Tag im Release vorkommt, </span><span class="normalschrift">so k√
             vorkommen</p></td>
           <td><p class="Normaltext-del">!wii,!ps3,!xbox</p></td>
           <td><p class="Normaltext-del">ps3.section,wii.section</p></td>
-        </tr>
-        <tr>
-          <td height="2%"><p class="Normaltext-del">DVDR,XViD,x264,XXX und 
-            Konsolenzeugs</p></td>
-          <td><p class="Normaltext-del">pc,game</p></td>
-          <td><p class="Normaltext-del">no.pcgame</p></td>
         </tr>
         <tr>
           <td height="2%"><p>&nbsp;</p></td>
