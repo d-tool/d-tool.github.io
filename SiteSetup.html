@@ -236,31 +236,41 @@ vorkommt.<br>
         Einfach anhaken und der Incfiller ist aktiv. Per Rechtsklickmenü kann man einstellen, ob
  das Land berücksichtigt  und ob das Announce im Infofenster 
 gepostet werden soll. Außerdem kann man die Zeiten ändern, wie oft und in welchen Abständen gecheckt wird ob etwas gefunden wurde.<br />
-Ja nachdem wie hoch die Anzahl der Sites ist bzw. wie beschäftigt der FTP Client ist, desto länger kann es dauern. Ist die Zahl zu liedrig eingestellt, kann man das daran bemerken, dass nicht gefillt wurde, aber in der Datenbank Fillsites stehen. Die Datenbank kann man per Kontextmenü im Incfiller Fenster öffnen.</p>
+Ja nachdem wie hoch die Anzahl der Sites ist bzw. wie beschäftigt der FTP Client ist, desto länger kann es dauern. Sind die Werte zu niedrig eingestellt, kann man das daran bemerken, dass nicht gefillt wurde, aber in der Datenbank Fillsites stehen. Die Datenbank kann man per Kontextmenü im Incfiller Fenster öffnen.</p>
       <p class="normalschrift"><strong>Section Management</strong><br>
       - edit name: ...<br>
       - change ID: Zum umsortieren der Sektionen. Das sollte man wenn dann hierüber machen.<br>
       Man kann nur unbelegte Nummern wählen, somit muss man bisschen tüfteln.
       <br>
-      - add new section/delete section: ...<br>
-      - show usage: Zeigt an auf welchen Sites es diese Sektion noch gibt<br>
-      - showsections: 
-      Zeigt alle Sektionen im d-tool Fenster an. Man kann den Pfad anklicken, dann wird er zum Eintragen in cbftp in die Zwischenablage kopiert.<br />
+      - add new section/delete section: ...<br />
+      - sync sections: Alle Sektionen der Site mit cbftp syncen
       <br />
-<br>
+      - showsections: 
+      Zeigt alle Sektionen im d-tool Fenster an. Man kann den Pfad anklicken, dann wird er zum Eintragen in cbftp in die Zwischenablage kopiert.      <br>
+      - show usage: Zeigt an auf welchen Sites es diese Sektion noch gibt<br />
+      - open ini: sections.ini öffnen
+      <br />
+      <br />
+      <br />
+      </p>
+      <p class="normalschrift">&nbsp;</p>
+      <p class="normalschrift">        <br>
         <strong>Rules</strong></p>
       <p class="normalschrift"><strong>Black- und Whitelist</strong><br>
 Generell gilt Whitelist geht vor Blacklist. Man skippt mit der Blacklist
  bestimmte Sachen oder ganze Sektionen und sagt dann per Whitelist, lass
  dies und das durch. Zudem kann man dann per + in der Blacklist wiederum 
-sagen, lasse es trotz Whitelist nicht durch.<br>
+sagen, lasse es trotz Whitelist nicht durch. Beide Listen sind case-sensitive.<br>
 <br>
         <strong>Affil- und Banliste</strong><br>
         Die Affilliste ist case-sensitive und kann keine Wildcards. 
 Affils am besten mit Strich eintragen (-GRouP). Wenn man auch andere 
 Groups neben den Affils eintragen will um diese auszuschliessen, dann 
 diese ohne Strich schreiben. So werden die Affils beim 
-"/dtaffils"-command richtig angezeigt<br />
+"/dtaffils"-command richtig angezeigt.<br />
+Affils werden bei Pre Announce der Site auch automatisch hinzugefügt.<br />
+Falls man etwas geändert hat an den Affils, kann man die Liste auch per sync-Button
+mit cbftp syncen.<br />
 <br />
 Beispiele für mögliche Einträge in den Rules und auch den globalen Listen siehe <a href="https://d-tool.github.io/SiteRules.html" class="link-normal">hier</a>      oder über den Button &quot;?&quot; direkt in mIRC.<br />
 Button &quot;e&quot; bewirkt, dass der Cursor automatisch ins Eingabefeld springt nachdem man einen Eintrag gewählt hat. Man hat danach 1s Zeit, so ist auch ein scrollen möglich.<br />
@@ -277,8 +287,6 @@ Button &quot;e&quot; bewirkt, dass der Cursor automatisch ins Eingabefeld spring
 <p class="normalschrift">&nbsp;</p>
 <p class="normalschrift">&nbsp;</p>
 <p class="normalschrift">&nbsp;</p>
-<p class="normalschrift">&nbsp;</p>
-<p class="normalschrift">&nbsp;</p>
 <p class="normalschrift"><br>
 </p>
       <p class="normalschrift"><strong>Picklist</strong></p>
@@ -289,11 +297,7 @@ So kann man oft benutze Groups, Formate, etc. in der rechten
 Liste speichern und nach belieben auswählen, ebenso die 
 Sektionen in der linken Liste. Alles wird nacheinander eingetragen. Im besten Fall muss man für einen Eintrag
  dann gar keinen Tastenschlag machen, sondern kann sich alles aus 
-Bausteinen zusammen bauen.</p>
-      <p class="normalschrift">Da Gross- 
-und Kleinschreibung bei Einträgen mit Sektionen in der Blacklist keine 
-Rolle spielt, ist es auch egal ob die Sektionen bei der einen Site groß 
-und bei der anderen klein geschrieben wird.</p>
+Bausteinen zusammen bauen.      </p>
       <p class="normalschrift"><strong>Eintragen</strong><br>
       Das was man adden will in das Eingabefeld von den Siterules 
 eintragen bzw. aus einer der Sitelisten wählen und in der Picklist auf  
@@ -321,20 +325,9 @@ Eingabefeld stand, doppelt klicken), und entsprechend editieren, dann in
       <br />
       <img src="SiteSetup-Dateien/menu-imdb.png" width="332" height="292"><br />
     </p>
-    <p>&nbsp;</p>
-    <p>&nbsp; </p>
-    <p><img src="SiteSetup-Dateien/menu-redirections.png" width="313" height="253"><br />
-      </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br />
-    </p>
-    <p>&nbsp; </p>
-    <p><br />
-    </p>
-    <p><img src="SiteSetup-Dateien/menu-rules.png" width="446" height="564"><br />
+    <p><img src="SiteSetup-Dateien/menu-redirections.png" width="402" height="567"><br />
+</p>
+    <p><img src="SiteSetup-Dateien/menu-rules.png" width="447" height="567"><br />
 </p>
     <p>&nbsp;</p>
     <p><img src="SiteSetup-Dateien/menu-picklist.png" width="225" height="567"></p></td>
