@@ -155,7 +155,7 @@ body,td,th {
         Zuletzt kann man mit einem <strong class="Grüntext">!</strong> vor einem Eintrag in der Blacklist wiederum sagen, dieser Eintrag ist   wieder stärker als die Whitelist, wird das ausgelöst steht als   Skipeintrag Blackestlist. Dann ist  Ende mit den Möglichkeiten, das lässt aber auch alles zu was man einstellen möchte.<br />
         Möchte man nur eine Sektion in die Blacklist eintragen und damit erstmal verbieten, dann mit <strong class="Grüntext">^</strong>. Das deklariert den Eintrag als Sektion und muss genauso geschrieben werden wie der Sektionsname.<br />
         Man kann in der Black-/Whitelist auch mehrere Sachen mit einem Eintrag erlauben, dann mit <strong class="Grüntext">|</strong> trennen und an eine Sektion binden, zB. <span class="Grüntext">TV*Grp|Grp|Grp</span>.<br />
-        Ausserdem kann man mit einem <strong class="Grüntext">~</strong> vor dem Eintrag bzw. mit einem <strong class="Grüntext">+</strong> gepaart per Regex skippen/allowen oder mit <span class="Grüntext">TV*SPORT</span> in der Black- sowie Whitelist Sport explizit regeln. Dann skipt/erlaubt man das, was man unter /dteditsport angegeben hat.<br />
+        Ausserdem kann man mit einem <strong class="Grüntext">~</strong> vor dem Eintrag bzw. mit einem <strong class="Grüntext">+</strong> gepaart per Regex skippen/allowen oder mit dem Eintrag <span class="Grüntext">SPORT</span> in der Black- sowie Whitelist Sport explizit regeln. Mit dem Eintrag skipt/erlaubt man das, was man unter /dteditsport angegeben hat.<br />
         Die Besonderheit bei Regexeinträgen ist, dass man die Sektion mit einem <strong class="Grüntext">'</strong> separiert statt mit einem<span class="Grüntext"> <strong>*</strong></span> wie sonst. Also zb. <span class="Grüntext">~TV-EN-HD'.S[0-9][0-9]E[0-9][0-9]</span>. Das macht die Picklist aber automatisch wenn man eine Sektion wählt und vorher das <strong class="Grüntext">~</strong> eintragen hat.<br />
         <br />
   Die Black- und Whitelisten der Sites interagieren auch mit den globalen Black- und Whitelisten. Der genaue Ablauf ist <span class="normalschrift"><a href="Funktionsweise.html" class="link-normal">hier </a></span>beschrieben.<br />
@@ -191,7 +191,7 @@ body,td,th {
         Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
         zB. <span class="Grüntext">+^</span>XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein <span class="Grüntext">+</span> ist)<br />
         <br />
-        <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT<br />
+        <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT oder TV*720|1080|SPORT|...<br />
           </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.<br />
         <br />
         <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. +TV-SP*!SCRIPTED<br />
@@ -209,7 +209,7 @@ body,td,th {
         <span class="Grüntext"><strong>~</strong> = Eintrag mit Regex</span> <span class="Grüntext">(zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;°&lt;regex&gt;°&lt;regex&gt;°...)</span><br />
         Wichtig bei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> '</span> notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
     </p>
-      <p><span class="Grüntext">SPORT = Hiermit kann man Sport Releases erlauben, zB. TV*SPORT<br />
+      <p><span class="Grüntext">SPORT = Hiermit kann man Sport Releases erlauben, zB. TV*SPORT oder TV*720|1080|SPORT|...<br />
 </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.      <br />
 <br />
         <strong>Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
