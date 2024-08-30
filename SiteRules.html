@@ -192,7 +192,7 @@ body,td,th {
         zB. <span class="Grüntext">+^</span>XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein <span class="Grüntext">+</span> ist)<br />
         <br />
         <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT oder TV*720|1080|SPORT|...<br />
-          </span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.<br />
+          </span>Was darunter fällt wird per /dteditsport eingestellt bzw. /dtes<br />
         <br />
         <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. +TV-SP*!SCRIPTED<br />
         </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per <span class="Grüntext">!SCRIPTED</span> mit Ausrufezeichen und muss an eine Sektion gebunden werden mit einem <span class="Grüntext">+</span>, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
@@ -216,7 +216,7 @@ body,td,th {
         Verbotene Sektion in der Blacklist: <span class="Grüntext">^GAMES</span><br />
         Black- oder Whitelisteintrag mit Sektion: <span class="Grüntext">GAMES*clone*-GRP</span>, <span class="Grüntext">GAMES*German</span>, <span class="Grüntext">+GAMES*german*clone*</span>, <span class="Grüntext">GAMES*Grp|Grp|Grp</span><br />
         Einfacher Black- oder Whitelisteintrag: <span class="Grüntext">EMU, *720p*PsO , *dTV*GERMAN*</span> oder <span class="Grüntext">+PAL</span> (Bei PsO muss am Ende kein Sternchen stehen, weil die Group am Ende vom Release steht und somit dahinter nichts mehr kommt)<br />
-        Sport Skip Blacklist: <span class="Grüntext"><span class="Grüntext">tv-de*SPORT</span><br />
+        Sport Skip Blacklist: <span class="Grüntext"><span class="Grüntext">tv-de*SPORT</span> <span class="Grüntext">oder TV*720|1080|SPORT|...</span><br />
         Regex in Blacklist oder Whitelist, zB. Shows mit Datum: <span class="Grüntext">~[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~+[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <br />
         <span class="Grüntext">~tv'[1-2][0-9]-[0-1][0-9]-[0-3][0-9]</span> oder <span class="Grüntext">~tv'&lt;regex&gt;°&lt;regex&gt;°&lt;regex&gt;°...</span> (&lt;regex&gt; steht für einen Regex Eintrag)</p>
       <p><strong>Affillist</strong>e<br />
