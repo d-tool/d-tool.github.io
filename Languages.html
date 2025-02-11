@@ -130,8 +130,9 @@ body {
  Im Sektionsnamen müssen Sprachen, die man definieren möchte und in diese Datei eingetragen wurden,  also immer von einem Punkt gefolgt sein, damit sie erkannt werden.<br />
         Für Französisch müsste zB. zusätzlich &quot;FR FRENCH,French,TRUEFRENCH&quot; in die nächste Zeile und im Sektionsnamen der Site zur Erkennung  FR. eingetragen werden.</span><span class="helpdesk"><br />
         <br />
-        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac/abook/mvid, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden.<br />
-        In der <strong>foreign.db </strong>können und sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit in der <strong>languages.db</strong> stehen.</p>
+        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac/mvid/abook, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden.<br />
+        In der <strong>foreign.db </strong>können und sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit in der <strong>languages.db</strong> stehen. <br />
+    </p>
       <p>Zusammengefasst:<br />
         <br />
         <strong>languages.db = alle erlaubten Sprachen<br />
@@ -143,6 +144,7 @@ body {
         Das Script aktualisiert die erlaubten Sprachen bei jedem Neustart von mIRC.  Im laufenden Betrieb muss daher der Befehl /dtlangs eingegeben werden wenn  die Datei manuell angepasst wird, damit  die Sprachen neu eingelesen werden.<br />
         <br />
          Es werden nur Sprachen aussortiert wenn man vorher die   Sektion per Sektionsnamen auf bestimmte Sprachen festlegt. Also muss auch bei APPS oder PCGames ENG. oder/und GER. angeben werden, im Sektionsnamen der Obersektion von d-tool, nicht der jeweiligen Site. Kombinationen wie zB. in Sektionen wie 0day in Form von GER.ENG. sollten genutzt werden. Es muss nur immer der Punkt hinter der Sprache kommen, dann wird es berücksichtigt.<br />
+         Anders als bei allen anderen Sektionen muss man bei      mp3/flac/mvid/abook die Sprache ENG nicht angeben, das wird vorausgesetzt.<br />
         <br />
         Die Listen sind aus einem guten Grund case-sensitive.  Wenn ein Film zB. eine Sprache im Titel hat wie Spanish, wird ansonsten der Foreigncheck ausgelöst, daher sind die Sprachen mit Großbuchstaben eingetragen, weil sie in der Regel auch so benannt sein sollten. Somit wird nur auf .SPANiSH. reagiert.
         <br />
