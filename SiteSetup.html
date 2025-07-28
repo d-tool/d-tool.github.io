@@ -123,9 +123,10 @@ body {
       <br />
         </strong>
       </p>
-      <p class="normalschrift">- Im Hauptmenü über den &quot;+&quot;-Button Site adden,
+      <p class="normalschrift">- Im Hauptmenü über den &quot;+&quot;-Button eine Site adden,
         der Name muss genau so lauten wie die Site in cbftp/Rush benannt ist. Dann per 
-        klick auf die Site im Pulldownmenü das Sitemenü öffnen. Seitdem das Script mit Hash-Tables arbeitet ist es nicht mehr möglich Zahlen als Sitename zu verwenden, da die Tabellen damit ein Problem haben aus irgendeinem Grund.</p>
+        Klick auf die Site im Pulldownmenü das Sitemenü öffnen. Seitdem das Script mit Hash-Tables arbeitet ist es nicht mehr möglich Zahlen als Sitename zu verwenden, da die Tabellen damit ein Problem haben. Wie man eine Site umbenennt oder die Reihenfolge ändert ist unten erklärt.
+      </p>
       <p class="normalschrift">- Im Feld "trigger"  das Wort 
         eingetragen  auf das reagiert werden soll wenn ein neues Race 
         kommt, zB. NEW oder STARTS. Was man einträgt muss nur in dem Wort 
@@ -291,11 +292,10 @@ Button &quot;e&quot; bewirkt, dass der Cursor automatisch ins Eingabefeld spring
 <p class="normalschrift">&nbsp;</p>
 <p class="normalschrift">&nbsp;</p>
 <p class="normalschrift"><br>
-</p>
-      <p class="normalschrift"><strong>Picklist</strong></p>
+  <strong>Picklist</strong></p>
       <p class="normalschrift">In die  Picklist kann man Bausteine 
-eintragen, die dann wiederum in das Eingabefeld von den Siterules 
-eingetragen werden können. Sie interagiert mit dem Eingabefeld der Siterules und nimmt Einträge auf bzw. gibt sie ab.<br>
+        eintragen, die dann wiederum in das Eingabefeld von den Siterules 
+        eingetragen werden können. Sie interagiert mit dem Eingabefeld der Siterules und nimmt Einträge auf bzw. gibt sie ab.<br>
 So kann man oft benutze Groups, Formate, etc. in der rechten 
 Liste speichern und nach belieben auswählen, ebenso die 
 Sektionen in der linken Liste. Alles wird nacheinander eingetragen. Im besten Fall muss man für einen Eintrag
@@ -313,8 +313,17 @@ Eingabefeld stand, doppelt klicken), und entsprechend editieren, dann in
       Eintrag in der Liste wählen und "del" drücken.</p>
       <p class="normalschrift"><strong>Beim "picken"</strong><br>
         Ein Klick fügt den Eintrag dem Eingabefeld hinzu (auch wenn dort schon etwas steht).<br>
-        Ein Doppelklick löscht zuvor das Eingabefeld und fügt den Eintrag dann hinzu.      </p>
-<p class="normalschrift">&nbsp;</p>
+        Ein Doppelklick löscht zuvor das Eingabefeld und fügt den Eintrag dann hinzu.</p>
+      <p class="normalschrift"><strong>Reihenfolge der Sites ändern</strong><span class="helpdesk"> oder Site umbenennen<br />
+      </span>   /dtedit in mIRC eingeben um die d-tool.ini zu öffnen. Nun in der ini nach ganz unten scrollen, dort sind die Sites gelistet. Ziemlich am Ende gibts es die Sektion [sites], die schön in Ruhe lassen. Die dort aufgelisteten Sites werden immer neu generiert. Darüber oder darunter stehen die Sites irgendwo aufgereiht, zB: [box] site=box - Das ist ein Eintrag für eine Site.<br />
+      Site Reihenfolge ändern:<br />
+      Die Reihenfolge im d-tool richtet sich danach, in welcher Reihenfolge diese Einträge in der ini vorhanden sind. Also alles entsprechend ordnen und die ini speichern.<br />
+      Site umbenennen:<br />
+      Den entsprechenden Eintrag in der d-tool.ini umbenennen, zusätzlich in den Ordner &quot;mIRC/d-tool/inis gehen und dort manuell den Namen der ini selber umbenennen, in die ini gehen und in der ersten und zweiten Zeile den Sitenamen ebenfalls anpassen.
+      <br />
+      <br />
+      Dann zum Test das Hauptmenü von d-tool schließen und wieder öffnen.<br />
+      </p>
       <p class="normalschrift">&nbsp;</p>
       <p>&nbsp;</p></td>
     <td width="464" valign="top" align="center"><p>&nbsp;</p>
