@@ -144,10 +144,10 @@ body,td,th {
         <br />
         Auf einer Site gibt es z.B. für HD Filme eine Sektion Movie-HD, auf der Anderen gibt es dafür 2 Sektionen, Movie-1080p und Movie-720p.<br />
   Da d-tool und das Spread-System von cbftp normalerweise nur von z.B. Sektion Nr.34 auf Site 1 zu Sektion Nr.34 auf Site 2 senden, hätte man ein Problem. <br />
-  Falls man mit cbftp raced nutzt d-tool für solche Fälle nicht das Spread- sondern das Transfer-System. <br />
+  Falls man mit cbftp raced nutzt d-tool für solche Fälle nicht das Spread- sondern das Transfersystem. <br />
   <br />
   Auf Site 1 ist z.B. Sektion Nr.34 <span class="Grüntext">Movie-HD</span>  - die passende Sektion Nr.34 auf Site 2 ist <span class="Grüntext">Movie-1080p</span>. <br />
-  Auf Site 2 gibt es zusätzlich die Sektion Nr.35 <span class="orangetext">Movie-720p</span>, wofür es auf Site 1 keine Sektion gibt, diese legt man noch an. <br />
+  Auf Site 2 gibt es zusätzlich die Sektion Nr.35 <span class="hellorangetext">Movie-720p</span>, wofür es auf Site 1 keine Sektion gibt, diese legt man noch an. <br />
   Man hat nun folgende 2 Dinge zu regeln: <br />
 <br />
         <span class="Grüntext"><strong><u>1.</u></strong></span> <u><strong>720p Releases von Site 1 <span class="Grüntext">Movie-HD </span>(Nr.34) sollen von <span style="color:#BFFF00">Movie-1080p</span> in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-720p</span> (Nr.35) gelenkt werden</strong></u><br />
@@ -157,13 +157,11 @@ body,td,th {
         <br />
         <strong class="Grüntext"><u>2. </u></strong> <u><strong>720p Releases von Site 2 <span class="Grüntext">Movie-720p </span>(Nr.35) sollen in  Sektion <span class="orangetext" style="color:#FFBF00">Movie-HD</span> (Nr.34) von Site 1 gelenkt werden<br />
         </strong></u><br />
-        Auf  Site 1 eine Dummie-Sektion Nr.35 anlegen, Name egal. Am besten immer &quot;fake&quot; mit rein schreiben, damit klar ist es ist ein Dummie.  In diesem Fall also &quot;Movie-720p-Fake&quot;. Die Sektion wird nicht aktiviert und Pfadangabe ist egal.<br />
-        Dann geht man im Sektionsmenü der Site 1 auf Redirections und trägt ein:        <span class="hellorangetext">Movie-720p-Fake </span>+ <span style="color: #BFFF00">Movie-HD</span> +<span style="color: #FF8000"> *</span><br />
-        Bedeutet: Ändere die Sektion  von <span class="hellorangetext">Movie-720p-Fake</span> zu <span class="Grüntext" style="color: #BFFF00">Movie-HD</span>,  egal was  ankommt (<span class="orangetext">*</span>)<br />
+        Auf  Site 1 eine fake-Sektion Nr.35 anlegen, Name egal. Am besten immer &quot;fake&quot; mit rein schreiben, damit klar ist es ist ein Dummie.  In diesem Fall also &quot;Movie-720p-Fake&quot;. Die Sektion wird nicht aktiviert und Pfadangabe ist egal.<br />
+        Dann geht man im Sektionsmenü der Site 1 auf Redirections und trägt ein:        <span class="hellorangetext">Movie-720p-fake </span>+ <span style="color: #BFFF00">Movie-HD</span> +<span style="color: #FF8000"> *</span><br />
+        Bedeutet: Ändere die Sektion  von <span class="hellorangetext">Movie-720p-fake</span> zu <span class="Grüntext" style="color: #BFFF00">Movie-HD</span>,  egal was  ankommt (<span class="orangetext">*</span>)<br />
         <br />
-        Fertig</p>
-      <p class="normalschrift"><strong>Dummie- oder Fake-Sektionen werden nur benötigt um eine Möglichkeit zu erhalten, eine Redirection einzustellen, falls man eine nicht vorhandene Sektion umleiten möchte. Fake Sektionen haben keinen anderen Sinn, weshalb sie weder aktiviert werden müssen, noch einen Pfad benötigen.</strong></p>
-      <p class="normalschrift"><br />
+        <br />
         <strong>Mögliche Einträge als Match einer Redirection</strong><strong>:</strong><br />
         Einfache Einträge, Wildcards (*abc*fgh*), Mehrfacheinträge (entry|entry...), Regex Eintrag mit einem ~ davor und der Eintrag SPORT sind möglich.<br />
         Außer Regex sind alle anderen Einträge case-sensitive.
@@ -194,10 +192,10 @@ body,td,th {
         eine der 3 Sektionen einer Site immer für die Gesamte der anderen. Ansonsten müsste man zusätzlich zu den 3 vorhandenen Sektionen auf Site b auch noch eine extra Sektion für Console machen, das erspare 
         ich mir  und nutze eine der vorhandenen für Console.<br />
         Dabei achte ich zB. bei dem klassischen Fall, wenn es auf einer Site nur HD gibt und auf der anderen HD-720p und HD-1080p, dass ich die HD Sektion mit der HD-1080p Sektion kopple und für HD-720p eine extra Sektion mache mit Redirection. Weil tendenziell dort mehr kommt bzw. mit mehr Datenaufkommen und 1080p dann  nicht umgeleitet werden muss und  das race als spreadjob zu cbftp gesendet wird statt als transferjob.<br />
-</p>
+      </p>
       <p class="normalschrift">Die durchgezogenen Linien zwischen den Kästen zeigen die Richtung mit Pfeil und die Umleitung mit Nummer entsprechend zur Auflistung darunter, die kaum sichtbare Linie die ursprüngliche Richtung ohne Redirection. <br />
         <img src="Redirections-Dateien/schaubild-redirs.png" alt="Bild" width="829" height="462" class="postimage" /><br />
-      </p></td>
+  </p></td>
     <td class="normalschrift" width="1" valign="bottom" align="right">&nbsp;</td>
   </tr>
 </tbody></table>
