@@ -118,35 +118,32 @@ body {
         <span class="helpdesk"><strong>SPRACHEN<br />
         </strong><br />
         <br />
-        Es liegen Textdateien im d-tool Ordner, die manuell an die eigenen Bedürfnisse angepasst werden müssen.
-        <br />
-        Bezüglich der erlaubten Sprachen normaler Races gibt es die Datei<strong> languages.db</strong> im d-tool Ordner.<br />
- Das Script tradet natürlich englische Releases, das muss  nicht angegeben werden und ist  immer erlaubt. Alle anderen  Sprachen die man traden möchte, müssen in diese Datei eingetragen werden. <br />
+        Die Sprachen müssen manuell an die eigenen Bedürfnisse angepasst werden, dies geschieht in dem Menü Languages (Befehl /dteditlangs oder  Kontextmenü d-tool&gt;settings&gt;languages).<br />
+ Das Script tradet generell englische Releases, das muss  nicht angegeben werden und ist  immer erlaubt. Alle anderen  Sprachen die man traden möchte, müssen in diese Datei eingetragen werden. <br />
+ <br />
+ <img src="Languages-Dateien/languages-menu.png" alt="" width="597" height="414" /><br />
  <br />
   Damit der Foreigncheck greift und falsche Sprachen herausfiltert ist es notwendig, dass man die Sprachen in den allgemeinen Sektionsnamen schreibt.<br />
- Out of the Box steht in dieser Datei &quot;GER GERMAN,German&quot;, das bedeutet es wird neben englisch auch deutsch getraded. </span>Das erste Wort in der Zeile steht dabei für den Eintrag im Sektionsnamen. Wird es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein (<strong>also gefolgt von einem Punkt - wichtig!</strong>). <br />
+ Out of the Box sind die erlaubten Sprachen deutsch, zu sehen am Eintrag &quot;GER GERMAN,German&quot; in dem Menü unter &quot;allowed languages&quot;, das bedeutet es wird neben englisch auch deutsch getraded. </span>Das erste Wort in der Zeile steht dabei für den Eintrag im Sektionsnamen. Wird es so eingetragen, muss im Sektionsnamen   &quot;GER.&quot; enthalten sein (<strong>also gefolgt von einem Punkt - wichtig!</strong>). <br />
 <span class="helpdesk">Das oder die Wörter an 2. Stelle, zB. .GERMAN. oder .German. sind die Wörter die im Release vorkommen müssen (check ist case-sensitive). So würde eine deutsche TV Sektion zB. TV.1080p.GER. heissen<br />
 <br />
  Im Sektionsnamen müssen Sprachen, die man definieren möchte und in diese Datei eingetragen wurden,  also immer von einem Punkt gefolgt sein, damit sie erkannt werden.<br />
         Für Französisch müsste zB. zusätzlich &quot;FR FRENCH,French,TRUEFRENCH&quot; in die nächste Zeile und im Sektionsnamen der Site zur Erkennung  FR. eingetragen werden.</span><span class="helpdesk"><br />
         <br />
-        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races gibt es die Datei <strong>foreign.db</strong>,  ausgenommen mp3/flac/mvid/abook, dafür gibt es die <strong>foreign-mp3.db</strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten, sie kann nach belieben erweitert oder verändert werden.<br />
-        In der <strong>foreign.db </strong>können und sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit in der <strong>languages.db</strong> stehen. <br />
-    </p>
+        </span>Für das Erkennen und somit auch verbieten falscher Sprachen aller Races trägt man die Länder bei &quot;foreign&quot; ein<strong></strong>,  ausgenommen mp3/flac/mvid/abook, dafür gibt es &quot;foreign music&quot;<strong></strong>. Es sind schon einige Sprachen enthalten die normalerweise reichen sollten.<br />
+        Bei &quot;foreign&quot;<strong> </strong> sollten auch die erlaubten Sprachen eingetragen sein, die man neben Englisch noch raced und somit auch bei &quot;allowed languages&quot;<strong></strong>eingetragen sind.</p>
       <p>Zusammengefasst:<br />
         <br />
-        <strong>languages.db = alle erlaubten Sprachen<br />
-        foreign.db = alle verbotenen Sprachen </strong>(inkl. der erlaubten Sprachen in languages.db)<strong><br />
-        foreign-mp3.db = alle verbotenen Sprachen in mp3/flac/abook/mvid</strong><br />
+        <strong>allowed languages = alle erlaubten Sprachen<br />
+        foreign = alle verbotenen Sprachen </strong>(inkl. der erlaubten Sprachen)<strong><br />
+        foreign music= alle verbotenen Sprachen in mp3/flac/abook/mvid</strong><br />
         <br />
-        Die languages.db und foreign.db sind case-sensitive, die foreign-mp3.db   nicht. Da hier automatisch ein - an Anfang und Ende gesetzt werden ist   hier eine Verwechslung ausgeschlossen.<br />
-        <br />
-        Das Script aktualisiert die erlaubten Sprachen bei jedem Neustart von mIRC.  Im laufenden Betrieb muss daher der Befehl /dtlangs eingegeben werden wenn  die Datei manuell angepasst wird, damit  die Sprachen neu eingelesen werden.<br />
+        Die &quot;allowed languages&quot; und &quot;foreign&quot; Einträge sind case-sensitive, die in &quot;foreign music&quot;   nicht. Da hier automatisch ein - an Anfang und Ende gesetzt werden ist   hier eine Verwechslung ausgeschlossen.<br />
         <br />
          Es werden nur Sprachen aussortiert wenn man vorher die   Sektion per Sektionsnamen auf bestimmte Sprachen festlegt. Also muss auch bei APPS oder PCGames ENG. oder/und GER. angeben werden, im Sektionsnamen der Obersektion von d-tool, nicht der jeweiligen Site. Kombinationen wie zB. in Sektionen wie 0day in Form von GER.ENG. sollten genutzt werden. Es muss nur immer der Punkt hinter der Sprache kommen, dann wird es berücksichtigt.<br />
          Anders als bei allen anderen Sektionen muss man bei      mp3/flac/mvid/abook die Sprache ENG nicht angeben, das wird vorausgesetzt.<br />
         <br />
-        Die Listen sind aus einem guten Grund case-sensitive.  Wenn ein Film zB. eine Sprache im Titel hat wie Spanish, wird ansonsten der Foreigncheck ausgelöst, daher sind die Sprachen mit Großbuchstaben eingetragen, weil sie in der Regel auch so benannt sein sollten. Somit wird nur auf .SPANiSH. reagiert.
+        Die Einträge sind aus einem guten Grund case-sensitive.  Wenn ein Film zB. eine Sprache im Titel hat wie Spanish, wird ansonsten der Foreigncheck ausgelöst, daher sind die Sprachen mit Großbuchstaben eingetragen, weil sie in der Regel auch so benannt sein sollten. Somit wird nur auf .SPANiSH. reagiert.
         <br />
         <br />
         Bei englischen Serien gibt es die Besonderheit, dass die Sprache von IMDb zu diesem Titel ebenfalls geprüft wird, wenn US oder UK only angegeben wurde. Das heisst es prüft dann zusätzlich, ob IMDb zu diesem Titel Englisch als Sprache angibt.
