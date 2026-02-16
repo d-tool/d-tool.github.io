@@ -186,19 +186,19 @@ body,td,th {
           </span>Mit dem | kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<span class="Grüntext"><br />
           <br />
           <strong>~</strong> = Eintrag mit Regex (zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;°&lt;regex&gt;°...)</span> <br />
-          Wichtig bei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> ' </span>notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
-        <br />
+          Wichtig dabei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> ' </span>notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge  eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> statt einem <span class="Grüntext">|</span>.<br />
+          <br />
         Man kann auch mehrere Sonderzeichen angeben, sollte aber Sinn machen<br />
-        zB. <span class="Grüntext">+^</span>XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein <span class="Grüntext">+</span> ist)<br />
+        zB. <span class="Grüntext">+^</span>XViD bedeutet dann: Eintrag wird nur als Sektion behandelt und   wird geskippt, auch wenn in der Whitelist etwas dagegen spricht (solange   in dem Whitelisteintrag kein <span class="Grüntext">+</span> ist).<br />
         <br />
         <span class="Grüntext">SPORT = Hiermit kann man Sport Releases verbieten, zB. TV*SPORT oder TV*720|1080|SPORT|...<br />
-          </span>Was darunter fällt wird per /dteditsport eingestellt bzw. /dtes<br />
+          </span>Was darunter fällt wird per /dteditsport eingestellt bzw. /dtes. Auch kombinierbar mit anderen Einträgen.<br />
         <br />
         <span class="Grüntext">!SCRIPTED = Hiermit kann man  Releases in TV Foreign Sektionen verbieten, die nicht scripted sind, zB. +TV-SP*!SCRIPTED<br />
         </span>Ist zwar speziell, dass man damit  Scripted erlaubt, es also auch auf die Whitelist könnte der Logik nach. Jedoch sollen ja nur alle Serien, die nicht Scripted sind, geskippt werden. Es ist also doch ein Blacklist Eintrag, nur eben per <span class="Grüntext">!SCRIPTED</span> mit Ausrufezeichen und muss an eine Sektion gebunden werden mit einem <span class="Grüntext">+</span>, weil damit nur Scripted erlaubt wird und nicht verboten.</p>
       <p><strong>Whitelist<br />
         </strong><br />
-        Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein <span class="Grüntext">+</span> vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced. Aber ein..<br />
+        Alles was in der Whitelist steht, ist &quot;stärker&quot; als die   Blacklisteinträge. Kommt im Release etwas vor, das zwar in der Blacklist   steht, gleichzeitig aber auch etwas im Release enthalten ist, das auf der Whitelist steht, wird geraced. Steht dann aber ein <span class="Grüntext">+</span> vor dem Eintrag in der Blacklist, ist dieser   wieder Stärker als die Whitelist und es wird nicht geraced.<br />
         <br />
         <span class="Grüntext"><strong>+</strong>=   Whitelisteintrag ist stärker als ein Eintrag mit + in der Blacklist und   auch stärker als die Global Blacklist. Zudem ist der Wankercheck   wirkungslos </span><br />
         Möchte man etwas IMMER approven, einfach mit einem <span class="Grüntext">+</span> in die Whitelist. Das geht über alles.<br />
@@ -207,10 +207,10 @@ body,td,th {
         Mit dem <span class="Grüntext">|</span> kann man mehrere Einträge in einem zusammen fassen und an eine   Sektion binden. Man kann auch Aufzählungen von Groups mit Leerzeichen   oder Kommas direkt aus den Rules eintragen, wird versucht dann   umzuwandeln.<br />
         <br />
         <span class="Grüntext"><strong>~</strong> = Eintrag mit Regex</span> <span class="Grüntext">(zB. ~TV-HD-EN'.S[0-9][0-9]E[0-9][0-9]. oder mehrere mit ~TV-HD-EN'&lt;regex&gt;°&lt;regex&gt;°&lt;regex&gt;°...)</span><br />
-        Wichtig bei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> '</span> notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
-    </p>
+        Wichtig dabei ist, dass zum Separieren der Sektion ein<span class="Grüntext"> '</span> notwendig ist statt einem <span class="Grüntext">*</span> wie bei allen anderen Einträgen mit Sektion. Und man nutzt, wenn man mehrere Einträge mit einem Mal eintragen möchte, ein <span class="Grüntext"><strong>°</strong></span> anstatt einem <span class="Grüntext">|</span>.<br />
+  </p>
       <p><span class="Grüntext">SPORT = Hiermit kann man Sport Releases erlauben, zB. TV*SPORT oder TV*720|1080|SPORT|...<br />
-</span>Was darunter fällt wird per /dteditsport eingestellt. Der Eintrag kann nicht kombiniert werden und muss immer alleine stehen.      <br />
+</span>Was darunter fällt wird per /dteditsport eingestellt bzw. /dtes. Auch kombinierbar mit anderen Einträgen.<br />
 <br />
         <strong>Beispiele für mögliche Einträge in Black-/Whitelist</strong><br />
         Verbotene Sektion in der Blacklist: <span class="Grüntext">^GAMES</span><br />
