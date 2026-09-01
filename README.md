@@ -27,3 +27,5 @@ d-tool is a mIRC addon that can execute several functions on text
 
 and some more...
 
+goto https://d-tool.github.io/
+
