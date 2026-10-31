@@ -5,8 +5,8 @@ d-tool is a mIRC addon that can execute several functions on text
 - supports cb and rush
 - TVMaze und IMDb Check over APIs
 - Reqfiller with auto !reqfilled command (chan/site) - was first back then with command
-- Incfiller
 - Affilraces
+- Incfiller
 - Race presets
 - Extended black-/whitelists allow nearly every rule
 - Wankercheck (prevents from sending crap)
@@ -26,4 +26,6 @@ d-tool is a mIRC addon that can execute several functions on text
 - Trigger words to get notice on certain stuff
 
 and some more...
+
+goto https://d-tool.github.io/
 
